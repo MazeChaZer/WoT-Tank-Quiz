@@ -74,6 +74,7 @@ public class ActivityQuizScreen extends Activity {
 	int lastHighscore;
 	String levelString;
 	boolean newHighscoreAlreadySaid = false;
+	boolean gameStopped = false;
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -106,10 +107,9 @@ public class ActivityQuizScreen extends Activity {
 	    lastHighscore = getSharedPreferences("highscore", MODE_PRIVATE).getInt(levelString + "Score" + "1", -10000);
 	    addTanks();
 	    chooseTank();
-	    setCountdown();
-	    countdown.start();
+	    startCountdownAgain();
 	}
-	public void setCountdown(){
+	public void startCountdownAgain(){
 		countdown = new CountDownTimer(secondsLeft * 1000, 1000) {
 
 	        public void onTick(long millisUntilFinished) {
@@ -118,6 +118,8 @@ public class ActivityQuizScreen extends Activity {
 	        }
 
 	        public void onFinish() {
+	        	gameStopped = true;
+	        	pauseGame = false;
 	            highscoreDialog = new Dialog(ActivityQuizScreen.this);
 	            highscoreDialog.setContentView(R.layout.hightscoredialog);
 	            highscoreDialog.setCancelable(false);
@@ -179,12 +181,12 @@ public class ActivityQuizScreen extends Activity {
 	            			localEditor.putString("lastUsedName", name);
 	            			localEditor.commit();
 	            			highscoreDialog.dismiss();
-	            			pauseGame = false;
 	            			ActivityQuizScreen.this.finish();
 	                    }
 	                });
 	        }	        
 	     };
+	     countdown.start();
 	}
 	@Override
 	public void onBackPressed() {
@@ -208,8 +210,7 @@ public class ActivityQuizScreen extends Activity {
 			builder.setTitle("Game paused");
 			builder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
 		           public void onClick(DialogInterface dialog, int id) {
-		        	   setCountdown();
-		        	   countdown.start();
+		        	   startCountdownAgain();
 		        	   paused = false;
 		           }
 		       });
@@ -222,7 +223,7 @@ public class ActivityQuizScreen extends Activity {
 			builder.setOnCancelListener(new DialogInterface.OnCancelListener() {
 				
 				public void onCancel(DialogInterface dialog) {
-					countdown.start();
+					startCountdownAgain();
 		        	paused = false;
 				}
 			});
@@ -481,7 +482,7 @@ public class ActivityQuizScreen extends Activity {
 		}
 	}
 	public void answerButtonClick(View view){
-		if (buttonsActivated){
+		if (buttonsActivated && ! gameStopped){
 			buttonsActivated = false;
 			Button clickedButton = (Button) view;
 			switch (clickedButton.getId()){

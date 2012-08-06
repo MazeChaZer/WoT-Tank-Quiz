@@ -18,7 +18,7 @@ You should have received a copy of the GNU General Public License
 along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>.
 
 Exeptions from this License:
-  - All the pictures of the tanks in the game "World of Tanks" are excluded from this license, wargaming.net is the copyright holder of these. I got the permission to use the pictures for non-commercial purpose and wargaming.net has still the right to regret me this permission. All images in the folder and subfolders of "All images\tanks" as well as the copies of these pictures in the "workspace\WoT Tank Quiz\res\drawable" folder are images of tanks in the game "World of Tanks".
+  - All the pictures of the tanks in the game "World of Tanks" are excluded from this license, wargaming.net is the copyright holder of these. I got the permission to use the pictures for non-commercial purpose and wargaming.net has still the right to regret me this permission. All images in the folder and subfolders of "All images\tanks" as well as the copies of these pictures in the "workspace\WoT Tank Quiz\res\drawable" folder are images of tanks in the game "World of Tanks". See http://worldoftanks.eu/de/user_agreement
   - The three cartoon tanks "tanque.svg", "tanque_comic.svg" and "tanque_xilographic_style.svg" in the folder "All images\logos\raw_material" are from the Open Clipart Library (http://openclipart.org/) and licensed under the Creative Commons Public Domain Dedication license (http://creativecommons.org/publicdomain/zero/1.0/).
 
 
@@ -42,5 +42,5 @@ Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
 Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 Ausnahmen von diese Lizenz:
-  - Alle Abbildungen von Panzern aus dem Spiel "World of Tanks" sind von dieser Lizenz ausgenommen, das Copyright für diese Bilder liegt bei wargaming.net. Ich habe die Erlaubnis bekommen, die Bilder für nicht-kommerzielle Zwecke zu verwenden, unter der Bedingung, dass wargaming.net mir jederzeit diese Erlaubnis entziehen kann. Alle Bilder in dem Ordner "All images\tanks" und in deren Unterordnern sowie die Kopien diese Bilder in "workspace\WoT Tank Quiz\res\drawable" sind Abbildungen von Panzern aus dem Spiel "World of Tanks".
+  - Alle Abbildungen von Panzern aus dem Spiel "World of Tanks" sind von dieser Lizenz ausgenommen, das Copyright für diese Bilder liegt bei wargaming.net. Ich habe die Erlaubnis bekommen, die Bilder für nicht-kommerzielle Zwecke zu verwenden, unter der Bedingung, dass wargaming.net mir jederzeit diese Erlaubnis entziehen kann. Alle Bilder in dem Ordner "All images\tanks" und in deren Unterordnern sowie die Kopien diese Bilder in "workspace\WoT Tank Quiz\res\drawable" sind Abbildungen von Panzern aus dem Spiel "World of Tanks". Siehe http://worldoftanks.eu/de/user_agreement
   - Die drei Clipart-Panzer "tanque.svg", "tanque_comic.svg" und "tanque_xilographic_style.svg" im Ordner "All images\logos\raw_material" stammen aus der Open Clipart Library (http://openclipart.org/) und sind unter einer Creative Commons Public Domain Dedication Liznez lizensiert (http://creativecommons.org/publicdomain/zero/1.0/).
