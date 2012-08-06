@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2012 Jonas Schürmann ©
+
+    My Website: mazechazer.jimdo.com
+
+    This file is part of  the WoT Tank Quiz.
+
+    The WoT Tank Quiz is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    The WoT Tank Quiz is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>.
+
+    Diese Datei ist Teil des WoT Tank Quiz.
+
+    Das WoT Tank Quiz ist Freie Software: Sie können es unter den Bedingungen
+    der GNU General Public License, wie von der Free Software Foundation,
+    Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren
+    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+    Das WoT Tank Quiz wird in der Hoffnung, dass es nützlich sein wird, aber
+    OHNE JEDE GEWÄHELEISTUNG, bereitgestellt; sogar ohne die implizite
+    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+    Siehe die GNU General Public License für weitere Details.
+
+    Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
+    Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ImageView
+        android:id="@+id/imageViewWorldOfTanks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/ImageDescriptionWorldOfTanks"
+        android:src="@drawable/cooltext667386151" />
+
+    <ImageView
+        android:id="@+id/imageViewTankQuiz"
+        android:contentDescription="@string/ImageDescriptionTankQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/imageViewWorldOfTanks"
+        android:src="@drawable/cooltext667386305" />
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageViewTankQuiz"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/cooltext668702409"
+        android:onClick="Play" />
+
+    <Button
+        android:id="@+id/buttonLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/buttonPlay"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttoneasy"
+        android:onClick="selectLevel" />
+
+    <Button
+        android:id="@+id/buttonHighscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/cooltext668702753"
+        android:onClick="showHighscore" />
+
+    <Button
+        android:id="@+id/buttonAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/cooltext668703345"
+        android:onClick="@string/ButtonAboutClick" />
+    
+
+</RelativeLayout>

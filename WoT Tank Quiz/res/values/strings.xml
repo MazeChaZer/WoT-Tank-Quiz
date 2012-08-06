@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="app_name">WoT Tank Quiz</string>
+    <string name="ImageDescriptionTankQuiz">Tank Quiz</string>
+    <string name="ImageDescriptionTank">Tank Image</string>
+    <string name="AnswerButtonClick">answerButtonClick</string>
+    <string name="ButtonAboutClick">buttonAboutClick</string>
+    <string name="StringHightscore">Highscore</string>
+    <string name="StringOkay">okay</string>
+    <string-array name="level">
+        <item >Easy</item>
+        <item >Medium</item>
+        <item >Hard</item>
+    </string-array>
+    <string name="ImageDescriptionWorldOfTanks">World of Tanks</string>
+    <string name="StringEasy">Easy</string>
+    <string name="StringMedium">Medium</string>
+    <string name="StringHard">Hard</string>
+    <string name="StringBeta">Beta</string>
+
+</resources>

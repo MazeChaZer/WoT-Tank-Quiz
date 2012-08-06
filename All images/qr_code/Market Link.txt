@@ -1,0 +1,1 @@
+market://search?q=pname:mazechazer.android.wottankquiz

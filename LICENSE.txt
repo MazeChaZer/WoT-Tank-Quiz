@@ -1,0 +1,46 @@
+This text file contains the License for the WoT Tank Quiz. German version see below.
+
+Copyright 2012 Jonas Schürmann ©
+
+My Website: mazechazer.jimdo.com
+
+The WoT Tank Quiz is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+The WoT Tank Quiz is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>.
+
+Exeptions from this License:
+  - All the pictures of the tanks in the game "World of Tanks" are excluded from this license, wargaming.net is the copyright holder of these. I got the permission to use the pictures for non-commercial purpose and wargaming.net has still the right to regret me this permission. All images in the folder and subfolders of "All images\tanks" as well as the copies of these pictures in the "workspace\WoT Tank Quiz\res\drawable" folder are images of tanks in the game "World of Tanks". See http://worldoftanks.eu/de/user_agreement
+  - The three cartoon tanks "tanque.svg", "tanque_comic.svg" and "tanque_xilographic_style.svg" in the folder "All images\logos\raw_material" are from the Open Clipart Library (http://openclipart.org/) and licensed under the Creative Commons Public Domain Dedication license (http://creativecommons.org/publicdomain/zero/1.0/).
+
+
+German version:
+
+Copyright 2012 Jonas Schürmann ©
+
+Meine Website: mazechazer.jimdo.com
+
+Das WoT Tank Quiz ist Freie Software: Sie können es unter den Bedingungen
+der GNU General Public License, wie von der Free Software Foundation,
+Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren
+veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+Das WoT Tank Quiz wird in der Hoffnung, dass es nützlich sein wird, aber
+OHNE JEDE GEWÄHELEISTUNG, bereitgestellt; sogar ohne die implizite
+Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+Siehe die GNU General Public License für weitere Details.
+
+Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
+Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
+
+Ausnahmen von diese Lizenz:
+  - Alle Abbildungen von Panzern aus dem Spiel "World of Tanks" sind von dieser Lizenz ausgenommen, das Copyright für diese Bilder liegt bei wargaming.net. Ich habe die Erlaubnis bekommen, die Bilder für nicht-kommerzielle Zwecke zu verwenden, unter der Bedingung, dass wargaming.net mir jederzeit diese Erlaubnis entziehen kann. Alle Bilder in dem Ordner "All images\tanks" und in deren Unterordnern sowie die Kopien diese Bilder in "workspace\WoT Tank Quiz\res\drawable" sind Abbildungen von Panzern aus dem Spiel "World of Tanks". Siehe http://worldoftanks.eu/de/user_agreement
+  - Die drei Clipart-Panzer "tanque.svg", "tanque_comic.svg" und "tanque_xilographic_style.svg" im Ordner "All images\logos\raw_material" stammen aus der Open Clipart Library (http://openclipart.org/) und sind unter einer Creative Commons Public Domain Dedication Liznez lizensiert (http://creativecommons.org/publicdomain/zero/1.0/).

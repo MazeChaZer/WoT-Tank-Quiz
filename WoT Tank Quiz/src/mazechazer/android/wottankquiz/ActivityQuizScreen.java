@@ -1,0 +1,540 @@
+/*  Copyright 2012 Jonas Schürmann ©
+
+    My Website: mazechazer.jimdo.com
+
+    This file is part of  the WoT Tank Quiz.
+
+    The WoT Tank Quiz is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    The WoT Tank Quiz is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>.
+
+    Diese Datei ist Teil des WoT Tank Quiz.
+
+    Das WoT Tank Quiz ist Freie Software: Sie können es unter den Bedingungen
+    der GNU General Public License, wie von der Free Software Foundation,
+    Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren
+    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+    Das WoT Tank Quiz wird in der Hoffnung, dass es nützlich sein wird, aber
+    OHNE JEDE GEWÄHELEISTUNG, bereitgestellt; sogar ohne die implizite
+    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+    Siehe die GNU General Public License für weitere Details.
+
+    Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
+    Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. */
+
+package mazechazer.android.wottankquiz;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+import java.lang.Math;
+import java.util.ArrayList;
+
+public class ActivityQuizScreen extends Activity {
+	int score = 0, secondsLeft = 60;
+    ImageView tankImage;
+    TextView textPoints, textTime;
+    Bundle b;
+    ArrayList<Tank> tankList = new ArrayList<Tank>();
+	ArrayList<Button> answerButtons = new ArrayList<Button>();
+	Dialog highscoreDialog;
+	int level, answer, givenAnswer;
+	String name;
+	boolean buttonsActivated = true;
+	CountDownTimer countdown;
+	boolean paused = false;
+	boolean pauseGame = true;
+	int lastHighscore;
+	String levelString;
+	boolean newHighscoreAlreadySaid = false;
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+	    super.onCreate(savedInstanceState);
+		setContentView(R.layout.quiz);
+	    b = this.getIntent().getExtras();
+	    if (b!=null){
+	    	level = b.getInt("level");
+	    }
+	    tankImage = (ImageView) findViewById(R.id.imageView1);
+	    textPoints = (TextView) findViewById(R.id.textViewPoints);
+	    textTime = (TextView) findViewById(R.id.textViewTime);
+		answerButtons.add((Button) findViewById(R.id.button1));
+		answerButtons.add((Button) findViewById(R.id.button2));
+		answerButtons.add((Button) findViewById(R.id.button3));
+		answerButtons.add((Button) findViewById(R.id.button4));
+	    textPoints.setText("Points: " + score);
+	    textTime.setText("Time: " + secondsLeft);
+	    switch (level){
+		case 1:
+			levelString = "Easy";
+			break;
+		case 2:
+			levelString = "Medium";
+			break;
+		case 3:
+			levelString = "Hard";
+			break;
+	    }
+	    lastHighscore = getSharedPreferences("highscore", MODE_PRIVATE).getInt(levelString + "Score" + "1", -10000);
+	    addTanks();
+	    chooseTank();
+	    setCountdown();
+	    countdown.start();
+	}
+	public void setCountdown(){
+		countdown = new CountDownTimer(secondsLeft * 1000, 1000) {
+
+	        public void onTick(long millisUntilFinished) {
+	        	secondsLeft -= 1;
+	            textTime.setText("Time: " + Integer.toString(secondsLeft));
+	        }
+
+	        public void onFinish() {
+	            highscoreDialog = new Dialog(ActivityQuizScreen.this);
+	            highscoreDialog.setContentView(R.layout.hightscoredialog);
+	            highscoreDialog.setCancelable(false);
+	            highscoreDialog.setTitle("Highscore");
+	            highscoreDialog.show();
+	            String statement;
+	            if (score < 0){
+	            	statement = "Haha you got less than zero points!";
+	            } else if (score <= 10){
+	            	statement = "Not bad. Keep it up.";
+	            } else if (score <= 20){
+	            	statement = "Well done";
+	            } else if (score <= 30){
+	            	statement = "Wow, good job.";
+	            } else {
+	            	statement = "WTF you're a freak :)";
+	            }
+	            ((TextView) highscoreDialog.findViewById(R.id.textViewHighscore)).setText(statement + "\nPoints: " + Integer.toString(score) + "\nPlease enter your name");
+	            SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+	            ((EditText) highscoreDialog.findViewById(R.id.editText1)).setText(prefs.getString("lastUsedName", ""));
+	            ((EditText) highscoreDialog.findViewById(R.id.editText1)).addTextChangedListener(new TextWatcher(){
+
+					public void afterTextChanged(Editable arg0) {
+					}
+					public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+					}
+					public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+						if (arg0.toString().equals("")){
+							((Button) highscoreDialog.findViewById(R.id.buttonHighscore)).setEnabled(false);
+						} else {
+							((Button) highscoreDialog.findViewById(R.id.buttonHighscore)).setEnabled(true);
+						}
+					}
+	            });
+	            Button buttonHighscore = (Button) highscoreDialog.findViewById(R.id.buttonHighscore);
+	            buttonHighscore.setEnabled(! ((EditText) highscoreDialog.findViewById(R.id.editText1)).getText().toString().equals(""));
+	            buttonHighscore.setOnClickListener(new OnClickListener() {
+	                    public void onClick(View v) {
+	                    	name = ((EditText) highscoreDialog.findViewById(R.id.editText1)).getText().toString();
+	                    	SharedPreferences saving = getSharedPreferences("highscore", MODE_PRIVATE);
+	                		SharedPreferences.Editor editor = saving.edit();
+	            			if (score > saving.getInt(levelString + "Score" + Integer.toString(10), -10000)){
+	            				int position = 1;
+	            				for (int i = 9; i >= 1; i--){
+	            					if (score <= saving.getInt(levelString +"Score" + Integer.toString(i), -10000)){
+	            						position = i + 1;
+	            						break;
+	            					}
+	            				}
+	            				for (int i = 10; i >= position + 1; i--){
+	            					editor.putString(levelString + "Name" + Integer.toString(i), saving.getString(levelString + "Name" + Integer.toString(i - 1), ""));
+	            					editor.putInt(levelString + "Score" + Integer.toString(i), saving.getInt(levelString + "Score" + Integer.toString(i - 1), 0));
+	            				}
+	            				editor.putString(levelString + "Name" + Integer.toString(position), name);
+	            				editor.putInt(levelString + "Score" + Integer.toString(position), score);
+	            				editor.commit();
+	            			}
+	            			SharedPreferences.Editor localEditor = getPreferences(MODE_PRIVATE).edit();
+	            			localEditor.putString("lastUsedName", name);
+	            			localEditor.commit();
+	            			highscoreDialog.dismiss();
+	            			pauseGame = false;
+	            			ActivityQuizScreen.this.finish();
+	                    }
+	                });
+	        }	        
+	     };
+	}
+	@Override
+	public void onBackPressed() {
+		pause();
+	}
+	@Override
+	public void onPause(){
+		super.onStop();
+		pause();
+	}
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu){
+		pause();
+		return true;
+	}
+	protected void pause(){
+		if (pauseGame && ! paused){
+			paused = true;
+			countdown.cancel();
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setTitle("Game paused");
+			builder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+		           public void onClick(DialogInterface dialog, int id) {
+		        	   setCountdown();
+		        	   countdown.start();
+		        	   paused = false;
+		           }
+		       });
+			builder.setNegativeButton("Back to menu", new DialogInterface.OnClickListener() {
+				
+				public void onClick(DialogInterface dialog, int which) {
+					finish();
+				}
+			});
+			builder.setOnCancelListener(new DialogInterface.OnCancelListener() {
+				
+				public void onCancel(DialogInterface dialog) {
+					countdown.start();
+		        	paused = false;
+				}
+			});
+			AlertDialog alert = builder.create();
+			alert.show();
+		}
+	}
+
+	private void addTanks(){
+		tankList.add(new Tank("Leichttraktor", R.drawable.germany_ltraktor, Country.GERMANY, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("PzKpfw 35 (t)", R.drawable.germany_pz35t, Country.GERMANY, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("PzKpfw II", R.drawable.germany_pzii, Country.GERMANY, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("PzKpfw 38H735 (f)", R.drawable.germany_h39_captured, Country.GERMANY, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("PzKpfw 38 (t)", R.drawable.germany_pz38t, Country.GERMANY, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("PzKpfw III Ausf. A", R.drawable.germany_pziii_a, Country.GERMANY, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("PzKpfw II Luchs", R.drawable.germany_pzii_luchs, Country.GERMANY, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("PzKpfw II Ausf. J", R.drawable.germany_pzii_j, Country.GERMANY, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("T-15", R.drawable.germany_t_15, Country.GERMANY, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("VK 1602 Leopard", R.drawable.germany_vk1602, Country.GERMANY, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("PzKpfw 38 nA", R.drawable.germany_pz38_na, Country.GERMANY, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("VK 2801", R.drawable.germany_vk2801, Country.GERMANY, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("PzKpfw S35 739 (f)", R.drawable.germany_s35_captured, Country.GERMANY, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("PzKpfw III", R.drawable.germany_pziii, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("PzKpfw IV", R.drawable.germany_pziv, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("PzKpfw III/IV", R.drawable.germany_pziii_iv, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("T-25", R.drawable.germany_t_25, Country.GERMANY, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("PzKpfw IV hydrostat.", R.drawable.germany_pziv_hydro, Country.GERMANY, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("VK 3601 (H)", R.drawable.germany_vk3601h, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("VK 3001 (H)", R.drawable.germany_vk3001h, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("VK 3001 (P)", R.drawable.germany_vk3001p, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("PzKpfw V-IV", R.drawable.germany_pzv_pziv, Country.GERMANY, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("PzKpfw V-IV Alpha", R.drawable.germany_pzv_pziv_ausf_alfa, Country.GERMANY, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("PzKpfw V Panther", R.drawable.germany_pzv, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("VK 3002 (DB)", R.drawable.germany_vk3002db, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("Panther II", R.drawable.germany_panther_ii, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("E-50", R.drawable.germany_e_50, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("PzKpfw B2 740 (f)", R.drawable.germany_b_1bis_captured, Country.GERMANY, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("PzKpfw VI Tiger", R.drawable.germany_pzvi, Country.GERMANY, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("PzKpfw VI Tiger (P)", R.drawable.germany_pzvi_tiger_p, Country.GERMANY, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("PzKpfw VIB Tiger II", R.drawable.germany_pzvib_tiger_ii, Country.GERMANY, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("VK 4502 (P) Ausf. A", R.drawable.germany_vk4502a, Country.GERMANY, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("Löwe", R.drawable.germany_lowe, Country.GERMANY, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("VK 4502 (P) Ausf. B", R.drawable.germany_vk4502p, Country.GERMANY, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("E-75", R.drawable.germany_e_75, Country.GERMANY, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("Maus", R.drawable.germany_maus, Country.GERMANY, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("E-100", R.drawable.germany_e_100, Country.GERMANY, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("Panzerjäger I", R.drawable.germany_panzerjager_i, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Marder II", R.drawable.germany_g20_marder_ii, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Hetzer", R.drawable.germany_hetzer, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("StuG III", R.drawable.germany_stugiii, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("JagdPz IV", R.drawable.germany_jagdpziv, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Jagdpanther", R.drawable.germany_jagdpanther, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Ferdinand", R.drawable.germany_ferdinand, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Jagdtiger", R.drawable.germany_jagdtiger, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Sturmpanzer I Bison", R.drawable.germany_bison_i, Country.GERMANY, TankClass.SPG, false));
+	    tankList.add(new Tank("Sturmpanzer II", R.drawable.germany_sturmpanzer_ii, Country.GERMANY, TankClass.SPG, false));
+	    tankList.add(new Tank("Wespe", R.drawable.germany_wespe, Country.GERMANY, TankClass.SPG, false));
+	    tankList.add(new Tank("Grille", R.drawable.germany_hummel, Country.GERMANY, TankClass.SPG, false));
+	    tankList.add(new Tank("GW Panther", R.drawable.germany_g_panther, Country.GERMANY, TankClass.SPG, false));
+	    tankList.add(new Tank("GW Tiger", R.drawable.germany_g_tiger, Country.GERMANY, TankClass.SPG, false));
+	    tankList.add(new Tank("GW Typ E", R.drawable.germany_g_e, Country.GERMANY, TankClass.SPG, false));
+	    
+	    tankList.add(new Tank("MS-1", R.drawable.ussr_ms_1, Country.USSR, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("BT-2", R.drawable.ussr_bt_2, Country.USSR, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("T-26", R.drawable.ussr_t_26, Country.USSR, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("MkVII Tetrach", R.drawable.ussr_tetrarch_ll, Country.USSR, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("BT-7", R.drawable.ussr_bt_7, Country.USSR, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("T-46", R.drawable.ussr_t_46, Country.USSR, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("BT-SV", R.drawable.ussr_bt_sv, Country.USSR, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("M3 Stuart", R.drawable.ussr_m3_stuart_ll, Country.USSR, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("T-127", R.drawable.ussr_t_127, Country.USSR, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("A-20", R.drawable.ussr_a_20, Country.USSR, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("T-50", R.drawable.ussr_t_50, Country.USSR, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("Valentine", R.drawable.ussr_valentine_ll, Country.USSR, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("T-50-2", R.drawable.ussr_t_50_2, Country.USSR, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("T-28", R.drawable.ussr_t_28, Country.USSR, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("A-32", R.drawable.ussr_a_32, Country.USSR, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("T-34", R.drawable.ussr_t_34, Country.USSR, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("Matilda", R.drawable.ussr_matilda_ii_ll, Country.USSR, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("T-34-85", R.drawable.ussr_t_34_85, Country.USSR, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("T-43", R.drawable.ussr_t_43, Country.USSR, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("KV-13", R.drawable.ussr_kv_13, Country.USSR, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("T-44", R.drawable.ussr_t_44, Country.USSR, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("T-54", R.drawable.ussr_t_54, Country.USSR, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("KV", R.drawable.ussr_kv, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("KV-220 Beta-Test", R.drawable.ussr_kv_220, Country.USSR, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("Churchill", R.drawable.ussr_churchill_ll, Country.USSR, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("KV-220", R.drawable.ussr_kv_220_action, Country.USSR, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("KV-1S", R.drawable.ussr_kv_1s, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("KV-3", R.drawable.ussr_kv_3, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("IS", R.drawable.ussr_is, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("IS-3", R.drawable.ussr_is_3, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("KV-5", R.drawable.ussr_kv_5, Country.USSR, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("IS-4", R.drawable.ussr_is_4, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("IS-7", R.drawable.ussr_is_7, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("AT-1", R.drawable.ussr_at_1, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("SU-76", R.drawable.ussr_su_76, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("SU-85B",R.drawable.ussr_gaz_74b, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("SU-85", R.drawable.ussr_su_85, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("SU-85I", R.drawable.ussr_su_85i, Country.USSR, TankClass.TANKDESTROYER, true));
+	    tankList.add(new Tank("SU-100", R.drawable.ussr_su_100, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("SU-152", R.drawable.ussr_su_152, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("ISU-152", R.drawable.ussr_isu_152, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Objekt 704", R.drawable.ussr_object_704, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("SU-18", R.drawable.ussr_su_18, Country.USSR, TankClass.SPG, false));
+	    tankList.add(new Tank("SU-26", R.drawable.ussr_su_26, Country.USSR, TankClass.SPG, false));
+	    tankList.add(new Tank("SU-5", R.drawable.ussr_su_5, Country.USSR, TankClass.SPG, false));
+	    tankList.add(new Tank("SU-8", R.drawable.ussr_su_8, Country.USSR, TankClass.SPG, false));
+	    tankList.add(new Tank("SU-51", R.drawable.ussr_s_51, Country.USSR, TankClass.SPG, false));
+	    tankList.add(new Tank("SU-14", R.drawable.ussr_su_14, Country.USSR, TankClass.SPG, false));
+	    tankList.add(new Tank("Objekt 212", R.drawable.ussr_object_212, Country.USSR, TankClass.SPG, false));
+	    tankList.add(new Tank("Objekt 261", R.drawable.ussr_object_261, Country.USSR, TankClass.SPG, false));
+	    
+	    tankList.add(new Tank("T1 Cunningham", R.drawable.usa_t1_cunningham, Country.USA, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("M2 Light Tank", R.drawable.usa_m2_lt, Country.USA, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("T2 Light", R.drawable.usa_t2_lt, Country.USA, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("M3 Stuart", R.drawable.usa_m3_stuart, Country.USA, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("MTLS-1G14", R.drawable.usa_mtls_1g14, Country.USA, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("M22 Locust", R.drawable.usa_m22_locust, Country.USA, TankClass.LIGHTTANK, true));
+	    tankList.add(new Tank("M5 Stuart", R.drawable.usa_m5_stuart, Country.USA, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("M24 Chaffee", R.drawable.usa_m24_chaffee, Country.USA, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("T2 Medium Tank", R.drawable.usa_t2_med, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("M2 Medium Tank", R.drawable.usa_m2_med, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("M3 Lee", R.drawable.usa_m3_grant, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("M4 Sherman", R.drawable.usa_m4_sherman, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("M7", R.drawable.usa_m7_med, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("Ram-II", R.drawable.usa_ram_ii, Country.USA, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("M4A2E4", R.drawable.usa_m4a2e4, Country.USA, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("M4A3E8 Sherman", R.drawable.usa_m4a3e8_sherman, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("M4A3E2", R.drawable.usa_sherman_jumbo, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("T20", R.drawable.usa_t20, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("M26 Pershing", R.drawable.usa_pershing, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("M46 Patton", R.drawable.usa_m46_patton, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("T14", R.drawable.usa_t14, Country.USA, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("T1 heavy", R.drawable.usa_t1_hvy, Country.USA, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("M6", R.drawable.usa_m6, Country.USA, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("T29", R.drawable.usa_t29, Country.USA, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("T34", R.drawable.usa_t34_hvy, Country.USA, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("T32", R.drawable.usa_t32, Country.USA, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("M6A2E1", R.drawable.usa_m6a2e1, Country.USA, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("M103", R.drawable.usa_m103, Country.USA, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("T110E5 ", R.drawable.usa_t110, Country.USA, TankClass.HEAVYTANK, false));
+	    
+	    tankList.add(new Tank("T30", R.drawable.usa_t30, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T18", R.drawable.usa_t18, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T82", R.drawable.usa_t82, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T40", R.drawable.usa_t40, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("M8A1", R.drawable.usa_m8a1, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("M10 Wolverine", R.drawable.usa_m10_wolverine, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T49", R.drawable.usa_t49, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("M36 Slugger", R.drawable.usa_m36_slagger, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("M18 Hellcat", R.drawable.usa_m18_hellcat, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T25 AT", R.drawable.usa_t25_at, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T25/2", R.drawable.usa_t25_2, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T28", R.drawable.usa_t28, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T28-Prototyp ", R.drawable.usa_t28_prototype, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T30", R.drawable.usa_t30, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T95", R.drawable.usa_t95, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T57", R.drawable.usa_t57, Country.USA, TankClass.SPG, false));
+	    tankList.add(new Tank("M37", R.drawable.usa_m37, Country.USA, TankClass.SPG, false));
+	    tankList.add(new Tank("M7 Priest", R.drawable.usa_m7_priest, Country.USA, TankClass.SPG, false));
+	    tankList.add(new Tank("M41", R.drawable.usa_m41, Country.USA, TankClass.SPG, false));
+	    tankList.add(new Tank("M12", R.drawable.usa_m12, Country.USA, TankClass.SPG, false));
+	    tankList.add(new Tank("M40/M43", R.drawable.usa_m40m43, Country.USA, TankClass.SPG, false));
+	    tankList.add(new Tank("T92", R.drawable.usa_t92, Country.USA, TankClass.SPG, false));
+	    	    
+	    tankList.add(new Tank("RenaultFT", R.drawable.france_renaultft, Country.FRANCE, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("Hotchkiss H35", R.drawable.france_hotchkiss_h35, Country.FRANCE, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("D1", R.drawable.france_d1, Country.FRANCE, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("AMX 38", R.drawable.france_amx38, Country.FRANCE, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("AMX 40" , R.drawable.france_amx40, Country.FRANCE, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("AMX 12t", R.drawable.france_amx_12t, Country.FRANCE, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("AMX 13 75", R.drawable.france_amx_13_75, Country.FRANCE, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("AMX 13 90", R.drawable.france_amx_13_90, Country.FRANCE, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("D2", R.drawable.france_d2, Country.FRANCE, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("Lorraine 40 t", R.drawable.france_lorraine40t, Country.FRANCE, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("Bat Chatillon 25 t", R.drawable.france_bat_chatillon25t, Country.FRANCE, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("B1", R.drawable.france_b1, Country.FRANCE, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("BDR G1B", R.drawable.france_bdr_g1b, Country.FRANCE, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("ARL 44", R.drawable.france_arl_44, Country.FRANCE, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("AMX M4(1945)", R.drawable.france_amx_m4_1945, Country.FRANCE, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("AMX 50 100", R.drawable.france_amx_50_100, Country.FRANCE, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("AMX 50 120", R.drawable.france_amx_50_120, Country.FRANCE, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("AMX 50B", R.drawable.france_f10_amx_50b, Country.FRANCE, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("FCM36 Pak40", R.drawable.france_fcm_36pak40, Country.FRANCE, TankClass.TANKDESTROYER, true));
+	    tankList.add(new Tank("105 leFH18B2 ", R.drawable.france__105_lefh18b2, Country.FRANCE, TankClass.SPG, true));
+	    
+	    tankList.add(new Tank("Typ 59", R.drawable.china_ch01_type59, Country.CHINA, TankClass.MEDIUMTANK, true));
+	}
+	private void chooseTank(){
+		@SuppressWarnings("unchecked")
+		ArrayList<Tank> chooseList = (ArrayList<Tank>) tankList.clone();
+		@SuppressWarnings("unchecked")
+		ArrayList<Button> chooseAnswerButtons = (ArrayList<Button>) answerButtons.clone();
+		Tank choosenTank1 = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
+		Log.d("wot", choosenTank1.name);
+		while (choosenTank1.name == "Typ 59"){
+			choosenTank1 = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
+		}
+		tankImage.setImageResource((Integer) choosenTank1.resID);
+		chooseList.remove(choosenTank1);
+		answer = (int) Math.round(Math.random() * chooseAnswerButtons.size() + 0.5);
+		chooseAnswerButtons.get(answer - 1).setText(choosenTank1.name);
+		chooseAnswerButtons.remove(answer - 1);
+		if (level == 1){
+			for (int i = chooseList.size() - 1; i >= 0; i -= 1){
+				if (chooseList.get(i).country == choosenTank1.country){
+					chooseList.remove(i);
+				}
+			}
+		} else if (level == 2){
+			for (int i = chooseList.size() - 1; i >= 0; i -= 1){
+				if ( (! (chooseList.get(i).country == choosenTank1.country) ) || chooseList.get(i).tankClass == choosenTank1.tankClass){
+					chooseList.remove(i);
+				}
+			}
+		} else if (level == 3){
+			for (int i = chooseList.size() - 1; i >= 0; i -= 1){
+				if ((! (chooseList.get(i).tankClass == choosenTank1.tankClass) ) || !(chooseList.get(i).country == choosenTank1.country)){
+					chooseList.remove(i);
+				}
+			}
+		}
+		
+		for (int j = 1; j <= 3; j++){
+			if (chooseList.size() == 0){
+				break;
+			}
+			Tank choosenTank = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
+			chooseList.remove(choosenTank);
+			int alternateAnswer = (int) Math.round(Math.random() * chooseAnswerButtons.size() + 0.5);
+			chooseAnswerButtons.get(alternateAnswer - 1).setText(choosenTank.name);
+			chooseAnswerButtons.remove(alternateAnswer - 1);
+			if (level == 1){
+				for (int i = chooseList.size() - 1; i >= 0; i -= 1){
+					if (chooseList.get(i).country == choosenTank.country){
+						chooseList.remove(i);
+					}
+				}
+			} else if (level == 2){
+				for (int i = chooseList.size() - 1; i >= 0; i -= 1){
+					if ( (! (chooseList.get(i).country == choosenTank.country) ) || chooseList.get(i).tankClass == choosenTank.tankClass){
+						chooseList.remove(i);
+					}
+				}
+			} else if (level == 3){
+				for (int i = chooseList.size() - 1; i >= 0; i -= 1){
+					if ((! (chooseList.get(i).tankClass == choosenTank.tankClass) ) || !(chooseList.get(i).country == choosenTank.country)){
+						chooseList.remove(i);
+					}
+				}
+			}
+		}
+		for (int i = 0; i <= chooseAnswerButtons.size() - 1; i++){
+			chooseAnswerButtons.get(i).setText("");
+		}
+	}
+	public void answerButtonClick(View view){
+		if (buttonsActivated){
+			buttonsActivated = false;
+			Button clickedButton = (Button) view;
+			switch (clickedButton.getId()){
+			case R.id.button1:
+				givenAnswer = 1;
+				break;
+			case R.id.button2:
+				givenAnswer = 2;
+				break;
+			case R.id.button3:
+				givenAnswer = 3;
+				break;
+			case R.id.button4:
+				givenAnswer = 4;
+				break;
+			}
+			if (givenAnswer == answer){
+				score += 1;
+				textPoints.setText("Points: " + Integer.toString(score));
+				answerButtons.get(answer - 1).setBackgroundResource(R.drawable.buttongreen);
+				Handler handler = new Handler(); 
+			    handler.postDelayed(new Runnable() { 
+			         public void run() { 
+			              answerButtons.get(answer - 1).setBackgroundResource(R.drawable.buttonstandard);
+			              chooseTank();
+			              buttonsActivated = true;
+			         } 
+			    }, 200);
+			    				
+			} else {
+				
+				score -= 1;
+				textPoints.setText("Points: " + Integer.toString(score));
+				answerButtons.get(givenAnswer - 1).setBackgroundResource(R.drawable.buttonred);
+				answerButtons.get(answer - 1).setBackgroundResource(R.drawable.buttongreen);
+				Handler handler = new Handler(); 
+			    handler.postDelayed(new Runnable() { 
+			         public void run() {
+			        	 answerButtons.get(givenAnswer - 1).setBackgroundResource(R.drawable.buttonstandard);
+			        	 answerButtons.get(answer - 1).setBackgroundResource(R.drawable.buttonstandard);
+			        	 chooseTank();
+			        	 buttonsActivated = true;
+			         } 
+			    }, 1000); 
+			}
+			if (! newHighscoreAlreadySaid){
+				if (score > lastHighscore){
+					Toast toast = Toast.makeText(getApplicationContext(), "New Highscore!", Toast.LENGTH_SHORT);
+					toast.setGravity(Gravity.TOP, 0, 0);
+					toast.show();
+					newHighscoreAlreadySaid = true;
+				}
+			}
+		}
+	}
+}
