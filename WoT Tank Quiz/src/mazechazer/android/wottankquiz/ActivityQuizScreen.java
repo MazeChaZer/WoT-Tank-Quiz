@@ -310,14 +310,20 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("T-44", R.drawable.ussr_t_44, Country.USSR, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("T-54", R.drawable.ussr_t_54, Country.USSR, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("KV", R.drawable.ussr_kv, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("KV-1", R.drawable.ussr_kv1, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("KV-220 Beta-Test", R.drawable.ussr_kv_220, Country.USSR, TankClass.HEAVYTANK, true));
 	    tankList.add(new Tank("Churchill", R.drawable.ussr_churchill_ll, Country.USSR, TankClass.HEAVYTANK, true));
 	    tankList.add(new Tank("KV-220", R.drawable.ussr_kv_220_action, Country.USSR, TankClass.HEAVYTANK, true));
 	    tankList.add(new Tank("KV-1S", R.drawable.ussr_kv_1s, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("KV-2", R.drawable.ussr_kv2, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("T-150", R.drawable.ussr_t150, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("KV-3", R.drawable.ussr_kv_3, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("IS", R.drawable.ussr_is, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("IS-3", R.drawable.ussr_is_3, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("KV-4", R.drawable.ussr_kv4, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("KV-5", R.drawable.ussr_kv_5, Country.USSR, TankClass.HEAVYTANK, true));
+	    tankList.add(new Tank("ST-I", R.drawable.ussr_st_i, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("IS-8", R.drawable.ussr_is8, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("IS-4", R.drawable.ussr_is_4, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("IS-7", R.drawable.ussr_is_7, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("AT-1", R.drawable.ussr_at_1, Country.USSR, TankClass.TANKDESTROYER, false));
@@ -367,7 +373,6 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("M6A2E1", R.drawable.usa_m6a2e1, Country.USA, TankClass.HEAVYTANK, true));
 	    tankList.add(new Tank("M103", R.drawable.usa_m103, Country.USA, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("T110E5 ", R.drawable.usa_t110, Country.USA, TankClass.HEAVYTANK, false));
-	    
 	    tankList.add(new Tank("T30", R.drawable.usa_t30, Country.USA, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("T18", R.drawable.usa_t18, Country.USA, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("T82", R.drawable.usa_t82, Country.USA, TankClass.TANKDESTROYER, false));
@@ -412,7 +417,10 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("FCM36 Pak40", R.drawable.france_fcm_36pak40, Country.FRANCE, TankClass.TANKDESTROYER, true));
 	    tankList.add(new Tank("105 leFH18B2 ", R.drawable.france__105_lefh18b2, Country.FRANCE, TankClass.SPG, true));
 	    
+	    tankList.add(new Tank("Type 62", R.drawable.china_ch02_type62, Country.CHINA, TankClass.LIGHTTANK, true));
 	    tankList.add(new Tank("Typ 59", R.drawable.china_ch01_type59, Country.CHINA, TankClass.MEDIUMTANK, true));
+	    tankList.add(new Tank("WZ-111", R.drawable.china_ch03_wz_111, Country.CHINA, TankClass.HEAVYTANK, true));
+
 	}
 	private void chooseTank(){
 		@SuppressWarnings("unchecked")

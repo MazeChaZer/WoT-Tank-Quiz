@@ -48,7 +48,8 @@ import android.content.SharedPreferences;
 public class ActivityMain extends Activity {
 	int level = 1;
 	final String notification = 
-		"Version 1.2.1 (Unofficial Release)\n" + 
+		"Version 1.3\n" + 
+		"•Added new tanks of the WoT 7.3 update: KV-1, KV-2, T-150, ST-I, IS-4, IS-8, Type 62 and WZ-111" +
 		"•Fixed S-51 spelling mistake (\"SU-51\")\n" +
 		"•Fixed bug around Hummel/Grille\n" +
 		"Version 1.2\n" + 
