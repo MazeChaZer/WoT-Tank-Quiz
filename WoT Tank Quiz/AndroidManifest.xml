@@ -36,12 +36,12 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mazechazer.android.wottankquiz"
-    android:versionCode="1"
-    android:versionName="1.0" android:installLocation="auto">
+    android:versionCode="2"
+    android:versionName="1.1" android:installLocation="auto">
 
     <uses-sdk android:minSdkVersion="5" android:targetSdkVersion="15"/>
     <application
-        android:icon="@drawable/wottq_logo"
+        android:icon="@drawable/wottq_logo_new_sd"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity

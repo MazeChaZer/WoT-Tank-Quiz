@@ -1,0 +1,3 @@
+Version 1.1
+•Improvements in the App Icon
+•Fixed Bug that the highscore dialog displays the wrong score
