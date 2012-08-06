@@ -36,7 +36,6 @@ package mazechazer.android.wottankquiz;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,14 +43,21 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 
 public class ActivityMain extends Activity {
 	int level = 1;
 	final String notification = 
+		"Version 1.4\n" +
+		"•Fixed bug that the \"Last Notifications\"-dialog isn't shown\n" +
+		"\n" +
 		"Version 1.3\n" + 
-		"•Added new tanks of the WoT 7.3 update: KV-1, KV-2, T-150, ST-I, IS-4, IS-8, Type 62 and WZ-111" +
+		"•Added new tanks of the WoT 7.3 update: KV-1, KV-2, T-150, ST-I, IS-4, IS-8, Type 62 and WZ-111\n" +
 		"•Fixed S-51 spelling mistake (\"SU-51\")\n" +
 		"•Fixed bug around Hummel/Grille\n" +
+		"\n" +
 		"Version 1.2\n" + 
 		"•Removed countdown bug when the pause dialog was cancelled with the back button\n" + 
 		"•Removed the bug that the pause dialog appears over the highscore dialog when activity is paused\n" + 
@@ -68,20 +74,24 @@ public class ActivityMain extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         SharedPreferences prefs = getPreferences(MODE_PRIVATE);
-        if (! prefs.getString("notificationShowedVersion", "").equals(Build.VERSION.RELEASE)){
-        	SharedPreferences.Editor editor = prefs.edit();
-        	editor.putString("notificationShowedVersion", Build.VERSION.RELEASE);
-        	editor.commit();
-        	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        	builder.setTitle("Last Changes");
-        	builder.setMessage(notification);
-        	builder.setNeutralButton("okay", new OnClickListener(){
-				public void onClick(DialogInterface dialog, int which) {
-					dialog.cancel();
-				}
-        		});
-        	builder.create().show();
-        }
+        PackageManager manager = this.getPackageManager();
+        try {
+			PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
+	        if (! prefs.getString("notificationShowedVersion", "").equals(info.versionName)){
+	        	SharedPreferences.Editor editor = prefs.edit();
+	        	editor.putString("notificationShowedVersion", info.versionName);
+	        	editor.commit();
+	        	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	        	builder.setTitle("Last Changes");
+	        	builder.setMessage(notification);
+	        	builder.setNeutralButton("okay", new OnClickListener(){
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.cancel();
+					}
+	        		});
+	        	builder.create().show();
+	        }
+        } catch (NameNotFoundException e) {}
     }
     public void Play(View view) {
     	Intent i = new Intent();

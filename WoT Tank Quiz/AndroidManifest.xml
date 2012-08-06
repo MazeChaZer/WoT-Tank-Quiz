@@ -36,8 +36,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mazechazer.android.wottankquiz"
-    android:versionCode="5"
-    android:versionName="1.3" android:installLocation="auto">
+    android:versionCode="6"
+    android:versionName="1.4" android:installLocation="auto">
 
     <uses-sdk android:minSdkVersion="5" android:targetSdkVersion="15"/>
     <application
