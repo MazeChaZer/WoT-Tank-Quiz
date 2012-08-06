@@ -48,15 +48,18 @@ import android.content.SharedPreferences;
 public class ActivityMain extends Activity {
 	int level = 1;
 	final String notification = 
+		"Version 1.2.1 (Unofficial Release)\n" + 
+		"•Fixed S-51 spelling mistake (\"SU-51\")\n" +
+		"•Fixed bug around Hummel/Grille\n" +
 		"Version 1.2\n" + 
-		"Removed countdown bug when the pause dialog was cancelled with the back button\n" + 
-		"Removed the bug that the pause dialog appears over the highscore dialog when activity is paused\n" + 
-		"Added the \"Last Changes\"-notification\n" + 
-		"Fixed the Bug that the highscore dialog displays the wrong score finally\n" + 
+		"•Removed countdown bug when the pause dialog was cancelled with the back button\n" + 
+		"•Removed the bug that the pause dialog appears over the highscore dialog when activity is paused\n" + 
+		"•Added the \"Last Changes\"-notification\n" + 
+		"•Fixed the Bug that the highscore dialog displays the wrong score finally\n" + 
 		"\n" + 
 		"Version 1.1\n" + 
-		"Improvements in the App Icon\n" + 
-		"Fixed Bug that the highscore dialog displays the wrong score";
+		"•Improvements in the App Icon\n" + 
+		"•Fixed Bug that the highscore dialog displays the wrong score";
 		
     /** Called when the activity is first created. */
     @Override

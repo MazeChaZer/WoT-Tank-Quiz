@@ -281,7 +281,8 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("Sturmpanzer I Bison", R.drawable.germany_bison_i, Country.GERMANY, TankClass.SPG, false));
 	    tankList.add(new Tank("Sturmpanzer II", R.drawable.germany_sturmpanzer_ii, Country.GERMANY, TankClass.SPG, false));
 	    tankList.add(new Tank("Wespe", R.drawable.germany_wespe, Country.GERMANY, TankClass.SPG, false));
-	    tankList.add(new Tank("Grille", R.drawable.germany_hummel, Country.GERMANY, TankClass.SPG, false));
+	    tankList.add(new Tank("Grille", R.drawable.germany_grille, Country.GERMANY, TankClass.SPG, false));
+	    tankList.add(new Tank("Hummel", R.drawable.germany_hummel, Country.GERMANY, TankClass.SPG, false));
 	    tankList.add(new Tank("GW Panther", R.drawable.germany_g_panther, Country.GERMANY, TankClass.SPG, false));
 	    tankList.add(new Tank("GW Tiger", R.drawable.germany_g_tiger, Country.GERMANY, TankClass.SPG, false));
 	    tankList.add(new Tank("GW Typ E", R.drawable.germany_g_e, Country.GERMANY, TankClass.SPG, false));
@@ -332,7 +333,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("SU-26", R.drawable.ussr_su_26, Country.USSR, TankClass.SPG, false));
 	    tankList.add(new Tank("SU-5", R.drawable.ussr_su_5, Country.USSR, TankClass.SPG, false));
 	    tankList.add(new Tank("SU-8", R.drawable.ussr_su_8, Country.USSR, TankClass.SPG, false));
-	    tankList.add(new Tank("SU-51", R.drawable.ussr_s_51, Country.USSR, TankClass.SPG, false));
+	    tankList.add(new Tank("S-51", R.drawable.ussr_s_51, Country.USSR, TankClass.SPG, false));
 	    tankList.add(new Tank("SU-14", R.drawable.ussr_su_14, Country.USSR, TankClass.SPG, false));
 	    tankList.add(new Tank("Objekt 212", R.drawable.ussr_object_212, Country.USSR, TankClass.SPG, false));
 	    tankList.add(new Tank("Objekt 261", R.drawable.ussr_object_261, Country.USSR, TankClass.SPG, false));

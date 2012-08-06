@@ -1,3 +1,7 @@
+Version 1.2.1 (Unofficial Release) 
+•Fixed S-51 spelling mistake ("SU-51")
+•Fixed bug around Hummel/Grille
+
 Version 1.2
 •Removed countdown bug when the pause dialog was cancelled with the back button
 •Removed the bug that the pause dialog appears over the highscore dialog when activity is paused
