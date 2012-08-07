@@ -276,6 +276,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("Hetzer", R.drawable.germany_hetzer, Country.GERMANY, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("StuG III", R.drawable.germany_stugiii, Country.GERMANY, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("JagdPz IV", R.drawable.germany_jagdpziv, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Dicker Max", R.drawable.germany_dickermax, Country.GERMANY, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("Jagdpanther", R.drawable.germany_jagdpanther, Country.GERMANY, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("Ferdinand", R.drawable.germany_ferdinand, Country.GERMANY, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("JagdPanther II", R.drawable.germany_jagdpantherii, Country.GERMANY, TankClass.TANKDESTROYER, false));
@@ -370,6 +371,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("M4A3E2", R.drawable.usa_sherman_jumbo, Country.USA, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("T20", R.drawable.usa_t20, Country.USA, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("M26 Pershing", R.drawable.usa_pershing, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("T26E4 SuperPershing", R.drawable.usa_t26_e4_superpershing, Country.USA, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("M46 Patton", R.drawable.usa_m46_patton, Country.USA, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("M48A1", R.drawable.usa_m48a1, Country.USA, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("T14", R.drawable.usa_t14, Country.USA, TankClass.HEAVYTANK, true));
