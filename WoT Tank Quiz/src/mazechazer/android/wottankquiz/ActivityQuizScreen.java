@@ -260,6 +260,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("VK 3002 (DB)", R.drawable.germany_vk3002db, Country.GERMANY, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("Panther II", R.drawable.germany_panther_ii, Country.GERMANY, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("E-50", R.drawable.germany_e_50, Country.GERMANY, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("E-50 Ausf.M", R.drawable.germany_e50_ausf_m, Country.GERMANY, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("PzKpfw B2 740 (f)", R.drawable.germany_b_1bis_captured, Country.GERMANY, TankClass.HEAVYTANK, true));
 	    tankList.add(new Tank("PzKpfw VI Tiger", R.drawable.germany_pzvi, Country.GERMANY, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("PzKpfw VI Tiger (P)", R.drawable.germany_pzvi_tiger_p, Country.GERMANY, TankClass.HEAVYTANK, false));
@@ -277,7 +278,10 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("JagdPz IV", R.drawable.germany_jagdpziv, Country.GERMANY, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("Jagdpanther", R.drawable.germany_jagdpanther, Country.GERMANY, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("Ferdinand", R.drawable.germany_ferdinand, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("JagdPanther II", R.drawable.germany_jagdpantherii, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Jagdtiger 8,8 cm PaK 43", R.drawable.germany_jagdtiger_sdkfz_185, Country.GERMANY, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("Jagdtiger", R.drawable.germany_jagdtiger, Country.GERMANY, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("JagdPz E-100", R.drawable.germany_jagdpz_e100, Country.GERMANY, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("Sturmpanzer I Bison", R.drawable.germany_bison_i, Country.GERMANY, TankClass.SPG, false));
 	    tankList.add(new Tank("Sturmpanzer II", R.drawable.germany_sturmpanzer_ii, Country.GERMANY, TankClass.SPG, false));
 	    tankList.add(new Tank("Wespe", R.drawable.germany_wespe, Country.GERMANY, TankClass.SPG, false));
@@ -309,6 +313,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("KV-13", R.drawable.ussr_kv_13, Country.USSR, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("T-44", R.drawable.ussr_t_44, Country.USSR, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("T-54", R.drawable.ussr_t_54, Country.USSR, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("T-62A", R.drawable.ussr_t62a, Country.USSR, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("KV", R.drawable.ussr_kv, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("KV-1", R.drawable.ussr_kv1, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("KV-220 Beta-Test", R.drawable.ussr_kv_220, Country.USSR, TankClass.HEAVYTANK, true));
@@ -320,6 +325,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("KV-3", R.drawable.ussr_kv_3, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("IS", R.drawable.ussr_is, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("IS-3", R.drawable.ussr_is_3, Country.USSR, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("IS-6", R.drawable.ussr_object252, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("KV-4", R.drawable.ussr_kv4, Country.USSR, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("KV-5", R.drawable.ussr_kv_5, Country.USSR, TankClass.HEAVYTANK, true));
 	    tankList.add(new Tank("ST-I", R.drawable.ussr_st_i, Country.USSR, TankClass.HEAVYTANK, false));
@@ -335,6 +341,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("SU-152", R.drawable.ussr_su_152, Country.USSR, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("ISU-152", R.drawable.ussr_isu_152, Country.USSR, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("Objekt 704", R.drawable.ussr_object_704, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Object 268", R.drawable.ussr_object268, Country.USSR, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("SU-18", R.drawable.ussr_su_18, Country.USSR, TankClass.SPG, false));
 	    tankList.add(new Tank("SU-26", R.drawable.ussr_su_26, Country.USSR, TankClass.SPG, false));
 	    tankList.add(new Tank("SU-5", R.drawable.ussr_su_5, Country.USSR, TankClass.SPG, false));
@@ -364,6 +371,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("T20", R.drawable.usa_t20, Country.USA, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("M26 Pershing", R.drawable.usa_pershing, Country.USA, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("M46 Patton", R.drawable.usa_m46_patton, Country.USA, TankClass.MEDIUMTANK, false));
+	    tankList.add(new Tank("M48A1", R.drawable.usa_m48a1, Country.USA, TankClass.MEDIUMTANK, false));
 	    tankList.add(new Tank("T14", R.drawable.usa_t14, Country.USA, TankClass.HEAVYTANK, true));
 	    tankList.add(new Tank("T1 heavy", R.drawable.usa_t1_hvy, Country.USA, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("M6", R.drawable.usa_m6, Country.USA, TankClass.HEAVYTANK, false));
@@ -388,6 +396,8 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("T28-Prototyp ", R.drawable.usa_t28_prototype, Country.USA, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("T30", R.drawable.usa_t30, Country.USA, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("T95", R.drawable.usa_t95, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T110E4", R.drawable.usa_t110e4, Country.USA, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("T110E3", R.drawable.usa_t110e3, Country.USA, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("T57", R.drawable.usa_t57, Country.USA, TankClass.SPG, false));
 	    tankList.add(new Tank("M37", R.drawable.usa_m37, Country.USA, TankClass.SPG, false));
 	    tankList.add(new Tank("M7 Priest", R.drawable.usa_m7_priest, Country.USA, TankClass.SPG, false));
@@ -401,6 +411,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("D1", R.drawable.france_d1, Country.FRANCE, TankClass.LIGHTTANK, false));
 	    tankList.add(new Tank("AMX 38", R.drawable.france_amx38, Country.FRANCE, TankClass.LIGHTTANK, false));
 	    tankList.add(new Tank("AMX 40" , R.drawable.france_amx40, Country.FRANCE, TankClass.LIGHTTANK, false));
+	    tankList.add(new Tank("ELC AMX" , R.drawable.france_elc_amx, Country.FRANCE, TankClass.LIGHTTANK, false));
 	    tankList.add(new Tank("AMX 12t", R.drawable.france_amx_12t, Country.FRANCE, TankClass.LIGHTTANK, false));
 	    tankList.add(new Tank("AMX 13 75", R.drawable.france_amx_13_75, Country.FRANCE, TankClass.LIGHTTANK, false));
 	    tankList.add(new Tank("AMX 13 90", R.drawable.france_amx_13_90, Country.FRANCE, TankClass.LIGHTTANK, false));
@@ -423,8 +434,15 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("AMX AC Mle.1946", R.drawable.france_amx_ac_mle1946, Country.FRANCE, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("AMX AC Mle. 1948", R.drawable.france_amx_ac_mle1948, Country.FRANCE, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("AMX 50 Foch", R.drawable.france_amx50_foch, Country.FRANCE, TankClass.TANKDESTROYER, false));
-	    tankList.add(new Tank("AMX-50 Foch (155)", R.drawable.france_amx_50fosh_155, Country.FRANCE, TankClass.TANKDESTROYER, false)); 
-	    tankList.add(new Tank("105 leFH18B2 ", R.drawable.france__105_lefh18b2, Country.FRANCE, TankClass.SPG, true));
+	    tankList.add(new Tank("AMX-50 Foch (155)", R.drawable.france_amx_50fosh_155, Country.FRANCE, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("RenaultBS", R.drawable.france_renaultbs, Country.FRANCE, TankClass.SPG, false));
+	    tankList.add(new Tank("Lorraine39 L AM", R.drawable.france_lorraine39_l_am, Country.FRANCE, TankClass.SPG, false));
+	    tankList.add(new Tank("105 leFH18B2", R.drawable.france__105_lefh18b2, Country.FRANCE, TankClass.SPG, true));
+	    tankList.add(new Tank("AMX 105AM", R.drawable.france_amx_105am, Country.FRANCE, TankClass.SPG, false));
+	    tankList.add(new Tank("AMX-13 F3 AM", R.drawable.france_amx_13f3am, Country.FRANCE, TankClass.SPG, false));
+	    tankList.add(new Tank("Lorraine155 50", R.drawable.france_lorraine155_50, Country.FRANCE, TankClass.SPG, false));
+	    tankList.add(new Tank("Lorraine155 51", R.drawable.france_lorraine155_51, Country.FRANCE, TankClass.SPG, false));
+	    tankList.add(new Tank("Bat Chatillon 155", R.drawable.france_bat_chatillon155, Country.FRANCE, TankClass.SPG, false));
 	    
 	    tankList.add(new Tank("Type 62", R.drawable.china_ch02_type62, Country.CHINA, TankClass.LIGHTTANK, true));
 	    tankList.add(new Tank("Typ 59", R.drawable.china_ch01_type59, Country.CHINA, TankClass.MEDIUMTANK, true));
