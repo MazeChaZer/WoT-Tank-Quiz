@@ -414,7 +414,16 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("AMX 50 100", R.drawable.france_amx_50_100, Country.FRANCE, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("AMX 50 120", R.drawable.france_amx_50_120, Country.FRANCE, TankClass.HEAVYTANK, false));
 	    tankList.add(new Tank("AMX 50B", R.drawable.france_f10_amx_50b, Country.FRANCE, TankClass.HEAVYTANK, false));
+	    tankList.add(new Tank("RenaultFT AC", R.drawable.france_renaultft_ac, Country.FRANCE, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("FCM36 Pak40", R.drawable.france_fcm_36pak40, Country.FRANCE, TankClass.TANKDESTROYER, true));
+	    tankList.add(new Tank("Renault UE 57", R.drawable.france_renaultue57, Country.FRANCE, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Somua SAu-40", R.drawable.france_somua_sau_40, Country.FRANCE, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("S-35 CA", R.drawable.france_s_35ca, Country.FRANCE, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("ARL V39", R.drawable.france_arl_v39, Country.FRANCE, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("AMX AC Mle.1946", R.drawable.france_amx_ac_mle1946, Country.FRANCE, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("AMX AC Mle. 1948", R.drawable.france_amx_ac_mle1948, Country.FRANCE, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("AMX 50 Foch", R.drawable.france_amx50_foch, Country.FRANCE, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("AMX-50 Foch (155)", R.drawable.france_amx_50fosh_155, Country.FRANCE, TankClass.TANKDESTROYER, false)); 
 	    tankList.add(new Tank("105 leFH18B2 ", R.drawable.france__105_lefh18b2, Country.FRANCE, TankClass.SPG, true));
 	    
 	    tankList.add(new Tank("Type 62", R.drawable.china_ch02_type62, Country.CHINA, TankClass.LIGHTTANK, true));
