@@ -60,26 +60,17 @@
         android:layout_marginTop="20dp"
         android:layout_below="@id/imageViewWorldOfTanks"
         android:src="@drawable/cooltext667386305" />
-
+
     <Button
         android:id="@+id/buttonPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/imageViewTankQuiz"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/cooltext668702409"
-        android:onClick="Play" />
-
-    <Button
-        android:id="@+id/buttonLevel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/buttonPlay"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/buttoneasy"
-        android:onClick="selectLevel" />
+        android:layout_marginTop="20dp"
+        android:onClick="Play"
+        android:text="@string/Play"
+        android:textSize="50dp" style="@style/ButtonShadow" android:paddingBottom="15dp" android:paddingLeft="25dp" android:paddingRight="25dp" android:paddingTop="15dp"/>
 
     <Button
         android:id="@+id/buttonHighscore"
@@ -87,8 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:background="@drawable/cooltext668702753"
-        android:onClick="showHighscore" />
+        android:onClick="showHighscore" android:text="@string/Hightscore" style="@style/ButtonShadow"/>
 
     <Button
         android:id="@+id/buttonAbout"
@@ -96,8 +86,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@drawable/cooltext668703345"
-        android:onClick="@string/ButtonAboutClick" />
-    
+        android:onClick="@string/ButtonAboutClick" android:text="@string/About" style="@style/ButtonShadow"/>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" android:background="@drawable/buttonarmy" android:paddingLeft="20dp" android:entries="@array/LevelSelect"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Changelog" style="@style/ButtonShadow" android:onClick="showChangelog"/>
 
 </RelativeLayout>

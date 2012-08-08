@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonShadow">
+        <item name="android:shadowColor">#2b5103</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:background">@drawable/blankbuttonarmy</item>
+        <item name="android:textAllCaps">True</item>
+    </style>
+    
+</resources>

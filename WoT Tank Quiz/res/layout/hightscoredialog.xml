@@ -64,6 +64,6 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/StringOkay"/>
+        android:text="@string/Okay"/>
 
 </LinearLayout>
