@@ -34,34 +34,31 @@
     Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
     Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. -->
 <resources>
-    <string name="Hightscore">Highscore</string>
-    <string name="Okay">okay</string>
+    <string name="Play">Play</string><string name="Level">Level</string><string-array name="LevelSelect">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array><string name="Hightscore">Highscore</string>
+    <string name="About">About</string><string name="AboutText">This App has been programmed by Jonas Schürmann aka MazeChaZer. It is open source. For more Information, visit mazechazer.jimdo.com. I hope you have fun with this app :). It would be nice if you could give me a feedback either on my website or in the Google Play Store. Bug Reports are also welcome.\nLicence\nCopyright 2012 Jonas Schürmann ©\nThe WoT Tank Quiz is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The WoT Tank Quiz is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with the WoT Tank Quiz.  If not, see &lt;http://www.gnu.org/licenses/&gt;.\n The images of the tanks are excluded from this licence, wargaming.net is the copyright holder of these. To see the licence for the pictures, visit http://worldoftanks.eu/de/user_agreement. Pictures Used with permission. \&quot;World of Tanks\&quot; is a registered trademark of wargaming.net.\n For further information visit my web site</string><string name="Okay">okay</string>
     <string name="Easy">Easy</string>
     <string name="Medium">Medium</string>
     <string name="Hard">Hard</string>
-    <string name="Changelog" >Changelog</string>
-    <string name="ChangelogText">Version 1.4\n•Fixed bug that the \&quot;Changelog\&quot;-dialog isn\'t shown\n\nVersion 1.3\n•Added new tanks of the WoT 7.3 update: KV-1, KV-2, T-150, ST-I, IS-4, IS-8, Type 62 and WZ-111\n•Fixed S-51 spelling mistake (\&quot;SU-51\&quot;)\n•Fixed bug around Hummel/Grille\n\nVersion 1.2\n•Removed countdown bug when the pause dialog was cancelled with the back button\n•Removed the bug that the pause dialog appears over the highscore dialog when activity is paused\n•Added the \&quot;Changelog\&quot;-notification\n•Fixed the Bug that the highscore dialog displays the wrong score finally\n\nVersion 1.1\n•Improvements in the App Icon\n•Fixed Bug that the highscore dialog displays the wrong score</string>
-    <string name="About">About</string>
-    <string name="AboutText" >This App has been programmed by Jonas Schürmann aka MazeChaZer. It is open source. For more Information, visit mazechazer.jimdo.com. I hope you have fun with this app :). It would be nice if you could give me a feedback either on my website or in the Google Play Store. Bug Reports are also welcome.\nLicence\nCopyright 2012 Jonas Schürmann ©\nThe WoT Tank Quiz is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The WoT Tank Quiz is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with the WoT Tank Quiz.  If not, see &lt;http://www.gnu.org/licenses/&gt;.\n The images of the tanks are excluded from this licence, wargaming.net is the copyright holder of these. To see the licence for the pictures, visit http://worldoftanks.eu/de/user_agreement. Pictures Used with permission. \&quot;World of Tanks\&quot; is a registered trademark of wargaming.net.\n For further information visit my web site</string>
-    <string name="ModeDescriptionEasy"/>
-    <string name="ModeDescriptionMedium"/>
-    <string name="ModeDescriptionHard"/>
-    <string name="NewHighscore">New Highscore!</string>
-    <string name="Play">Play</string>
-    <string-array name="LevelSelect">
-        <item >Easy</item>
-        <item >Medium</item>
-        <item >Hard</item>
-    </string-array>
-    <string name="GamePaused">Game paused</string>
-    <string name="Continue">Continue</string>
-    <string name="BackToMenu">Back to menu</string>
-    <string name="Time">Time</string>
-    <string name="Points">Points</string>
+    
+    
+    
+    
+    <string name="Points">Points</string><string name="Time">Time</string><string name="GamePaused">Game paused</string><string name="Continue">Continue</string><string name="BackToMenu">Back to menu</string><string name="NewHighscore">New Highscore!</string>
+    
+    
+    
+    
+    
+    
     <string name="StatementLessThanZero">Haha you got less than zero points!</string>
     <string name="StatementZeroToTen">Not bad. Keep it up.</string>
     <string name="StatementElevenToTwenty">Well done.</string>
     <string name="StatementTwentyoneToThirty">Wow, good job.</string>
     <string name="StatementThirtyoneAndMore">WTF you\'re a freak :)</string>
-    <string name="PleaseEnterYourName">Please enter your name</string>
+    <string name="PleaseEnterYourName">Please enter your name</string><string name="Changelog">Changelog</string><string name="ChangelogText">Version 1.4\n•Fixed bug that the \&quot;Changelog\&quot;-dialog isn\'t shown\n\nVersion 1.3\n•Added new tanks of the WoT 7.3 update: KV-1, KV-2, T-150, ST-I, IS-4, IS-8, Type 62 and WZ-111\n•Fixed S-51 spelling mistake (\&quot;SU-51\&quot;)\n•Fixed bug around Hummel/Grille\n\nVersion 1.2\n•Removed countdown bug when the pause dialog was cancelled with the back button\n•Removed the bug that the pause dialog appears over the highscore dialog when activity is paused\n•Added the \&quot;Changelog\&quot;-notification\n•Fixed the Bug that the highscore dialog displays the wrong score finally\n\nVersion 1.1\n•Improvements in the App Icon\n•Fixed Bug that the highscore dialog displays the wrong score</string>
+    
 </resources>

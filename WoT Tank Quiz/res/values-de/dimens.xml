@@ -34,13 +34,6 @@
     Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
     Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. -->
 <resources>
-    <style name="ArmyButton">
-        <item name="android:shadowColor">#2b5103</item>
-        <item name="android:shadowDx">0</item>
-        <item name="android:shadowDy">0</item>
-        <item name="android:shadowRadius">3</item>
-        <item name="android:background">@drawable/buttonarmy</item>
-        <item name="android:textAllCaps">True</item>
-    </style>
+    <dimen name="PlayButtonTextSize">40dp</dimen>
     
 </resources>

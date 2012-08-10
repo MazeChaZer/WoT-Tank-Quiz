@@ -34,13 +34,13 @@
 
 package mazechazer.android.wottankquiz;
 
+import java.util.Locale;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -51,7 +51,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Typeface;
 
 public class ActivityMain extends Activity {
-//	int level = 1;
+	int level = 1;
 //	final String notification = 
 //		"Version 1.4\n" +
 //		"•Fixed bug that the \"Last Notifications\"-dialog isn't shown\n" +
@@ -70,19 +70,23 @@ public class ActivityMain extends Activity {
 //		"Version 1.1\n" + 
 //		"•Improvements in the App Icon\n" + 
 //		"•Fixed Bug that the highscore dialog displays the wrong score";
-		
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-//        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "capitalist.ttf");
-//        ((Button)findViewById(R.id.buttonPlay)).setTypeface(myTypeface);
-//        ((Button)findViewById(R.id.buttonAbout)).setTypeface(myTypeface);
-//        ((Button)findViewById(R.id.buttonHighscore)).setTypeface(myTypeface);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.LevelSelect, android.R.layout.simple_spinner_item);
-        spinner.setAdapter(adapter);
+        String deviceLanguage = Locale.getDefault().getLanguage();
+        String fontname;
+        if (deviceLanguage.equals("ru")) {
+        	fontname = "capitalist.ttf";
+        } else {
+        	fontname = "DESTROY_.ttf";
+        }
+        Typeface myTypeface = Typeface.createFromAsset(getAssets(), fontname);
+        ((Button)findViewById(R.id.buttonPlay)).setTypeface(myTypeface);
+        ((Button)findViewById(R.id.buttonAbout)).setTypeface(myTypeface);
+        ((Button)findViewById(R.id.buttonHighscore)).setTypeface(myTypeface);
+        ((Button)findViewById(R.id.buttonLevel)).setTypeface(myTypeface);
         
         SharedPreferences prefs = getPreferences(MODE_PRIVATE);
         PackageManager manager = this.getPackageManager();
@@ -106,7 +110,7 @@ public class ActivityMain extends Activity {
     }
     public void Play(View view) {
     	Intent i = new Intent();
-    	i.putExtra("level", ((Spinner) findViewById(R.id.spinner1)).getSelectedItemPosition() + 1);
+    	i.putExtra("level", level);
     	i.setClass(ActivityMain.this, ActivityQuizScreen.class);
     	startActivityForResult(i, 0);
     }
@@ -121,27 +125,18 @@ public class ActivityMain extends Activity {
     		});
     	builder.create().show();
     }
-//    public void selectLevel(View view){
-//    	final CharSequence[] items = {"Easy", "Medium", "Hard"};
-//    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//    	builder.setTitle("Level");
-//    	builder.setItems(items, new DialogInterface.OnClickListener() {
-//    	    public void onClick(DialogInterface dialog, int item) {
-//    	    	if (items[item].equals("Easy")){
-//    	    		level = 1;
-//    	    		((Button) findViewById(R.id.buttonLevel)).setBackgroundResource(R.drawable.buttoneasy);
-//    	    	} else if (items[item].equals("Medium")){
-//    	    		level = 2;
-//    	    		((Button) findViewById(R.id.buttonLevel)).setBackgroundResource(R.drawable.buttonmedium);
-//    	    	} else if (items[item].equals("Hard")){
-//    	    		level = 3;
-//    	    		((Button) findViewById(R.id.buttonLevel)).setBackgroundResource(R.drawable.buttonhard);
-//    	    	}
-//    	    }
-//    	});
-//    	AlertDialog alert = builder.create();
-//    	alert.show();
-//    }
+    public void selectLevel(View view){
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	builder.setTitle(R.string.Level);
+    	builder.setItems(R.array.LevelSelect, new DialogInterface.OnClickListener() {
+    	    public void onClick(DialogInterface dialog, int item) {
+    	    	level = item + 1;
+    	    	((Button) findViewById(R.id.buttonLevel)).setText(getResources().getTextArray(R.array.LevelSelect)[item]);
+    	    }
+    	});
+    	AlertDialog alert = builder.create();
+    	alert.show();
+    }
     public void buttonAboutClick(View view){
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
     	builder.setMessage(R.string.AboutText);
