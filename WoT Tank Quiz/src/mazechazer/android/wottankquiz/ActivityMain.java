@@ -46,6 +46,8 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.graphics.Typeface;
+import android.widget.TextView;
 
 public class ActivityMain extends Activity {
 	int level = 1;
@@ -73,6 +75,7 @@ public class ActivityMain extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        ((TextView) findViewById(R.id.textViewTankQuiz)).setTypeface(Typeface.createFromAsset(getAssets(), "DESTROY_.ttf"));
         SharedPreferences prefs = getPreferences(MODE_PRIVATE);
         PackageManager manager = this.getPackageManager();
         try {
