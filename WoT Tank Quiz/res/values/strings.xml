@@ -35,7 +35,7 @@
     Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string name="app_name">WoT Tank Quiz</string>
-    <string name="ImageDescriptionTankQuiz">Tank Quiz</string>
+    <string name="HeaderTankQuiz">Tank Quiz</string>
     <string name="ImageDescriptionTank">Tank Image</string>
     <string name="AnswerButtonClick">answerButtonClick</string>
     <string name="ButtonAboutClick">buttonAboutClick</string>

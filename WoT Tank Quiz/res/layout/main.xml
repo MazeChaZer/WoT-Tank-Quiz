@@ -33,53 +33,31 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
     Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. -->
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
     <ImageView
         android:id="@+id/imageViewWorldOfTanks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/ImageDescriptionWorldOfTanks"
-        android:src="@drawable/cooltext667386151" />
-
-    <ImageView
-        android:id="@+id/imageViewTankQuiz"
-        android:contentDescription="@string/ImageDescriptionTankQuiz"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/imageViewWorldOfTanks"
-        android:src="@drawable/cooltext667386305" />
+        android:scaleType="fitStart"
+        android:src="@drawable/wot_logo_color" />
 
-    <Button
-        android:id="@+id/buttonPlay"
+    <TextView
+        android:id="@+id/textViewTankQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewWorldOfTanks"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imageViewTankQuiz"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/cooltext668702409"
-        android:onClick="Play" />
-
-    <Button
-        android:id="@+id/buttonLevel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/buttonPlay"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/buttoneasy"
-        android:onClick="selectLevel" />
+        android:text="@string/HeaderTankQuiz"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/buttonHighscore"
@@ -98,6 +76,24 @@
         android:layout_alignParentRight="true"
         android:background="@drawable/cooltext668703345"
         android:onClick="@string/ButtonAboutClick" />
-    
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTankQuiz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/cooltext668702409"
+        android:onClick="Play" />
+
+    <Button
+        android:id="@+id/buttonLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonPlay"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttoneasy"
+        android:onClick="selectLevel" />
 
 </RelativeLayout>
