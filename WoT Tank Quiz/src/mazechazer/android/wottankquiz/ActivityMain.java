@@ -128,10 +128,11 @@ public class ActivityMain extends Activity {
     public void selectLevel(View view){
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
     	builder.setTitle(R.string.Level);
-    	builder.setItems(R.array.LevelSelect, new DialogInterface.OnClickListener() {
+    	final CharSequence items[] = {getResources().getText(R.string.Easy), getResources().getText(R.string.Medium), getResources().getText(R.string.Hard)};
+    	builder.setItems(items, new DialogInterface.OnClickListener() {
     	    public void onClick(DialogInterface dialog, int item) {
     	    	level = item + 1;
-    	    	((Button) findViewById(R.id.buttonLevel)).setText(getResources().getTextArray(R.array.LevelSelect)[item]);
+    	    	((Button) findViewById(R.id.buttonLevel)).setText(items[item]);
     	    }
     	});
     	AlertDialog alert = builder.create();

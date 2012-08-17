@@ -34,11 +34,7 @@
     Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
     Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. -->
 <resources>
-    <string name="Play">Play</string><string name="Level">Level</string><string-array name="LevelSelect">
-        <item>Easy</item>
-        <item>Medium</item>
-        <item>Hard</item>
-    </string-array><string name="Hightscore">Highscore</string>
+    <string name="Play">Play</string><string name="Level">Level</string><string name="Hightscore">Highscore</string>
     <string name="About">About</string><string name="AboutText">This App has been programmed by Jonas Schürmann aka MazeChaZer. It is open source. For more Information, visit mazechazer.jimdo.com. I hope you have fun with this app :). It would be nice if you could give me a feedback either on my website or in the Google Play Store. Bug Reports are also welcome.\nLicence\nCopyright 2012 Jonas Schürmann ©\nThe WoT Tank Quiz is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The WoT Tank Quiz is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with the WoT Tank Quiz.  If not, see &lt;http://www.gnu.org/licenses/&gt;.\n The images of the tanks are excluded from this licence, wargaming.net is the copyright holder of these. To see the licence for the pictures, visit http://worldoftanks.eu/de/user_agreement. Pictures Used with permission. \&quot;World of Tanks\&quot; is a registered trademark of wargaming.net.\n For further information visit my web site</string><string name="Okay">okay</string>
     <string name="Easy">Easy</string>
     <string name="Medium">Medium</string>
