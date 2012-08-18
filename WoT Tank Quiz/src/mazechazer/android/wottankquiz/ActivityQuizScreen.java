@@ -70,7 +70,7 @@ public class ActivityQuizScreen extends Activity {
 	boolean buttonsActivated = true;
 	CountDownTimer countdown;
 	boolean paused = false;
-	boolean pauseGame = true;
+	boolean allowPauseGame = true;
 	int lastHighscore;
 	String levelString;
 	boolean newHighscoreAlreadySaid = false;
@@ -119,7 +119,7 @@ public class ActivityQuizScreen extends Activity {
 
 	        public void onFinish() {
 	        	gameStopped = true;
-	        	pauseGame = false;
+	        	allowPauseGame = false;
 	            highscoreDialog = new Dialog(ActivityQuizScreen.this);
 	            highscoreDialog.setContentView(R.layout.hightscoredialog);
 	            highscoreDialog.setCancelable(false);
@@ -194,7 +194,7 @@ public class ActivityQuizScreen extends Activity {
 	}
 	@Override
 	public void onPause(){
-		super.onStop();
+		super.onPause();
 		pause();
 	}
 	@Override
@@ -203,7 +203,7 @@ public class ActivityQuizScreen extends Activity {
 		return true;
 	}
 	protected void pause(){
-		if (pauseGame && ! paused){
+		if (allowPauseGame && ! paused){
 			paused = true;
 			countdown.cancel();
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -451,21 +451,22 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("WZ-111", R.drawable.china_ch03_wz_111, Country.CHINA, TankClass.HEAVYTANK, true));
 
 	}
+	@SuppressWarnings("unchecked")
 	private void chooseTank(){
-		@SuppressWarnings("unchecked")
 		ArrayList<Tank> chooseList = (ArrayList<Tank>) tankList.clone();
-		@SuppressWarnings("unchecked")
 		ArrayList<Button> chooseAnswerButtons = (ArrayList<Button>) answerButtons.clone();
 		Tank choosenTank1 = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
 		Log.d("wot", choosenTank1.name);
-		while (choosenTank1.name == "Typ 59"){
-			choosenTank1 = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
-		}
-		tankImage.setImageResource((Integer) choosenTank1.resID);
+//		while (choosenTank1.name == "Typ 59"){
+//			choosenTank1 = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
+//		}
+		tankImage.setImageResource(choosenTank1.resID);
 		chooseList.remove(choosenTank1);
 		answer = (int) Math.round(Math.random() * chooseAnswerButtons.size() + 0.5);
 		chooseAnswerButtons.get(answer - 1).setText(choosenTank1.name);
 		chooseAnswerButtons.remove(answer - 1);
+		ArrayList<Tank> formerChooseList = (ArrayList<Tank>) chooseList.clone();
+		boolean chooseListBecameEmpty = false;
 		if (level == 1){
 			for (int i = chooseList.size() - 1; i >= 0; i -= 1){
 				if (chooseList.get(i).country == choosenTank1.country){
@@ -485,38 +486,41 @@ public class ActivityQuizScreen extends Activity {
 				}
 			}
 		}
-		
+		if (chooseList.size() == 0){
+			chooseListBecameEmpty = true;
+			chooseList = (ArrayList<Tank>) formerChooseList.clone();
+		}
 		for (int j = 1; j <= 3; j++){
-			if (chooseList.size() == 0){
-				break;
-			}
 			Tank choosenTank = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
 			chooseList.remove(choosenTank);
-			int alternateAnswer = (int) Math.round(Math.random() * chooseAnswerButtons.size() + 0.5);
-			chooseAnswerButtons.get(alternateAnswer - 1).setText(choosenTank.name);
-			chooseAnswerButtons.remove(alternateAnswer - 1);
-			if (level == 1){
-				for (int i = chooseList.size() - 1; i >= 0; i -= 1){
-					if (chooseList.get(i).country == choosenTank.country){
-						chooseList.remove(i);
+			int alternateAnswerButton = (int) Math.round(Math.random() * chooseAnswerButtons.size() + 0.5);
+			chooseAnswerButtons.get(alternateAnswerButton - 1).setText(choosenTank.name);
+			chooseAnswerButtons.remove(alternateAnswerButton - 1);
+			if (! chooseListBecameEmpty){
+				if (level == 1){
+					for (int i = chooseList.size() - 1; i >= 0; i -= 1){
+						if (chooseList.get(i).country == choosenTank.country){
+							chooseList.remove(i);
+						}
+					}
+				} else if (level == 2){
+					for (int i = chooseList.size() - 1; i >= 0; i -= 1){
+						if ( (! (chooseList.get(i).country == choosenTank.country) ) || chooseList.get(i).tankClass == choosenTank.tankClass){
+							chooseList.remove(i);
+						}
+					}
+				} else if (level == 3){
+					for (int i = chooseList.size() - 1; i >= 0; i -= 1){
+						if ((! (chooseList.get(i).tankClass == choosenTank.tankClass) ) || !(chooseList.get(i).country == choosenTank.country)){
+							chooseList.remove(i);
+						}
 					}
 				}
-			} else if (level == 2){
-				for (int i = chooseList.size() - 1; i >= 0; i -= 1){
-					if ( (! (chooseList.get(i).country == choosenTank.country) ) || chooseList.get(i).tankClass == choosenTank.tankClass){
-						chooseList.remove(i);
-					}
-				}
-			} else if (level == 3){
-				for (int i = chooseList.size() - 1; i >= 0; i -= 1){
-					if ((! (chooseList.get(i).tankClass == choosenTank.tankClass) ) || !(chooseList.get(i).country == choosenTank.country)){
-						chooseList.remove(i);
-					}
+				if (chooseList.size() == 0){
+					chooseListBecameEmpty = true;
+					chooseList = (ArrayList<Tank>) formerChooseList.clone();
 				}
 			}
-		}
-		for (int i = 0; i <= chooseAnswerButtons.size() - 1; i++){
-			chooseAnswerButtons.get(i).setText("");
 		}
 	}
 	public void answerButtonClick(View view){
