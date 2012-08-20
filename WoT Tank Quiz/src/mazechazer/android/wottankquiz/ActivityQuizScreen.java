@@ -75,6 +75,7 @@ public class ActivityQuizScreen extends Activity {
 	String levelString;
 	boolean newHighscoreAlreadySaid = false;
 	boolean gameStopped = false;
+	ArrayList<Tank> unusedTanks;
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -232,6 +233,7 @@ public class ActivityQuizScreen extends Activity {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	private void addTanks(){
 		tankList.add(new Tank("Leichttraktor", R.drawable.germany_ltraktor, Country.GERMANY, TankClass.LIGHTTANK, false));
 	    tankList.add(new Tank("PzKpfw 35 (t)", R.drawable.germany_pz35t, Country.GERMANY, TankClass.LIGHTTANK, false));
@@ -449,23 +451,27 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("Type 62", R.drawable.china_ch02_type62, Country.CHINA, TankClass.LIGHTTANK, true));
 	    tankList.add(new Tank("Typ 59", R.drawable.china_ch01_type59, Country.CHINA, TankClass.MEDIUMTANK, true));
 	    tankList.add(new Tank("WZ-111", R.drawable.china_ch03_wz_111, Country.CHINA, TankClass.HEAVYTANK, true));
+	    
+	    unusedTanks = (ArrayList<Tank>) tankList.clone();
 
 	}
 	@SuppressWarnings("unchecked")
 	private void chooseTank(){
-		ArrayList<Tank> chooseList = (ArrayList<Tank>) tankList.clone();
+		if (unusedTanks.size() == 0){
+			unusedTanks = (ArrayList<Tank>) tankList.clone();
+		}
+		ArrayList<Tank> chooseList = (ArrayList<Tank>) unusedTanks.clone();
+		ArrayList<Tank> alternateChooseList = (ArrayList<Tank>) unusedTanks.clone();
 		ArrayList<Button> chooseAnswerButtons = (ArrayList<Button>) answerButtons.clone();
 		Tank choosenTank1 = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
 		Log.d("wot", choosenTank1.name);
-//		while (choosenTank1.name == "Typ 59"){
-//			choosenTank1 = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
-//		}
 		tankImage.setImageResource(choosenTank1.resID);
 		chooseList.remove(choosenTank1);
+		alternateChooseList.remove(choosenTank1);
+		unusedTanks.remove(choosenTank1);
 		answer = (int) Math.round(Math.random() * chooseAnswerButtons.size() + 0.5);
 		chooseAnswerButtons.get(answer - 1).setText(choosenTank1.name);
 		chooseAnswerButtons.remove(answer - 1);
-		ArrayList<Tank> formerChooseList = (ArrayList<Tank>) chooseList.clone();
 		boolean chooseListBecameEmpty = false;
 		if (level == 1){
 			for (int i = chooseList.size() - 1; i >= 0; i -= 1){
@@ -488,15 +494,15 @@ public class ActivityQuizScreen extends Activity {
 		}
 		if (chooseList.size() == 0){
 			chooseListBecameEmpty = true;
-			chooseList = (ArrayList<Tank>) formerChooseList.clone();
 		}
 		for (int j = 1; j <= 3; j++){
-			Tank choosenTank = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
-			chooseList.remove(choosenTank);
-			int alternateAnswerButton = (int) Math.round(Math.random() * chooseAnswerButtons.size() + 0.5);
-			chooseAnswerButtons.get(alternateAnswerButton - 1).setText(choosenTank.name);
-			chooseAnswerButtons.remove(alternateAnswerButton - 1);
 			if (! chooseListBecameEmpty){
+				Tank choosenTank = chooseList.get((int) Math.round(Math.random() * chooseList.size() - 0.5));
+				chooseList.remove(choosenTank);
+				alternateChooseList.remove(choosenTank);
+				int alternateAnswerButton = (int) Math.round(Math.random() * chooseAnswerButtons.size() + 0.5);
+				chooseAnswerButtons.get(alternateAnswerButton - 1).setText(choosenTank.name);
+				chooseAnswerButtons.remove(alternateAnswerButton - 1);
 				if (level == 1){
 					for (int i = chooseList.size() - 1; i >= 0; i -= 1){
 						if (chooseList.get(i).country == choosenTank.country){
@@ -518,8 +524,13 @@ public class ActivityQuizScreen extends Activity {
 				}
 				if (chooseList.size() == 0){
 					chooseListBecameEmpty = true;
-					chooseList = (ArrayList<Tank>) formerChooseList.clone();
 				}
+			} else {
+				Tank choosenTank = alternateChooseList.get((int) Math.round(Math.random() * alternateChooseList.size() - 0.5));
+				alternateChooseList.remove(choosenTank);
+				int alternateAnswerButton = (int) Math.round(Math.random() * chooseAnswerButtons.size() + 0.5);
+				chooseAnswerButtons.get(alternateAnswerButton - 1).setText(choosenTank.name);
+				chooseAnswerButtons.remove(alternateAnswerButton - 1);
 			}
 		}
 	}
