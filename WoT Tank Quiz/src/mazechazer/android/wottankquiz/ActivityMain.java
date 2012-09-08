@@ -141,7 +141,7 @@ public class ActivityMain extends Activity {
     public void buttonAboutClick(View view){
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
     	builder.setMessage(R.string.AboutText);
-    	builder.setNeutralButton("okay", new DialogInterface.OnClickListener() {
+    	builder.setNeutralButton(R.string.Okay, new DialogInterface.OnClickListener() {
     	           public void onClick(DialogInterface dialog, int id) {
     	                dialog.cancel();
     	           }
