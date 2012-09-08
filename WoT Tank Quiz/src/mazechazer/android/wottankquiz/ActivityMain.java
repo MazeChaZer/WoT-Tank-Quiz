@@ -80,7 +80,7 @@ public class ActivityMain extends Activity {
         if (deviceLanguage.equals("ru")) {
         	fontname = "capitalist.ttf";
         } else {
-        	fontname = "DESTROY_.ttf";
+        	fontname = "Destroy_new.ttf";
         }
         Typeface myTypeface = Typeface.createFromAsset(getAssets(), fontname);
         ((Button)findViewById(R.id.buttonPlay)).setTypeface(myTypeface);

@@ -1,2 +1,4 @@
 Capitalist: http://de.fontriver.com/font/capitalist/
 Destroy: http://de.cooltext.com/Download-Font-Destroy
+
+Destroy_new.ttf is created from the original DESTROY_.ttf font, Tilde taken from Liberation Sans Normal.
