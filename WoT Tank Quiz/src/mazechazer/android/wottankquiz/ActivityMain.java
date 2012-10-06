@@ -34,8 +34,7 @@
 
 package mazechazer.android.wottankquiz;
 
-import java.util.Locale;
-
+//import java.util.Locale;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
