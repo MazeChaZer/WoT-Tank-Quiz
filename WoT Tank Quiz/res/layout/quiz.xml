@@ -57,7 +57,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/buttonstandard"
-        android:onClick="@string/AnswerButtonClick" />
+        android:onClick="@string/ButtonAnswerClick" />
     
    <Button
         android:id="@+id/button3"
@@ -65,7 +65,7 @@
         android:layout_height="60dp"
         android:layout_above="@id/button4"
         android:background="@drawable/buttonstandard"
-        android:onClick="@string/AnswerButtonClick" />
+        android:onClick="@string/ButtonAnswerClick" />
     
    <Button
         android:id="@+id/button2"
@@ -73,7 +73,7 @@
         android:layout_height="60dp"
         android:layout_above="@id/button3"
         android:background="@drawable/buttonstandard"
-        android:onClick="@string/AnswerButtonClick" />
+        android:onClick="@string/ButtonAnswerClick" />
    
     <Button
         android:id="@+id/button1"
@@ -81,7 +81,7 @@
         android:layout_height="60dp"
         android:layout_above="@id/button2"
         android:background="@drawable/buttonstandard"
-        android:onClick="@string/AnswerButtonClick" />
+        android:onClick="@string/ButtonAnswerClick" />
     
     <ImageView
         android:id="@+id/imageView1"

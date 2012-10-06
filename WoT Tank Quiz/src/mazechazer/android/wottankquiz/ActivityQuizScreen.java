@@ -92,8 +92,8 @@ public class ActivityQuizScreen extends Activity {
 		answerButtons.add((Button) findViewById(R.id.button2));
 		answerButtons.add((Button) findViewById(R.id.button3));
 		answerButtons.add((Button) findViewById(R.id.button4));
-	    textPoints.setText("Points: " + score);
-	    textTime.setText("Time: " + secondsLeft);
+	    textPoints.setText(getResources().getText(R.string.Points) + ": " + score);
+	    textTime.setText(getResources().getText(R.string.Time) + ": " + secondsLeft);
 	    switch (level){
 		case 1:
 			levelString = "Easy";
@@ -115,7 +115,7 @@ public class ActivityQuizScreen extends Activity {
 
 	        public void onTick(long millisUntilFinished) {
 	        	secondsLeft -= 1;
-	            textTime.setText("Time: " + Integer.toString(secondsLeft));
+	            textTime.setText(getResources().getText(R.string.Time) + ": " + Integer.toString(secondsLeft));
 	        }
 
 	        public void onFinish() {
@@ -124,21 +124,21 @@ public class ActivityQuizScreen extends Activity {
 	            highscoreDialog = new Dialog(ActivityQuizScreen.this);
 	            highscoreDialog.setContentView(R.layout.hightscoredialog);
 	            highscoreDialog.setCancelable(false);
-	            highscoreDialog.setTitle("Highscore");
+	            highscoreDialog.setTitle(R.string.Hightscore);
 	            highscoreDialog.show();
-	            String statement;
+	            CharSequence statement;
 	            if (score < 0){
-	            	statement = "Haha you got less than zero points!";
+	            	statement = getResources().getText(R.string.StatementLessThanZero);
 	            } else if (score <= 10){
-	            	statement = "Not bad. Keep it up.";
+	            	statement = getResources().getText(R.string.StatementZeroToTen);
 	            } else if (score <= 20){
-	            	statement = "Well done";
+	            	statement = getResources().getText(R.string.StatementElevenToTwenty);
 	            } else if (score <= 30){
-	            	statement = "Wow, good job.";
+	            	statement = getResources().getText(R.string.StatementTwentyoneToThirty);
 	            } else {
-	            	statement = "WTF you're a freak :)";
+	            	statement = getResources().getText(R.string.StatementThirtyoneAndMore);
 	            }
-	            ((TextView) highscoreDialog.findViewById(R.id.textViewHighscore)).setText(statement + "\nPoints: " + Integer.toString(score) + "\nPlease enter your name");
+	            ((TextView) highscoreDialog.findViewById(R.id.textViewHighscore)).setText(statement + "\n" + getResources().getText(R.string.Points) + ": " + Integer.toString(score) + "\n" + getResources().getText(R.string.PleaseEnterYourName));
 	            SharedPreferences prefs = getPreferences(MODE_PRIVATE);
 	            ((EditText) highscoreDialog.findViewById(R.id.editText1)).setText(prefs.getString("lastUsedName", ""));
 	            ((EditText) highscoreDialog.findViewById(R.id.editText1)).addTextChangedListener(new TextWatcher(){
@@ -208,14 +208,14 @@ public class ActivityQuizScreen extends Activity {
 			paused = true;
 			countdown.cancel();
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setTitle("Game paused");
-			builder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+			builder.setTitle(R.string.GamePaused);
+			builder.setPositiveButton(R.string.Continue, new DialogInterface.OnClickListener() {
 		           public void onClick(DialogInterface dialog, int id) {
 		        	   startCountdownAgain();
 		        	   paused = false;
 		           }
 		       });
-			builder.setNegativeButton("Back to menu", new DialogInterface.OnClickListener() {
+			builder.setNegativeButton(R.string.BackToMenu, new DialogInterface.OnClickListener() {
 				
 				public void onClick(DialogInterface dialog, int which) {
 					finish();
@@ -534,7 +534,7 @@ public class ActivityQuizScreen extends Activity {
 			}
 		}
 	}
-	public void answerButtonClick(View view){
+	public void buttonAnswerClick(View view){
 		if (buttonsActivated && ! gameStopped){
 			buttonsActivated = false;
 			Button clickedButton = (Button) view;
@@ -554,7 +554,7 @@ public class ActivityQuizScreen extends Activity {
 			}
 			if (givenAnswer == answer){
 				score += 1;
-				textPoints.setText("Points: " + Integer.toString(score));
+				textPoints.setText(getResources().getText(R.string.Points) + ": " + Integer.toString(score));
 				answerButtons.get(answer - 1).setBackgroundResource(R.drawable.buttongreen);
 				Handler handler = new Handler(); 
 			    handler.postDelayed(new Runnable() { 
@@ -568,7 +568,7 @@ public class ActivityQuizScreen extends Activity {
 			} else {
 				
 				score -= 1;
-				textPoints.setText("Points: " + Integer.toString(score));
+				textPoints.setText(getResources().getText(R.string.Points) + ": " + Integer.toString(score));
 				answerButtons.get(givenAnswer - 1).setBackgroundResource(R.drawable.buttonred);
 				answerButtons.get(answer - 1).setBackgroundResource(R.drawable.buttongreen);
 				Handler handler = new Handler(); 
@@ -583,7 +583,7 @@ public class ActivityQuizScreen extends Activity {
 			}
 			if (! newHighscoreAlreadySaid){
 				if (score > lastHighscore){
-					Toast toast = Toast.makeText(getApplicationContext(), "New Highscore!", Toast.LENGTH_SHORT);
+					Toast toast = Toast.makeText(getApplicationContext(), R.string.NewHighscore, Toast.LENGTH_SHORT);
 					toast.setGravity(Gravity.TOP, 0, 0);
 					toast.show();
 					newHighscoreAlreadySaid = true;

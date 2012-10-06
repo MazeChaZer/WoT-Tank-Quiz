@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2012 Jonas Schürmann ©
+
+    My Website: mazechazer.jimdo.com
+
+    This file is part of  the WoT Tank Quiz.
+
+    The WoT Tank Quiz is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    The WoT Tank Quiz is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>.
+
+    Diese Datei ist Teil des WoT Tank Quiz.
+
+    Das WoT Tank Quiz ist Freie Software: Sie können es unter den Bedingungen
+    der GNU General Public License, wie von der Free Software Foundation,
+    Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren
+    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+    Das WoT Tank Quiz wird in der Hoffnung, dass es nützlich sein wird, aber
+    OHNE JEDE GEWÄHELEISTUNG, bereitgestellt; sogar ohne die implizite
+    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+    Siehe die GNU General Public License für weitere Details.
+
+    Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
+    Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. -->
+<resources>
+    <string name="Play">Spielen</string><string name="Level">Schwierigkeitsgrad</string><string name="Hightscore">Bestenliste</string><string name="About">Über</string><string name="AboutText" >Diese App wurde von Jonas Schürmann aka MazeChaZer programmiert. Die App ist Open Source. Besuche mazechazer.jimdo.com für weitere Informationen. Ich hoffe dir gefällt die App :). Es wäre nett wenn du mir ein Feedback geben könntest, entweder auf meiner Website oder im Google Play Store. Bug-Reports sind auch gerne gesehen.\nCopyright 2012 Jonas Schürmann ©\nDas WoT Tank Quiz ist Freie Software: Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation, Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren
+veröffentlichten Version, weiterverbreiten und/oder modifizieren. Das WoT Tank Quiz wird in der Hoffnung, dass es nützlich sein wird, aber OHNE JEDE GEWÄHELEISTUNG, bereitgestellt; sogar ohne die implizite Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Siehe die GNU General Public License für weitere Details. Sie sollten eine Kopie der GNU General Public License zusammen mit diesem Programm erhalten haben. Wenn nicht, siehe &lt;http://www.gnu.org/licenses/&gt;.\nDie Abbildungen der Panzer sind von dieser Lizenz ausgenommen, das Copyright für diese Bilder liegt bei wargaming.net. Die Lizenz ist unter folgender URL verfügbar: http://worldoftanks.eu/de/user_agreement. Die Abbildungen werden mit Erlaubnis genutzt. \&quot;World of Tanks\&quot; ist ein eingetragenes Markenzeichen von wargaming.net. Besuche meine Website für weitere Informationen.</string>
+    <string name="Okay">okay</string>
+    <string name="Easy">Einfach</string><string name="Medium">Mittel</string>
+    <string name="Hard">Schwer</string><string name="Points">Punkte</string><string name="Time">Zeit</string><string name="GamePaused">Pause</string>
+    <string name="Continue">Weiter</string>
+    
+    
+    
+    
+    <string name="BackToMenu">Zurück zum Menü</string><string name="NewHighscore">Neuer Bestwert!</string>
+    
+    
+    
+    <string name="StatementLessThanZero">Haha du hast weniger als null Punkte!</string><string name="StatementZeroToTen">Nicht schlecht. Weiter so.</string><string name="StatementElevenToTwenty">Gut gemacht.</string><string name="StatementTwentyoneToThirty">Wow, sehr gut.</string><string name="StatementThirtyoneAndMore">WTF du bist echt ein Freak :)</string><string name="PleaseEnterYourName">Bitte gib deinen Namen ein</string><string name="Changelog">Letzte Änderungen</string><string name="ChangelogText">Version 1.4\n•Fehler behoben, dass der \&quot;Letzte Änderungen\&quot;-Dialog nicht angezeigt wird\n\nVersion 1.3\n•Die neuen Panzer aus dem WoT 7.3 Update wurden hinzugefügt: KV-1, KV-2, T-150, ST-I, IS-4, IS-8, Type 62 and WZ-111\n\nVersion 1.2.1\n•Rechtschreibefehler bei der S-51 (\&quot;SU-51\&quot;) behoben\n•Hummel-/Grille-Bug behoben\n\nVersion 1.2\n•Fehler beim Countdown behoben, der auftrat, wenn der Pause-Dialog mit der Zurück-Taste geschlossen wurde\n•Fehler behoben, dass der Pause-Dialog über dem Highscore-Dialog eingeblendet wird, wenn die Activity pausiert wird\n•Den \&quot;Letzte Änderungen\&quot;-Dialog hinzugefügt\n•Fehler letztendlich behoben, dass im Highscore-Dialog die falschen Punkte angezeigt werden\n\nVersion 1.1\n•Verbesserungen des App-Icons\n•Fehler behoben, dass im Highscore-Dialog die falschen Punkte angezeigt werden</string>
+    
+</resources>
