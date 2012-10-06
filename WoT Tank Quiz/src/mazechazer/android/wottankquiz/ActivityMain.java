@@ -52,37 +52,20 @@ import android.graphics.Typeface;
 
 public class ActivityMain extends Activity {
 	int level = 1;
-//	final String notification = 
-//		"Version 1.4\n" +
-//		"•Fixed bug that the \"Last Notifications\"-dialog isn't shown\n" +
-//		"\n" +
-//		"Version 1.3\n" + 
-//		"•Added new tanks of the WoT 7.3 update: KV-1, KV-2, T-150, ST-I, IS-4, IS-8, Type 62 and WZ-111\n" +
-//		"•Fixed S-51 spelling mistake (\"SU-51\")\n" +
-//		"•Fixed bug around Hummel/Grille\n" +
-//		"\n" +
-//		"Version 1.2\n" + 
-//		"•Removed countdown bug when the pause dialog was cancelled with the back button\n" + 
-//		"•Removed the bug that the pause dialog appears over the highscore dialog when activity is paused\n" + 
-//		"•Added the \"Last Changes\"-notification\n" + 
-//		"•Fixed the Bug that the highscore dialog displays the wrong score finally\n" + 
-//		"\n" + 
-//		"Version 1.1\n" + 
-//		"•Improvements in the App Icon\n" + 
-//		"•Fixed Bug that the highscore dialog displays the wrong score";
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        String deviceLanguage = Locale.getDefault().getLanguage();
-        String fontname;
-        if (deviceLanguage.equals("ru")) {
-        	fontname = "capitalist.ttf";
-        } else {
-        	fontname = "Destroy_new.ttf";
-        }
-        Typeface myTypeface = Typeface.createFromAsset(getAssets(), fontname);
+//        String deviceLanguage = Locale.getDefault().getLanguage();
+//        String fontname;
+//        if (deviceLanguage.equals("ru")) {
+//        	fontname = "capitalist.ttf";
+//        } else {
+//        	fontname = "Destroy_new.ttf";
+//        }
+//        Typeface myTypeface = Typeface.createFromAsset(getAssets(), fontname);
+        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "Destroy_new.ttf");
         ((Button)findViewById(R.id.buttonPlay)).setTypeface(myTypeface);
         ((Button)findViewById(R.id.buttonAbout)).setTypeface(myTypeface);
         ((Button)findViewById(R.id.buttonHighscore)).setTypeface(myTypeface);
