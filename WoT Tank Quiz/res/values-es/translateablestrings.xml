@@ -17,28 +17,13 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>.
-
-    Diese Datei ist Teil des WoT Tank Quiz.
-
-    Das WoT Tank Quiz ist Freie Software: Sie können es unter den Bedingungen
-    der GNU General Public License, wie von der Free Software Foundation,
-    Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren
-    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
-
-    Das WoT Tank Quiz wird in der Hoffnung, dass es nützlich sein wird, aber
-    OHNE JEDE GEWÄHELEISTUNG, bereitgestellt; sogar ohne die implizite
-    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
-    Siehe die GNU General Public License für weitere Details.
-
-    Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
-    Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. -->
+    along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>. -->
 <resources>
     <string name="Play">Jugar</string>
     <string name="Level">Nivel</string>
     <string name="Hightscore">Récords</string>
     <string name="About">Acerca de</string>
-    <string name="AboutText">Esta aplicación es de código abierto y ha sido programada por Jonas Schürmann, también conocido como MazeChaZer. Para más información visita:\n\nmazechazer.jimdo.com\n\nEspero que te resulte divertida. Estaría bien que me dejases algún comentario en mi sitio web o en la Play Store de Google. También agradecería cualquier informe sobre posibles bugs.\n\nLicencia:\nCopyright 2012 Jonas Schürmann ©\n\nEl WoT Tank Quiz es un producto de software libre: puedes redistribuirlo y/o modificarlo bajo los términos de la Licencia Pública General de GNU publicada por la Fundación de Software Libre, ya sea la versión 3 de la Licencia o cualquier versión posterior que tú elijas. Con la distribución de WoT Tank Quiz se pretende hacer pública una aplicación que pueda resultar de utilidad, pero SIN NINGUNA GARANTÍA; tampoco la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO DETERMINADO. Para más información, consulta la Licencia Pública General de GNU.\n\nDeberías haber recibido una copia de la Licencia Pública General de GNU junto con el WoT Tank Quiz. Si no es así, puedes entrar en:\n\n&lt;http://www.gnu.org/licenses/&gt;\n\nLa licencia no incluye las imágenes de los tanques, wargaming.net es el propietario de sus derechos de copia. Para consultar la licencia de las imágenes entra en:\n\nhttp://worldoftanks.eu/de/user_agreement\n\nImágenes utilizadas con permiso.\n\n\"World of Tanks\" es una marca registrada por wargaming.net.\n\nPara más información visita mi sitio web.\n\nTraducción de Cristina Vidal</string>
+    <string name="AboutText">Esta aplicación es de código abierto y ha sido programada por Jonas Schürmann, también conocido como MazeChaZer.\n\nEs software libre (código abierto).\nPara obtener más información visita mi sitio web:\n\nmazechazer.jimdo.com\n\nAllí también tienes la posibilidad de contactar conmigo o enviar un informe de bugs.\nEspero que te diviertas con esta aplicación :)\nEstaría guay que me dieses tu opinión en la Play Store de Google o en mi web.\n\nLicencia:\nCopyright 2012 Jonas Schürmann ©\n\nEl WoT Tank Quiz es un producto de software libre: puedes redistribuirlo y/o modificarlo bajo los términos de la Licencia Pública General de GNU publicada por la Fundación de Software Libre, ya sea la versión 3 de la Licencia o cualquier versión posterior que tú elijas. Con la distribución de WoT Tank Quiz se pretende hacer pública una aplicación que pueda resultar de utilidad, pero SIN NINGUNA GARANTÍA; tampoco la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO DETERMINADO. Para más información, consulta la Licencia Pública General de GNU.\n\nDeberías haber recibido una copia de la Licencia Pública General de GNU junto con el WoT Tank Quiz. Si no es así, puedes entrar en:\n\n&lt;http://www.gnu.org/licenses/&gt;\n\nLa licencia no incluye las imágenes de los tanques, wargaming.net es el propietario de sus derechos de copia.\n\nImágenes utilizadas con permiso.\n\n\&quot;World of Tanks\&quot; es una marca registrada por wargaming.net.\n\nVisita mi web para obtener más información sobre la licencia.\n\nTraducción de Cristina Vidal</string>
     <string name="Okay">OK</string>
     <string name="Easy">Fácil</string>
     <string name="Medium">Medio</string>
@@ -55,6 +40,6 @@
     <string name="StatementTwentyoneToThirty">Guau, buen trabajo.</string>
     <string name="StatementThirtyoneAndMore">¿Quéeeeee? Menudo friki estás hecho :)</string>
     <string name="PleaseEnterYourName">Introduce tu nombre</string>
-    <string name="Changelog">Resumen de cambios</string>
-    <string name="ChangelogText">Versión 1.4\n•Arreglado el bug que ocultaba el diálogo del \&quot;Resumen de cambios\&quot;\n\nVersión 1.3\n•Añadidos nuevos tanques de la actualización del WoT 7.3: KV-1, KV-2, T-150, ST-I, IS-4, IS-8, Type 62 y WZ-111\n•Corregida la errata del S-51(\&quot;SU-51\&quot;)\n•Arreglado el bug en Hummel/Grille\n\nVersión 1.2\n•Eliminado el bug de la cuenta atrás que aparecía cuando el diálogo de pausa se cancelaba con el botón de retroceder\n• Eliminado el bug por el que el diálogo de pausa aparecía encima del diálogo de récords cuando se pausaba la actividad\n•Añadida la notificación del \&quot;Resumen de cambios\&quot;\n•Arreglado el bug que mostraba una puntuación incorrecta en el diálogo de récords\n\nVersión 1.1\n•Mejoras en el icono de la aplicación\n•Arreglado el bug que mostraba la puntuación incorrecta en el diálogo de récords</string>
+    <string name="Changelog">Historial de cambios</string>
+    <string name="ChangelogText">Versión 1.5\n•Añadidas las versiones en alemán y español de la aplicación\n•Añadidos nuevos tanques de las actualizaciones del WoT:\n7.4: RenaultFT AC, Renault UE 57, Somua SAu&#8211;40, S&#8211;35 CA, ARL V39, AMX AC Mle.1946, AMX AC Mle.1948, AMX 50 Foch, RenaultBS, Lorraine39 L AM, AMX 105AM, AMX 13 F3 AM, Lorraine 155 50, Lorraine 155 51, Bat Chatillon 155, IS&#8211;6, Jagdtiger 8,8 cm PaK 43\n7.5: JagdPz E&#8211;100, Object 268, AMX&#8211;50 Foch (155), T110E3, T110E4, E&#8211;50 Ausf. M, T&#8211;62A, M48A1, ELC AMX, Dicker Max, Super Pershing\n8.0: SU&#8211;100М1, SU&#8211;101, SU&#8211;122&#8211;54, Object 263, Matilda Black Prince\n•Mejorada la elección de los tanques(ya no aparece el mismo tanque dos veces en la misma partida)\n•Mejoradas las respuestas alternativas (ya no aparecen campos en blanco)\n•Nueva cabecera en la página de inicio; nueva fuente para los botones\n•Añadido botón para mostrar el historial de cambios en el diálogo \&quot;Acerca de…\&quot;\n\nVersión 1.4\n•Arreglado el bug que ocultaba el diálogo del \&quot;Historial de cambios\&quot;\n\nVersión 1.3\n•Añadidos nuevos tanques de la actualización del WoT 7.3: KV&#8211;1, KV&#8211;2, T&#8211;150, ST&#8211;I, IS&#8211;4, IS&#8211;8, Type 62 y WZ&#8211;111\n•Corregida la errata del S&#8211;51(\&quot;SU&#8211;51\&quot;)\n•Arreglado el bug en Hummel/Grille\n\nVersión 1.2\n•Eliminado el bug de la cuenta atrás que aparecía cuando el diálogo de pausa se cancelaba con el botón de retroceder\n• Eliminado el bug por el que el diálogo de pausa aparecía encima del diálogo de récords cuando se pausaba la actividad\n•Añadida la notificación del \&quot;Historial de cambios\&quot;\n•Arreglado el bug que mostraba una puntuación incorrecta en el diálogo de récords\n\nVersión 1.1\n•Mejoras en el icono de la aplicación\n•Arreglado el bug que mostraba la puntuación incorrecta en el diálogo de récords</string>
 </resources>
