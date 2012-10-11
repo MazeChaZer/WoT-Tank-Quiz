@@ -39,7 +39,6 @@
         android:layout_below="@+id/imageViewWorldOfTanks"
         android:layout_centerHorizontal="true"
         android:text="@string/HeaderTankQuiz"
-        android:textAllCaps="true"
         android:textColor="#ffffff"
         android:textSize="30dp" />
     
@@ -52,7 +51,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:onClick="Play"
-        android:text="@string/Play"
+        android:text="@string/PlayButton"
         android:textSize="@dimen/PlayButtonTextSize" android:paddingLeft="25dp" android:paddingRight="25dp"/>
 
     <Button
@@ -61,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:onClick="showHighscore" android:text="@string/Hightscore" style="@style/ArmyButton"/>
+        android:onClick="showHighscore" android:text="@string/HighscoreButton" style="@style/ArmyButton"/>
 
     <Button
         android:id="@+id/buttonAbout"
@@ -69,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:onClick="@string/ButtonAboutClick" android:text="@string/About" style="@style/ArmyButton"/>
+        android:onClick="@string/ButtonAboutClick" android:text="@string/AboutButton" style="@style/ArmyButton"/>
 
     <Button
         android:id="@+id/buttonLevel"
@@ -81,6 +80,6 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/buttonarmydropdown"
         android:onClick="selectLevel"
-        android:text="@string/Easy" android:paddingTop="15dp" android:paddingBottom="13dp" android:paddingLeft="15dp"/>
+        android:text="@string/EasyButton" android:paddingTop="15dp" android:paddingBottom="13dp" android:paddingLeft="15dp"/>
 
 </RelativeLayout>

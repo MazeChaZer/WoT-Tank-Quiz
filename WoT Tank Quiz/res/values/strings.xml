@@ -20,7 +20,7 @@
     along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>. -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string name="app_name">WoT Tank Quiz</string>
-    <string name="HeaderTankQuiz">Tank Quiz</string>
+    <string name="HeaderTankQuiz">TANK QUIZ</string>
     <string name="AnswerButtonClick">answerButtonClick</string>    
     <string name="ButtonAnswerClick">buttonAnswerClick</string>
     <string name="ButtonAboutClick">buttonAboutClick</string>

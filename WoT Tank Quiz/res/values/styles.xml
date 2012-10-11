@@ -25,7 +25,6 @@
         <item name="android:shadowDy">0</item>
         <item name="android:shadowRadius">3</item>
         <item name="android:background">@drawable/buttonarmy</item>
-        <item name="android:textAllCaps">True</item>
     </style>
     
 </resources>
