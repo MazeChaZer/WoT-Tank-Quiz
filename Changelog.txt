@@ -1,5 +1,16 @@
+Version 1.5
+•Added German and Spanish translations of the app
+•Added new tanks of the WoT updates:
+  7.4: RenaultFT AC, Renault UE 57, Somua SAu-40, S-35 CA, ARL V39, AMX AC Mle.1946, AMX AC Mle.1948, AMX 50 Foch, RenaultBS, Lorraine39 L AM, AMX 105AM, AMX 13 F3 AM, Lorraine 155 50, Lorraine 155 51, Bat Chatillon 155, IS-6, Jagdtiger 8,8 cm PaK 43
+  7.5: JagdPz E-100, Object 268, AMX-50 Foch (155), T110E3, T110E4, E-50 Ausf. M, T-62A, M48A1, ELC AMX, Dicker Max, Super Pershing
+  8.0: SU-100М1, SU-101, SU-122-54, Object 263, Matilda Black Prince
+•Improved tank picking (no tank is picked twice anymore during one game)
+•Improved alternate answer picking (no more blank fields)
+•New header on the start page, new font for buttons
+•Added Button to show the Changelog in the "About"-Dialog
+
 Version 1.4
-•Fixed bug that the "Last Notifications"-dialog isn't shown
+•Fixed bug that the "Changelog"-dialog isn't shown
 
 Version 1.3
 •Added new tanks of the WoT 7.3 update: KV-1, KV-2, T-150, ST-I, IS-4, IS-8, Type 62 and WZ-111
@@ -11,7 +22,7 @@ Version 1.2.1 (Unofficial Release)
 Version 1.2
 •Removed countdown bug when the pause dialog was cancelled with the back button
 •Removed the bug that the pause dialog appears over the highscore dialog when activity is paused
-•Added the "Last Changes"-notification
+•Added the "Changelog"-notification
 •Fixed the Bug that the highscore dialog displays the wrong score finally
 
 Version 1.1

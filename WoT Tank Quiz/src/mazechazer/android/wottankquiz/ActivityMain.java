@@ -79,15 +79,7 @@ public class ActivityMain extends Activity {
 	        	SharedPreferences.Editor editor = prefs.edit();
 	        	editor.putString("notificationShowedVersion", info.versionName);
 	        	editor.commit();
-	        	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-	        	builder.setTitle(getResources().getText(R.string.Changelog));
-	        	builder.setMessage(getResources().getText(R.string.ChangelogText));
-	        	builder.setNeutralButton(getResources().getText(R.string.Okay), new OnClickListener(){
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.cancel();
-					}
-	        		});
-	        	builder.create().show();
+	        	showChangelog();
 	        }
         } catch (NameNotFoundException e) {}
     }
@@ -97,7 +89,7 @@ public class ActivityMain extends Activity {
     	i.setClass(ActivityMain.this, ActivityQuizScreen.class);
     	startActivityForResult(i, 0);
     }
-    public void showChangelog(View view){
+    public void showChangelog(){
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
     	builder.setTitle(R.string.Changelog);
     	builder.setMessage(R.string.ChangelogText);
@@ -124,11 +116,16 @@ public class ActivityMain extends Activity {
     public void buttonAboutClick(View view){
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
     	builder.setMessage(R.string.AboutText);
-    	builder.setNeutralButton(R.string.Okay, new DialogInterface.OnClickListener() {
-    	           public void onClick(DialogInterface dialog, int id) {
-    	                dialog.cancel();
-    	           }
-    	       });
+    	builder.setNegativeButton(R.string.Okay, new DialogInterface.OnClickListener() {
+           public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+           }
+       });
+    	builder.setNeutralButton(R.string.Changelog, new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				showChangelog();
+			}
+		});
     	AlertDialog alert = builder.create();
     	alert.show();
     }

@@ -342,9 +342,13 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("SU-85I", R.drawable.ussr_su_85i, Country.USSR, TankClass.TANKDESTROYER, true));
 	    tankList.add(new Tank("SU-100", R.drawable.ussr_su_100, Country.USSR, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("SU-152", R.drawable.ussr_su_152, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("SU-100M1", R.drawable.ussr_su100m1, Country.USSR, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("ISU-152", R.drawable.ussr_isu_152, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("SU-101", R.drawable.ussr_su_101, Country.USSR, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("Objekt 704", R.drawable.ussr_object_704, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("SU-122-54", R.drawable.ussr_su122_54, Country.USSR, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("Object 268", R.drawable.ussr_object268, Country.USSR, TankClass.TANKDESTROYER, false));
+	    tankList.add(new Tank("Object 263 ", R.drawable.ussr_object263, Country.USSR, TankClass.TANKDESTROYER, false));
 	    tankList.add(new Tank("SU-18", R.drawable.ussr_su_18, Country.USSR, TankClass.SPG, false));
 	    tankList.add(new Tank("SU-26", R.drawable.ussr_su_26, Country.USSR, TankClass.SPG, false));
 	    tankList.add(new Tank("SU-5", R.drawable.ussr_su_5, Country.USSR, TankClass.SPG, false));
@@ -451,6 +455,8 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("Type 62", R.drawable.china_ch02_type62, Country.CHINA, TankClass.LIGHTTANK, true));
 	    tankList.add(new Tank("Typ 59", R.drawable.china_ch01_type59, Country.CHINA, TankClass.MEDIUMTANK, true));
 	    tankList.add(new Tank("WZ-111", R.drawable.china_ch03_wz_111, Country.CHINA, TankClass.HEAVYTANK, true));
+	    
+	    tankList.add(new Tank("Matilda Black Prince", R.drawable.uk_gb68_matilda_black_prince, Country.UK, TankClass.MEDIUMTANK, true));
 	    
 	    unusedTanks = (ArrayList<Tank>) tankList.clone();
 

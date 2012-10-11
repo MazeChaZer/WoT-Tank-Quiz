@@ -35,5 +35,5 @@
 package mazechazer.android.wottankquiz;
 
 public enum Country {
-	GERMANY, USA, FRANCE, USSR, CHINA
+	GERMANY, USA, FRANCE, USSR, CHINA, UK
 }
