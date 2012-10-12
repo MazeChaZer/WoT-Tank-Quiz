@@ -24,7 +24,7 @@
     android:versionCode="7"
     android:versionName="1.5" android:installLocation="auto">
 
-    <uses-sdk android:minSdkVersion="5" android:targetSdkVersion="15"/>
+    <uses-sdk android:minSdkVersion="5" android:targetSdkVersion="16"/>
     <application
         android:icon="@drawable/wottq_logo_new_sd"
         android:label="@string/app_name"
