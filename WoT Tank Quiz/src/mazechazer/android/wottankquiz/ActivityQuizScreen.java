@@ -109,7 +109,7 @@ public class ActivityQuizScreen extends Activity {
 	            highscoreDialog = new Dialog(ActivityQuizScreen.this);
 	            highscoreDialog.setContentView(R.layout.hightscoredialog);
 	            highscoreDialog.setCancelable(false);
-	            highscoreDialog.setTitle(R.string.Hightscore);
+	            highscoreDialog.setTitle(R.string.Highscore);
 	            highscoreDialog.show();
 	            CharSequence statement;
 	            if (score < 0){

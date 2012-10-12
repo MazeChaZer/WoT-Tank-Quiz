@@ -21,7 +21,7 @@
 <resources>
     <string name="Play">Spielen</string>
     <string name="Level">Schwierigkeitsgrad</string>
-    <string name="Hightscore">Bestenliste</string>
+    <string name="Highscore">Bestenliste</string>
     <string name="About">Über</string>
     <string name="AboutText" >Diese App wurde von Jonas Schürmann aka MazeChaZer programmiert.\nDie App ist freie Software (Open Source).\nBesuche meine Website für weitere Informationen:\n\nmazechazer.jimdo.com\n\nDort hast du auch die Möglichkeit, mich zu kontaktieren oder mir einen Bug Report zuzusenden.\nIch hoffe dir gefällt die App :)\nEs wäre nett wenn du mir entweder im Google Play Store oder auf meiner Website ein Feedback geben könntest.\n\nLizenz\nCopyright 2012 Jonas Schürmann ©\nDas WoT Tank Quiz ist Freie Software: Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation, Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren
 veröffentlichten Version, weiterverbreiten und/oder modifizieren. Das WoT Tank Quiz wird in der Hoffnung, dass es nützlich sein wird, aber OHNE JEDE GEWÄHELEISTUNG, bereitgestellt; sogar ohne die implizite Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Siehe die GNU General Public License für weitere Details. Sie sollten eine Kopie der GNU General Public License zusammen mit diesem Programm erhalten haben. Wenn nicht, siehe &lt;http://www.gnu.org/licenses/&gt;.\nDie Abbildungen der Panzer sind von dieser Lizenz ausgenommen, das Copyright für diese Bilder liegt bei wargaming.net. Die Abbildungen werden mit Erlaubnis genutzt. \&quot;World of Tanks\&quot; ist ein eingetragenes Markenzeichen von wargaming.net. Besuche meine Website für weitere Informationen zur Lizensierung.</string>
