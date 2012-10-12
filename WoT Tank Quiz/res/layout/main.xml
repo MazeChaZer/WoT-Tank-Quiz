@@ -41,7 +41,7 @@
         android:text="@string/HeaderTankQuiz"
         android:textColor="#ffffff"
         android:textSize="30dp" />
-    
+    
     <Button
         android:id="@+id/buttonPlay"
         style="@style/ArmyButton"
@@ -51,25 +51,28 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:onClick="Play"
-        android:text="@string/PlayButton"
-        android:textSize="@dimen/PlayButtonTextSize" android:paddingLeft="25dp" android:paddingRight="25dp"/>
-
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:textSize="@dimen/PlayButtonTextSize" />
+
     <Button
         android:id="@+id/buttonHighscore"
+        style="@style/ArmyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:onClick="showHighscore" android:text="@string/HighscoreButton" style="@style/ArmyButton"/>
-
+        android:onClick="showHighscore" />
+
     <Button
         android:id="@+id/buttonAbout"
+        style="@style/ArmyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:onClick="@string/ButtonAboutClick" android:text="@string/AboutButton" style="@style/ArmyButton"/>
-
+        android:onClick="@string/ButtonAboutClick" />
+
     <Button
         android:id="@+id/buttonLevel"
         style="@style/ArmyButton"
@@ -80,6 +83,8 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/buttonarmydropdown"
         android:onClick="selectLevel"
-        android:text="@string/EasyButton" android:paddingTop="15dp" android:paddingBottom="13dp" android:paddingLeft="15dp"/>
+        android:paddingBottom="13dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp" />
 
 </RelativeLayout>

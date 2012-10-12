@@ -19,20 +19,15 @@
     You should have received a copy of the GNU General Public License
     along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>. -->
 <resources>
-    <string name="PlayButton">JUGAR</string>
+    <string name="Play">Jugar</string>
     <string name="Level">Nivel</string>
     <string name="Hightscore">Récords</string>
-    <string name="HightscoreButton">RÉCORDS</string>
     <string name="About">Acerca de</string>
-    <string name="AboutButton">ACERCA DE</string>
     <string name="AboutText">Esta aplicación es de código abierto y ha sido programada por Jonas Schürmann, también conocido como MazeChaZer.\n\nEs software libre (código abierto).\nPara obtener más información visita mi sitio web:\n\nmazechazer.jimdo.com\n\nAllí también tienes la posibilidad de contactar conmigo o enviar un informe de bugs.\nEspero que te diviertas con esta aplicación :)\nEstaría guay que me dieses tu opinión en la Play Store de Google o en mi web.\n\nLicencia:\nCopyright 2012 Jonas Schürmann ©\n\nEl WoT Tank Quiz es un producto de software libre: puedes redistribuirlo y/o modificarlo bajo los términos de la Licencia Pública General de GNU publicada por la Fundación de Software Libre, ya sea la versión 3 de la Licencia o cualquier versión posterior que tú elijas. Con la distribución de WoT Tank Quiz se pretende hacer pública una aplicación que pueda resultar de utilidad, pero SIN NINGUNA GARANTÍA; tampoco la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO DETERMINADO. Para más información, consulta la Licencia Pública General de GNU.\n\nDeberías haber recibido una copia de la Licencia Pública General de GNU junto con el WoT Tank Quiz. Si no es así, puedes entrar en:\n\n&lt;http://www.gnu.org/licenses/&gt;\n\nLa licencia no incluye las imágenes de los tanques, wargaming.net es el propietario de sus derechos de copia.\n\nImágenes utilizadas con permiso.\n\n\&quot;World of Tanks\&quot; es una marca registrada por wargaming.net.\n\nVisita mi web para obtener más información sobre la licencia.\n\nTraducción de Cristina Vidal</string>
     <string name="Okay">OK</string>
     <string name="Easy">Fácil</string>
-    <string name="EasyButton">FÁCIL</string>
     <string name="Medium">Medio</string>
-    <string name="MediumButton">MEDIO</string>
     <string name="Hard">Difícil</string>
-    <string name="HardButton">DIFÍCIL</string>
     <string name="Points">Puntos</string>
     <string name="Time">Tiempo</string>
     <string name="GamePaused">Juego pausado</string>

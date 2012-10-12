@@ -42,6 +42,14 @@ public class ActivityMain extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Button buttonPlay = (Button) findViewById(R.id.buttonPlay);
+        Button buttonAbout = (Button) findViewById(R.id.buttonAbout);
+        Button buttonHighscore = (Button) findViewById(R.id.buttonHighscore);
+        Button buttonLevel = (Button) findViewById(R.id.buttonLevel);
+        buttonPlay.setText(((String) getResources().getText(R.string.Play)).toUpperCase());
+        buttonAbout.setText(((String) getResources().getText(R.string.About)).toUpperCase());
+        buttonHighscore.setText(((String) getResources().getText(R.string.Highscore)).toUpperCase());
+        buttonLevel.setText(((String) getResources().getText(R.string.Easy)).toUpperCase());
 //        String deviceLanguage = Locale.getDefault().getLanguage();
 //        String fontname;
 //        if (deviceLanguage.equals("ru")) {
@@ -51,10 +59,10 @@ public class ActivityMain extends Activity {
 //        }
 //        Typeface myTypeface = Typeface.createFromAsset(getAssets(), fontname);
         Typeface myTypeface = Typeface.createFromAsset(getAssets(), "Destroy_new.ttf");
-        ((Button)findViewById(R.id.buttonPlay)).setTypeface(myTypeface);
-        ((Button)findViewById(R.id.buttonAbout)).setTypeface(myTypeface);
-        ((Button)findViewById(R.id.buttonHighscore)).setTypeface(myTypeface);
-        ((Button)findViewById(R.id.buttonLevel)).setTypeface(myTypeface);
+        buttonPlay.setTypeface(myTypeface);
+        buttonAbout.setTypeface(myTypeface);
+        buttonHighscore.setTypeface(myTypeface);
+        buttonLevel.setTypeface(myTypeface);
         ((TextView) findViewById(R.id.textViewTankQuiz)).setTypeface(myTypeface);
         SharedPreferences prefs = getPreferences(MODE_PRIVATE);
         PackageManager manager = this.getPackageManager();
@@ -89,12 +97,10 @@ public class ActivityMain extends Activity {
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
     	builder.setTitle(R.string.Level);
     	final CharSequence items[] = {getResources().getText(R.string.Easy), getResources().getText(R.string.Medium), getResources().getText(R.string.Hard)};
-    	final CharSequence buttonTexts[] = {getResources().getText(R.string.EasyButton), getResources().getText(R.string.MediumButton), getResources().getText(R.string.HardButton)};
-
     	builder.setItems(items, new DialogInterface.OnClickListener() {
     	    public void onClick(DialogInterface dialog, int item) {
     	    	level = item + 1;
-    	    	((Button) findViewById(R.id.buttonLevel)).setText(buttonTexts[item]);
+    	    	((Button) findViewById(R.id.buttonLevel)).setText(((String)items[item]).toUpperCase());
     	    }
     	});
     	AlertDialog alert = builder.create();
