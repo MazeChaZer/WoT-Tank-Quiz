@@ -24,14 +24,12 @@ public class Tank {
 	Country country;
 	TankClass tankClass;
 	int resID;
-	boolean isPremium;
 	Tank() {
 	}
-	Tank(String nameArg, int resIDArg, Country countryArg, TankClass tankClassArg, boolean isPremiumArg){
+	Tank(String nameArg, int resIDArg, Country countryArg, TankClass tankClassArg){
 		name = nameArg;
 		resID = resIDArg;
 		country = countryArg;
 		tankClass = tankClassArg;
-		isPremium = isPremiumArg;
 	}
 }
