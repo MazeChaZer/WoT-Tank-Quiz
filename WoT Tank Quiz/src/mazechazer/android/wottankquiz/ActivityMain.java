@@ -45,11 +45,9 @@ public class ActivityMain extends Activity {
         Button buttonPlay = (Button) findViewById(R.id.buttonPlay);
         Button buttonAbout = (Button) findViewById(R.id.buttonAbout);
         Button buttonHighscore = (Button) findViewById(R.id.buttonHighscore);
-        Button buttonLevel = (Button) findViewById(R.id.buttonLevel);
         buttonPlay.setText(((String) getResources().getText(R.string.Play)).toUpperCase());
         buttonAbout.setText(((String) getResources().getText(R.string.About)).toUpperCase());
         buttonHighscore.setText(((String) getResources().getText(R.string.Highscore)).toUpperCase());
-        buttonLevel.setText(((String) getResources().getText(R.string.Easy)).toUpperCase());
 //        String deviceLanguage = Locale.getDefault().getLanguage();
 //        String fontname;
 //        if (deviceLanguage.equals("ru")) {
@@ -62,7 +60,6 @@ public class ActivityMain extends Activity {
         buttonPlay.setTypeface(myTypeface);
         buttonAbout.setTypeface(myTypeface);
         buttonHighscore.setTypeface(myTypeface);
-        buttonLevel.setTypeface(myTypeface);
         ((TextView) findViewById(R.id.textViewTankQuiz)).setTypeface(myTypeface);
         SharedPreferences prefs = getPreferences(MODE_PRIVATE);
         PackageManager manager = this.getPackageManager();
@@ -77,10 +74,7 @@ public class ActivityMain extends Activity {
         } catch (NameNotFoundException e) {}
     }
     public void Play(View view) {
-    	Intent i = new Intent();
-    	i.putExtra("level", level);
-    	i.setClass(ActivityMain.this, ActivityQuizScreen.class);
-    	startActivityForResult(i, 0);
+    	startActivity(new Intent(ActivityMain.this, ActivityLevelselect.class));
     }
     public void showChangelog(){
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -93,19 +87,19 @@ public class ActivityMain extends Activity {
     		});
     	builder.create().show();
     }
-    public void selectLevel(View view){
-    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    	builder.setTitle(R.string.Level);
-    	final CharSequence items[] = {getResources().getText(R.string.Easy), getResources().getText(R.string.Medium), getResources().getText(R.string.Hard)};
-    	builder.setItems(items, new DialogInterface.OnClickListener() {
-    	    public void onClick(DialogInterface dialog, int item) {
-    	    	level = item + 1;
-    	    	((Button) findViewById(R.id.buttonLevel)).setText(((String)items[item]).toUpperCase());
-    	    }
-    	});
-    	AlertDialog alert = builder.create();
-    	alert.show();
-    }
+//    public void selectLevel(View view){
+//    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//    	builder.setTitle(R.string.Level);
+//    	final CharSequence items[] = {getResources().getText(R.string.Easy), getResources().getText(R.string.Medium), getResources().getText(R.string.Hard)};
+//    	builder.setItems(items, new DialogInterface.OnClickListener() {
+//    	    public void onClick(DialogInterface dialog, int item) {
+//    	    	level = item + 1;
+//    	    	((Button) findViewById(R.id.buttonLevel)).setText(((String)items[item]).toUpperCase());
+//    	    }
+//    	});
+//    	AlertDialog alert = builder.create();
+//    	alert.show();
+//    }
     public void buttonAboutClick(View view){
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
     	builder.setTitle(R.string.About);
@@ -123,7 +117,6 @@ public class ActivityMain extends Activity {
     	AlertDialog alert = builder.create();
     	alert.show();
     }
-
     public void showHighscore(View view){
     	startActivity(new Intent(ActivityMain.this, ActivityHighscore.class));
     }

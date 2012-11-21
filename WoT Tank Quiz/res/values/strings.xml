@@ -17,13 +17,16 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>. -->
+    along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>.
+-->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
+
     <string name="app_name">WoT Tank Quiz</string>
     <string name="HeaderTankQuiz">TANK QUIZ</string>
-    <string name="AnswerButtonClick">answerButtonClick</string>    
+    <string name="AnswerButtonClick">answerButtonClick</string>
     <string name="ButtonAnswerClick">buttonAnswerClick</string>
     <string name="ButtonAboutClick">buttonAboutClick</string>
     <string name="ImageDescriptionWorldOfTanks">World of Tanks</string>
     <string name="ImageDescriptionTank">Tank Image</string>
+
 </resources>
