@@ -41,7 +41,7 @@
         android:text="@string/HeaderTankQuiz"
         android:textColor="#ffffff"
         android:textSize="30dp" />
-    
+    
     <Button
         android:id="@+id/buttonPlay"
         style="@style/ArmyButton"
@@ -53,8 +53,9 @@
         android:onClick="Play"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
+        android:textColor="#000000"
         android:textSize="@dimen/PlayButtonTextSize" />
-
+
     <Button
         android:id="@+id/buttonHighscore"
         style="@style/ArmyButton"
@@ -62,8 +63,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:onClick="showHighscore" />
-
+        android:onClick="showHighscore"
+        android:textColor="#000000" />
+
     <Button
         android:id="@+id/buttonAbout"
         style="@style/ArmyButton"
@@ -71,8 +73,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:onClick="@string/ButtonAboutClick" />
-
+        android:onClick="@string/ButtonAboutClick"
+        android:textColor="#000000" />
+
     <Button
         android:id="@+id/buttonLevel"
         style="@style/ArmyButton"
@@ -85,6 +88,7 @@
         android:onClick="selectLevel"
         android:paddingBottom="13dp"
         android:paddingLeft="15dp"
-        android:paddingTop="15dp" />
+        android:paddingTop="15dp"
+        android:textColor="#000000" />
 
 </RelativeLayout>

@@ -35,38 +35,42 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
+
     <Button
         android:id="@+id/button4"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/buttonstandard"
-        android:onClick="@string/ButtonAnswerClick" />
-    
+        android:onClick="@string/ButtonAnswerClick"
+        android:textColor="#000000" />
+    
    <Button
-        android:id="@+id/button3"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:layout_above="@id/button4"
-        android:background="@drawable/buttonstandard"
-        android:onClick="@string/ButtonAnswerClick" />
-    
+       android:id="@+id/button3"
+       android:layout_width="fill_parent"
+       android:layout_height="60dp"
+       android:layout_above="@id/button4"
+       android:background="@drawable/buttonstandard"
+       android:onClick="@string/ButtonAnswerClick"
+       android:textColor="#000000" />
+    
    <Button
-        android:id="@+id/button2"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:layout_above="@id/button3"
-        android:background="@drawable/buttonstandard"
-        android:onClick="@string/ButtonAnswerClick" />
-   
+       android:id="@+id/button2"
+       android:layout_width="fill_parent"
+       android:layout_height="60dp"
+       android:layout_above="@id/button3"
+       android:background="@drawable/buttonstandard"
+       android:onClick="@string/ButtonAnswerClick"
+       android:textColor="#000000" />
+   
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_above="@id/button2"
         android:background="@drawable/buttonstandard"
-        android:onClick="@string/ButtonAnswerClick" />
+        android:onClick="@string/ButtonAnswerClick"
+        android:textColor="#000000" />
     
     <ImageView
         android:id="@+id/imageView1"
