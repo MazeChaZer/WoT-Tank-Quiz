@@ -17,34 +17,19 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>.
-
-    Diese Datei ist Teil des WoT Tank Quiz.
-
-    Das WoT Tank Quiz ist Freie Software: Sie können es unter den Bedingungen
-    der GNU General Public License, wie von der Free Software Foundation,
-    Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren
-    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
-
-    Das WoT Tank Quiz wird in der Hoffnung, dass es nützlich sein wird, aber
-    OHNE JEDE GEWÄHELEISTUNG, bereitgestellt; sogar ohne die implizite
-    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
-    Siehe die GNU General Public License für weitere Details.
-
-    Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
-    Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>. -->
+    along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>. -->
     
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/StringHightscore"
+        android:text="@string/Highscore"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <RadioGroup
@@ -61,7 +46,7 @@
             android:layout_weight="1"
             android:checked="true"
             android:onClick="onRadioButtonClick"
-            android:text="@string/StringEasy" />
+            android:text="@string/Easy" />
 
         <RadioButton
             android:id="@+id/radioButtonMediumHighscore"
@@ -69,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onRadioButtonClick"
-            android:text="@string/StringMedium" />
+            android:text="@string/Medium" />
 
         <RadioButton
             android:id="@+id/radioButtonHardHighscore"
@@ -77,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onRadioButtonClick"
-            android:text="@string/StringHard" />
+            android:text="@string/Hard" />
     </RadioGroup>
 
     <LinearLayout
