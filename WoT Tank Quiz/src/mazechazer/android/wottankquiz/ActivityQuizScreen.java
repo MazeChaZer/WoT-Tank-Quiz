@@ -355,6 +355,8 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("M22 Locust", R.drawable.usa_m22_locust, Country.USA, TankClass.LIGHTTANK));
 	    tankList.add(new Tank("M5 Stuart", R.drawable.usa_m5_stuart, Country.USA, TankClass.LIGHTTANK));
 	    tankList.add(new Tank("M24 Chaffee", R.drawable.usa_m24_chaffee, Country.USA, TankClass.LIGHTTANK));
+	    tankList.add(new Tank("T21", R.drawable.usa_t21, Country.USA, TankClass.LIGHTTANK));
+	    tankList.add(new Tank("T71", R.drawable.usa_t71, Country.USA, TankClass.LIGHTTANK));
 	    tankList.add(new Tank("T2 Medium Tank", R.drawable.usa_t2_med, Country.USA, TankClass.MEDIUMTANK));
 	    tankList.add(new Tank("M2 Medium Tank", R.drawable.usa_m2_med, Country.USA, TankClass.MEDIUMTANK));
 	    tankList.add(new Tank("M3 Lee", R.drawable.usa_m3_grant, Country.USA, TankClass.MEDIUMTANK));
@@ -367,7 +369,9 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("T20", R.drawable.usa_t20, Country.USA, TankClass.MEDIUMTANK));
 	    tankList.add(new Tank("M26 Pershing", R.drawable.usa_pershing, Country.USA, TankClass.MEDIUMTANK));
 	    tankList.add(new Tank("T26E4 SuperPershing", R.drawable.usa_t26_e4_superpershing, Country.USA, TankClass.MEDIUMTANK));
+	    tankList.add(new Tank("T69", R.drawable.usa_t69, Country.USA, TankClass.MEDIUMTANK));
 	    tankList.add(new Tank("M46 Patton", R.drawable.usa_m46_patton, Country.USA, TankClass.MEDIUMTANK));
+	    tankList.add(new Tank("T54E1", R.drawable.usa_t54e1, Country.USA, TankClass.MEDIUMTANK));
 	    tankList.add(new Tank("M48A1", R.drawable.usa_m48a1, Country.USA, TankClass.MEDIUMTANK));
 	    tankList.add(new Tank("T14", R.drawable.usa_t14, Country.USA, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("T1 heavy", R.drawable.usa_t1_hvy, Country.USA, TankClass.HEAVYTANK));
@@ -378,6 +382,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("M6A2E1", R.drawable.usa_m6a2e1, Country.USA, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("M103", R.drawable.usa_m103, Country.USA, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("T110E5", R.drawable.usa_t110, Country.USA, TankClass.HEAVYTANK));
+	    tankList.add(new Tank("T57 Heavy Tank", R.drawable.usa_t57_58, Country.USA, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("T30", R.drawable.usa_t30, Country.USA, TankClass.TANKDESTROYER));
 	    tankList.add(new Tank("T18", R.drawable.usa_t18, Country.USA, TankClass.TANKDESTROYER));
 	    tankList.add(new Tank("T82", R.drawable.usa_t82, Country.USA, TankClass.TANKDESTROYER));
@@ -420,6 +425,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("ARL 44", R.drawable.france_arl_44, Country.FRANCE, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("AMX M4(1945)", R.drawable.france_amx_m4_1945, Country.FRANCE, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("AMX 50 100", R.drawable.france_amx_50_100, Country.FRANCE, TankClass.HEAVYTANK));
+	    tankList.add(new Tank("FCM 50 t", R.drawable.france_fcm_50t, Country.FRANCE, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("AMX 50 120", R.drawable.france_amx_50_120, Country.FRANCE, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("AMX 50B", R.drawable.france_f10_amx_50b, Country.FRANCE, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("RenaultFT AC", R.drawable.france_renaultft_ac, Country.FRANCE, TankClass.TANKDESTROYER));
@@ -464,10 +470,12 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("FV4202(105)", R.drawable.uk_gb70_fv4202_105, Country.UK, TankClass.MEDIUMTANK));
 	    tankList.add(new Tank("Churchill I", R.drawable.uk_gb08_churchill_i, Country.UK, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("Churchill VII", R.drawable.uk_gb09_churchill_vii, Country.UK, TankClass.HEAVYTANK));
+	    tankList.add(new Tank("TOG II*", R.drawable.uk_gb63_tog_ii, Country.UK, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("Black Prince", R.drawable.uk_gb10_black_prince, Country.UK, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("Caernarvon", R.drawable.uk_gb11_caernarvon, Country.UK, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("Conqueror", R.drawable.uk_gb12_conqueror, Country.UK, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("FV215b", R.drawable.uk_gb13_fv215b, Country.UK, TankClass.HEAVYTANK));
+	    tankList.add(new Tank("AT-15A", R.drawable.uk_gb71_at_15a, Country.UK, TankClass.TANKDESTROYER));
 	    
 	    unusedTanks = (ArrayList<Tank>) tankList.clone();
 

@@ -1,3 +1,7 @@
+Version 1.7
+•Added new tanks of the WoT 8.2 update: T21, T71, Т69, Т54E1, T57, TOG-2, АТ-15А, FCM 50t
+•Fixed rare bug that the text on the answer buttons wasn't readable on some devices
+
 Version 1.6
 •Added new tanks of the WoT 8.1 update: SU-122-44, Panther M-10, PzKpfw IV Schmalturm, Cruiser MK. I, A13 Mk. I Cr. Tank Mk. III, A10 Cruiser Mk. II, A13 Mk. II Cr. Tank Mk. IV, Valentine Mk.III, A13 Covenanter, Crusader, Medium Mark I, Vickers Medium Mk. II, Vickers Medium Mk. III, Matilda, Cromwell, Comet, Centurion Mk. I, Centurion Mk. 7/1, FV4202(105), Churchill I, Churchill VII, Black Prince, Caernarvon, Conqueror, FV215b
 
