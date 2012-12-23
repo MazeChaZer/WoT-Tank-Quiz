@@ -54,7 +54,7 @@
         </activity>
         <activity
             android:name=".ActivityLevelselect"
-            android:label="@string/title_activity_activity_levelselect" >
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 
