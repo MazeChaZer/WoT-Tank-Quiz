@@ -53,7 +53,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".ActivityLevelselect"
+            android:name="mazechazer.android.wottankquiz.ActivityLevelSelect"
             android:screenOrientation="portrait" >
         </activity>
     </application>

@@ -74,7 +74,7 @@ public class ActivityMain extends Activity {
         } catch (NameNotFoundException e) {}
     }
     public void Play(View view) {
-    	startActivity(new Intent(ActivityMain.this, ActivityLevelselect.class));
+    	startActivity(new Intent(ActivityMain.this, ActivityLevelSelect.class));
     }
     public void showChangelog(){
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
