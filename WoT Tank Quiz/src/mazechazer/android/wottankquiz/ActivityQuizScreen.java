@@ -127,8 +127,122 @@ public class ActivityQuizScreen extends Activity {
 			}
 
 			public void onFinish() {
+				gameStopped = true;
+				allowPauseGame = false;
 
+				highscoreDialog = new Dialog(ActivityQuizScreen.this);
+				highscoreDialog.setContentView(R.layout.hightscoredialog);
+				highscoreDialog.setCancelable(false);
+				highscoreDialog.setTitle(R.string.Highscore);
+				highscoreDialog.show();
+				
+				CharSequence statement;
+				if (score < 0) {
+					statement = getResources().getText(
+							R.string.StatementLessThanZero);
+				} else if (score <= 10) {
+					statement = getResources().getText(
+							R.string.StatementZeroToTen);
+				} else if (score <= 20) {
+					statement = getResources().getText(
+							R.string.StatementElevenToTwenty);
+				} else if (score <= 30) {
+					statement = getResources().getText(
+							R.string.StatementTwentyoneToThirty);
+				} else {
+					statement = getResources().getText(
+							R.string.StatementThirtyoneAndMore);
+				}
+				
+				((TextView) highscoreDialog
+						.findViewById(R.id.textViewHighscore))
+						.setText(statement
+								+ "\n"
+								+ getResources().getText(R.string.Points)
+								+ ": "
+								+ Integer.toString(score)
+								+ "\n"
+								+ getResources().getText(
+										R.string.PleaseEnterYourName));
+				SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+				((EditText) highscoreDialog.findViewById(R.id.editText1))
+						.setText(prefs.getString("lastUsedName", ""));
+				((EditText) highscoreDialog.findViewById(R.id.editText1))
+						.addTextChangedListener(new TextWatcher() {
+
+							public void afterTextChanged(Editable arg0) {
+							}
+
+							public void beforeTextChanged(CharSequence arg0,
+									int arg1, int arg2, int arg3) {
+							}
+
+							public void onTextChanged(CharSequence arg0,
+									int arg1, int arg2, int arg3) {
+								if (arg0.toString().equals("")) {
+									((Button) highscoreDialog
+											.findViewById(R.id.buttonHighscore))
+											.setEnabled(false);
+								} else {
+									((Button) highscoreDialog
+											.findViewById(R.id.buttonHighscore))
+											.setEnabled(true);
+								}
+							}
+						});
+				Button buttonHighscore = (Button) highscoreDialog
+						.findViewById(R.id.buttonHighscore);
+				buttonHighscore.setEnabled(!((EditText) highscoreDialog
+						.findViewById(R.id.editText1)).getText().toString()
+						.equals(""));
+				buttonHighscore.setOnClickListener(new OnClickListener() {
+					public void onClick(View v) {
+						name = ((EditText) highscoreDialog
+								.findViewById(R.id.editText1)).getText()
+								.toString();
+						SharedPreferences saving = getSharedPreferences(
+								"highscore", MODE_PRIVATE);
+						SharedPreferences.Editor editor = saving.edit();
+						if (score > saving.getInt(levelString + "Score"
+								+ Integer.toString(10), -10000)) {
+							int position = 1;
+							for (int i = 9; i >= 1; i--) {
+								if (score <= saving.getInt(levelString
+										+ "Score" + Integer.toString(i), -10000)) {
+									position = i + 1;
+									break;
+								}
+							}
+							for (int i = 10; i >= position + 1; i--) {
+								editor.putString(
+										levelString + "Name"
+												+ Integer.toString(i),
+										saving.getString(levelString + "Name"
+												+ Integer.toString(i - 1), ""));
+								editor.putInt(
+										levelString + "Score"
+												+ Integer.toString(i),
+										saving.getInt(levelString + "Score"
+												+ Integer.toString(i - 1), 0));
+							}
+							editor.putString(
+									levelString + "Name"
+											+ Integer.toString(position), name);
+							editor.putInt(
+									levelString + "Score"
+											+ Integer.toString(position), score);
+							editor.commit();
+						}
+						SharedPreferences.Editor localEditor = getPreferences(
+								MODE_PRIVATE).edit();
+						localEditor.putString("lastUsedName", name);
+						localEditor.commit();
+						highscoreDialog.dismiss();
+						ActivityQuizScreen.this.finish();
+					}
+				});
 			}
+
 		};
 		countdown.start();
 	}
