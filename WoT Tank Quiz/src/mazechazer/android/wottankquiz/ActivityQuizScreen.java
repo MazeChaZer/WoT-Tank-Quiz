@@ -23,6 +23,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.res.XmlResourceParser;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -39,8 +40,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.lang.Math;
+import java.io.IOException;
 import java.util.ArrayList;
+import org.xmlpull.v1.XmlPullParserException;
 
 public class ActivityQuizScreen extends Activity {
 	int score = 0, secondsLeft = 60;
@@ -220,7 +222,42 @@ public class ActivityQuizScreen extends Activity {
 
 	@SuppressWarnings("unchecked")
 	private void addTanks(){
-		tankList.add(new Tank("Leichttraktor", R.drawable.germany_ltraktor, Country.GERMANY, TankClass.LIGHTTANK));
+            XmlResourceParser tanks = getResources().getXml(R.xml.tanks);
+
+            int eventType = -1;
+            while (eventType != XmlResourceParser.END_DOCUMENT) {
+                    if (eventType == XmlResourceParser.START_TAG) {
+                            String strName = tanks.getName();
+                            if (strName.equals("tank")) {
+
+                                    // No getters, no setters - so why not snake?
+                                    Tank tank = new Tank(
+                                                    tanks.getAttributeValue(null, "name"),
+                                                    getResources().getIdentifier(
+                                                                    tanks.getAttributeValue(null, "pic"),
+                                                                    "drawable", getPackageName()), Country
+                                                                    .valueOf(tanks.getAttributeValue(null,
+                                                                                    "country")), TankClass
+                                                                    .valueOf(tanks.getAttributeValue(null,
+                                                                                    "class")));
+                                    
+                                    tankList.add(tank);
+
+                            }
+                    }
+
+                    try {
+                            eventType = tanks.next();
+                    } catch (IOException ioException) {
+                            Toast.makeText(this, "Error i/o", Toast.LENGTH_LONG).show();
+                    } catch (XmlPullParserException xmlPullParserException) {
+                            Toast.makeText(this, "Error parse xml", Toast.LENGTH_LONG)
+                                            .show();
+                    }
+            }
+            
+            /*
+            tankList.add(new Tank("Leichttraktor", R.drawable.germany_ltraktor, Country.GERMANY, TankClass.LIGHTTANK));
 	    tankList.add(new Tank("PzKpfw 35 (t)", R.drawable.germany_pz35t, Country.GERMANY, TankClass.LIGHTTANK));
 	    tankList.add(new Tank("PzKpfw II", R.drawable.germany_pzii, Country.GERMANY, TankClass.LIGHTTANK));
 	    tankList.add(new Tank("PzKpfw 38H735 (f)", R.drawable.germany_h39_captured, Country.GERMANY, TankClass.LIGHTTANK));
@@ -476,7 +513,7 @@ public class ActivityQuizScreen extends Activity {
 	    tankList.add(new Tank("Conqueror", R.drawable.uk_gb12_conqueror, Country.UK, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("FV215b", R.drawable.uk_gb13_fv215b, Country.UK, TankClass.HEAVYTANK));
 	    tankList.add(new Tank("AT-15A", R.drawable.uk_gb71_at_15a, Country.UK, TankClass.TANKDESTROYER));
-	    
+	    */
 	    unusedTanks = (ArrayList<Tank>) tankList.clone();
 
 	}
