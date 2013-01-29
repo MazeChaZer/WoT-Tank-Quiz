@@ -20,16 +20,16 @@
 package mazechazer.android.wottankquiz;
 
 public class Tank {
-	String name;
-	Country country;
-	TankClass tankClass;
-	int resID;
-	Tank() {
-	}
-	Tank(String nameArg, int resIDArg, Country countryArg, TankClass tankClassArg){
-		name = nameArg;
-		resID = resIDArg;
-		country = countryArg;
-		tankClass = tankClassArg;
-	}
+    String name;
+    Country country;
+    TankClass tankClass;
+    int resID;
+    Tank() {
+    }
+    Tank(String nameArg, int resIDArg, Country countryArg, TankClass tankClassArg){
+        name = nameArg;
+        resID = resIDArg;
+        country = countryArg;
+        tankClass = tankClassArg;
+    }
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Copyright 2012 Jonas Schürmann ©
+<!--Copyright 2012 Jonas Schürmann ©
 
     My Website: mazechazer.jimdo.com
 
@@ -23,19 +22,21 @@
     android:id="@+id/relativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:orientation="vertical" >
+
     <TextView
         android:id="@+id/textViewPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <TextView
         android:id="@+id/textViewTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
+
     <Button
         android:id="@+id/button4"
         android:layout_width="fill_parent"
@@ -44,7 +45,7 @@
         android:background="@drawable/buttonstandard"
         android:onClick="@string/ButtonAnswerClick"
         android:textColor="#000000" />
-    
+
    <Button
        android:id="@+id/button3"
        android:layout_width="fill_parent"
@@ -53,7 +54,7 @@
        android:background="@drawable/buttonstandard"
        android:onClick="@string/ButtonAnswerClick"
        android:textColor="#000000" />
-    
+
    <Button
        android:id="@+id/button2"
        android:layout_width="fill_parent"
@@ -62,7 +63,7 @@
        android:background="@drawable/buttonstandard"
        android:onClick="@string/ButtonAnswerClick"
        android:textColor="#000000" />
-   
+
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
@@ -71,7 +72,7 @@
         android:background="@drawable/buttonstandard"
         android:onClick="@string/ButtonAnswerClick"
         android:textColor="#000000" />
-    
+
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
@@ -81,5 +82,5 @@
         android:contentDescription="@string/ImageDescriptionTank"
         android:cropToPadding="true"
         android:scaleType="center" />
-    
+
 </RelativeLayout>

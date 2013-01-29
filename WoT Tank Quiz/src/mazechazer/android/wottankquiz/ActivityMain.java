@@ -36,7 +36,7 @@ import android.graphics.Typeface;
 import android.widget.TextView;
 
 public class ActivityMain extends Activity {
-	int level = 1;
+    int level = 1;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,9 +53,9 @@ public class ActivityMain extends Activity {
 //        String deviceLanguage = Locale.getDefault().getLanguage();
 //        String fontname;
 //        if (deviceLanguage.equals("ru")) {
-//        	fontname = "capitalist.ttf";
+//            fontname = "capitalist.ttf";
 //        } else {
-//        	fontname = "Destroy_new.ttf";
+//            fontname = "Destroy_new.ttf";
 //        }
 //        Typeface myTypeface = Typeface.createFromAsset(getAssets(), fontname);
         Typeface myTypeface = Typeface.createFromAsset(getAssets(), "Destroy_new.ttf");
@@ -67,64 +67,64 @@ public class ActivityMain extends Activity {
         SharedPreferences prefs = getPreferences(MODE_PRIVATE);
         PackageManager manager = this.getPackageManager();
         try {
-			PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
-	        if (! prefs.getString("notificationShowedVersion", "").equals(info.versionName)){
-	        	SharedPreferences.Editor editor = prefs.edit();
-	        	editor.putString("notificationShowedVersion", info.versionName);
-	        	editor.commit();
-	        	showChangelog();
-	        }
+            PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
+            if (! prefs.getString("notificationShowedVersion", "").equals(info.versionName)){
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("notificationShowedVersion", info.versionName);
+                editor.commit();
+                showChangelog();
+            }
         } catch (NameNotFoundException e) {}
     }
     public void Play(View view) {
-    	Intent i = new Intent();
-    	i.putExtra("level", level);
-    	i.setClass(ActivityMain.this, ActivityQuizScreen.class);
-    	startActivityForResult(i, 0);
+        Intent i = new Intent();
+        i.putExtra("level", level);
+        i.setClass(ActivityMain.this, ActivityQuizScreen.class);
+        startActivityForResult(i, 0);
     }
     public void showChangelog(){
-    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    	builder.setTitle(R.string.Changelog);
-    	builder.setMessage(R.string.ChangelogText);
-    	builder.setNeutralButton(getResources().getText(R.string.Okay), new OnClickListener(){
-			public void onClick(DialogInterface dialog, int which) {
-				dialog.cancel();
-			}
-    		});
-    	builder.create().show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.Changelog);
+        builder.setMessage(R.string.ChangelogText);
+        builder.setNeutralButton(getResources().getText(R.string.Okay), new OnClickListener(){
+            public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+            }
+        });
+        builder.create().show();
     }
     public void selectLevel(View view){
-    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    	builder.setTitle(R.string.Level);
-    	final CharSequence items[] = {getResources().getText(R.string.Easy), getResources().getText(R.string.Medium), getResources().getText(R.string.Hard)};
-    	builder.setItems(items, new DialogInterface.OnClickListener() {
-    	    public void onClick(DialogInterface dialog, int item) {
-    	    	level = item + 1;
-    	    	((Button) findViewById(R.id.buttonLevel)).setText(((String)items[item]).toUpperCase());
-    	    }
-    	});
-    	AlertDialog alert = builder.create();
-    	alert.show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.Level);
+        final CharSequence items[] = {getResources().getText(R.string.Easy), getResources().getText(R.string.Medium), getResources().getText(R.string.Hard)};
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int item) {
+                level = item + 1;
+                ((Button) findViewById(R.id.buttonLevel)).setText(((String)items[item]).toUpperCase());
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
     public void buttonAboutClick(View view){
-    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    	builder.setTitle(R.string.About);
-    	builder.setMessage(R.string.AboutText);
-    	builder.setNegativeButton(R.string.Okay, new DialogInterface.OnClickListener() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.About);
+        builder.setMessage(R.string.AboutText);
+        builder.setNegativeButton(R.string.Okay, new DialogInterface.OnClickListener() {
            public void onClick(DialogInterface dialog, int id) {
                 dialog.cancel();
            }
-       });
-    	builder.setNeutralButton(R.string.Changelog, new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int which) {
-				showChangelog();
-			}
-		});
-    	AlertDialog alert = builder.create();
-    	alert.show();
+        });
+        builder.setNeutralButton(R.string.Changelog, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                    showChangelog();
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     public void showHighscore(View view){
-    	startActivity(new Intent(ActivityMain.this, ActivityHighscore.class));
+        startActivity(new Intent(ActivityMain.this, ActivityHighscore.class));
     }
 }

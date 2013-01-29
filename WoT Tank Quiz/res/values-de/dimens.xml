@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Copyright 2012 Jonas Schürmann ©
+<!--Copyright 2012 Jonas Schürmann ©
 
     My Website: mazechazer.jimdo.com
 
@@ -20,5 +19,4 @@
     along with the WoT Tank Quiz.  If not, see <http://www.gnu.org/licenses/>. -->
 <resources>
     <dimen name="PlayButtonTextSize">40dp</dimen>
-    
 </resources>

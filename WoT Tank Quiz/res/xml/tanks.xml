@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <tanks>
     <tank name="Leichttraktor" pic="germany_ltraktor" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw 35 (t)" pic="germany_pz35t" country="GERMANY" class="LIGHTTANK" />
@@ -36,12 +36,12 @@
     <tank name="PzKpfw VI Tiger (P)" pic="germany_pzvi_tiger_p" country="GERMANY" class="HEAVYTANK" />
     <tank name="PzKpfw VIB Tiger II" pic="germany_pzvib_tiger_ii" country="GERMANY" class="HEAVYTANK" />
     <tank name="VK 4502 (P) Ausf. A" pic="germany_vk4502a" country="GERMANY" class="HEAVYTANK" />
-    <tank name="LГ¶we" pic="germany_lowe" country="GERMANY" class="HEAVYTANK" />
+    <tank name="Löwe" pic="germany_lowe" country="GERMANY" class="HEAVYTANK" />
     <tank name="VK 4502 (P) Ausf. B" pic="germany_vk4502p" country="GERMANY" class="HEAVYTANK" />
     <tank name="E-75" pic="germany_e_75" country="GERMANY" class="HEAVYTANK" />
     <tank name="Maus" pic="germany_maus" country="GERMANY" class="HEAVYTANK" />
     <tank name="E-100" pic="germany_e_100" country="GERMANY" class="HEAVYTANK" />
-    <tank name="PanzerjГ¤ger I" pic="germany_panzerjager_i" country="GERMANY" class="TANKDESTROYER" />
+    <tank name="Panzerjäger I" pic="germany_panzerjager_i" country="GERMANY" class="TANKDESTROYER" />
     <tank name="Marder II" pic="germany_g20_marder_ii" country="GERMANY" class="TANKDESTROYER" />
     <tank name="Hetzer" pic="germany_hetzer" country="GERMANY" class="TANKDESTROYER" />
     <tank name="StuG III" pic="germany_stugiii" country="GERMANY" class="TANKDESTROYER" />

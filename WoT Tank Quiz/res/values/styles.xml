@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Copyright 2012 Jonas Schürmann ©
+<!--Copyright 2012 Jonas Schürmann ©
 
     My Website: mazechazer.jimdo.com
 
@@ -26,5 +25,4 @@
         <item name="android:shadowRadius">3</item>
         <item name="android:background">@drawable/buttonarmy</item>
     </style>
-    
 </resources>

@@ -28,7 +28,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class ActivityHighscore extends Activity {
-	/** Called when the activity is first created. */
+    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,48 +36,48 @@ public class ActivityHighscore extends Activity {
         loadNames();
     }
     private void loadNames(){
-    	String levelString;
-    	SharedPreferences saving = getSharedPreferences("highscore", MODE_PRIVATE);
-    	if (((RadioButton) findViewById(R.id.radioButtonEasyHighscore)).isChecked()){
-        	levelString = "Easy";
+        String levelString;
+        SharedPreferences saving = getSharedPreferences("highscore", MODE_PRIVATE);
+        if (((RadioButton) findViewById(R.id.radioButtonEasyHighscore)).isChecked()){
+            levelString = "Easy";
         } else if ((((RadioButton) findViewById(R.id.radioButtonMediumHighscore)).isChecked())){
-        	levelString = "Medium";
+            levelString = "Medium";
         } else {
-        	levelString = "Hard";
+            levelString = "Hard";
         }
-    	ArrayList<TextView> names = new ArrayList<TextView>();
-    	names.add((TextView) findViewById(R.id.TextViewName1));
-    	names.add((TextView) findViewById(R.id.TextViewName2));
-    	names.add((TextView) findViewById(R.id.TextViewName3));
-    	names.add((TextView) findViewById(R.id.TextViewName4));
-    	names.add((TextView) findViewById(R.id.TextViewName5));
-    	names.add((TextView) findViewById(R.id.TextViewName6));
-    	names.add((TextView) findViewById(R.id.TextViewName7));
-    	names.add((TextView) findViewById(R.id.TextViewName8));
-    	names.add((TextView) findViewById(R.id.TextViewName9));
-    	names.add((TextView) findViewById(R.id.TextViewName10));
-    	ArrayList<TextView> scores = new ArrayList<TextView>();
-    	scores.add((TextView) findViewById(R.id.TextViewScore1));
-    	scores.add((TextView) findViewById(R.id.TextViewScore2));
-    	scores.add((TextView) findViewById(R.id.TextViewScore3));
-    	scores.add((TextView) findViewById(R.id.TextViewScore4));
-    	scores.add((TextView) findViewById(R.id.TextViewScore5));
-    	scores.add((TextView) findViewById(R.id.TextViewScore6));
-    	scores.add((TextView) findViewById(R.id.TextViewScore7));
-    	scores.add((TextView) findViewById(R.id.TextViewScore8));
-    	scores.add((TextView) findViewById(R.id.TextViewScore9));
-    	scores.add((TextView) findViewById(R.id.TextViewScore10));
-    	for (int i = 1; i <= 10; i++){
-    		if (! saving.getString(levelString + "Name" + Integer.toString(i), "").equals("")){
-    			names.get(i - 1).setText(saving.getString(levelString + "Name" + Integer.toString(i), ""));
-    			scores.get(i - 1).setText(Integer.toString(saving.getInt(levelString + "Score" + Integer.toString(i), 0)));
-    		} else {
-    			names.get(i - 1).setText("");
-    			scores.get(i - 1).setText("");
-    		}
-    	}
+        ArrayList<TextView> names = new ArrayList<TextView>();
+        names.add((TextView) findViewById(R.id.TextViewName1));
+        names.add((TextView) findViewById(R.id.TextViewName2));
+        names.add((TextView) findViewById(R.id.TextViewName3));
+        names.add((TextView) findViewById(R.id.TextViewName4));
+        names.add((TextView) findViewById(R.id.TextViewName5));
+        names.add((TextView) findViewById(R.id.TextViewName6));
+        names.add((TextView) findViewById(R.id.TextViewName7));
+        names.add((TextView) findViewById(R.id.TextViewName8));
+        names.add((TextView) findViewById(R.id.TextViewName9));
+        names.add((TextView) findViewById(R.id.TextViewName10));
+        ArrayList<TextView> scores = new ArrayList<TextView>();
+        scores.add((TextView) findViewById(R.id.TextViewScore1));
+        scores.add((TextView) findViewById(R.id.TextViewScore2));
+        scores.add((TextView) findViewById(R.id.TextViewScore3));
+        scores.add((TextView) findViewById(R.id.TextViewScore4));
+        scores.add((TextView) findViewById(R.id.TextViewScore5));
+        scores.add((TextView) findViewById(R.id.TextViewScore6));
+        scores.add((TextView) findViewById(R.id.TextViewScore7));
+        scores.add((TextView) findViewById(R.id.TextViewScore8));
+        scores.add((TextView) findViewById(R.id.TextViewScore9));
+        scores.add((TextView) findViewById(R.id.TextViewScore10));
+        for (int i = 1; i <= 10; i++){
+            if (! saving.getString(levelString + "Name" + Integer.toString(i), "").equals("")){
+                names.get(i - 1).setText(saving.getString(levelString + "Name" + Integer.toString(i), ""));
+                scores.get(i - 1).setText(Integer.toString(saving.getInt(levelString + "Score" + Integer.toString(i), 0)));
+            } else {
+                names.get(i - 1).setText("");
+                scores.get(i - 1).setText("");
+            }
+        }
     }
     public void onRadioButtonClick(View view){
-    	loadNames();
+        loadNames();
     }
 }

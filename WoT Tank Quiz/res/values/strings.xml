@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Copyright 2012 Jonas Schürmann ©
+<!--Copyright 2012 Jonas Schürmann ©
 
     My Website: mazechazer.jimdo.com
 
@@ -21,7 +20,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string name="app_name">WoT Tank Quiz</string>
     <string name="HeaderTankQuiz">TANK QUIZ</string>
-    <string name="AnswerButtonClick">answerButtonClick</string>    
+    <string name="AnswerButtonClick">answerButtonClick</string>
     <string name="ButtonAnswerClick">buttonAnswerClick</string>
     <string name="ButtonAboutClick">buttonAboutClick</string>
     <string name="ImageDescriptionWorldOfTanks">World of Tanks</string>
