@@ -19,7 +19,7 @@
 
 package mazechazer.android.wottankquiz;
 
-//import java.util.Locale;
+import java.util.Locale;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -46,10 +46,10 @@ public class ActivityMain extends Activity {
         Button buttonAbout = (Button) findViewById(R.id.buttonAbout);
         Button buttonHighscore = (Button) findViewById(R.id.buttonHighscore);
         Button buttonLevel = (Button) findViewById(R.id.buttonLevel);
-        buttonPlay.setText(((String) getResources().getText(R.string.Play)).toUpperCase());
-        buttonAbout.setText(((String) getResources().getText(R.string.About)).toUpperCase());
-        buttonHighscore.setText(((String) getResources().getText(R.string.Highscore)).toUpperCase());
-        buttonLevel.setText(((String) getResources().getText(R.string.Easy)).toUpperCase());
+        buttonPlay.setText(((String) getResources().getText(R.string.Play)).toUpperCase(Locale.getDefault()));
+        buttonAbout.setText(((String) getResources().getText(R.string.About)).toUpperCase(Locale.getDefault()));
+        buttonHighscore.setText(((String) getResources().getText(R.string.Highscore)).toUpperCase(Locale.getDefault()));
+        buttonLevel.setText(((String) getResources().getText(R.string.Easy)).toUpperCase(Locale.getDefault()));
 //        String deviceLanguage = Locale.getDefault().getLanguage();
 //        String fontname;
 //        if (deviceLanguage.equals("ru")) {
@@ -86,7 +86,7 @@ public class ActivityMain extends Activity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.Changelog);
         builder.setMessage(R.string.ChangelogText);
-        builder.setNeutralButton(getResources().getText(R.string.Okay), new OnClickListener(){
+        builder.setNeutralButton(getResources().getText(android.R.string.ok), new OnClickListener(){
             public void onClick(DialogInterface dialog, int which) {
                     dialog.cancel();
             }
@@ -100,7 +100,7 @@ public class ActivityMain extends Activity {
         builder.setItems(items, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
                 level = item + 1;
-                ((Button) findViewById(R.id.buttonLevel)).setText(((String)items[item]).toUpperCase());
+                ((Button) findViewById(R.id.buttonLevel)).setText(((String)items[item]).toUpperCase(Locale.getDefault()));
             }
         });
         AlertDialog alert = builder.create();
@@ -110,7 +110,7 @@ public class ActivityMain extends Activity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.About);
         builder.setMessage(R.string.AboutText);
-        builder.setNegativeButton(R.string.Okay, new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(android.R.string.ok, new DialogInterface.OnClickListener() {
            public void onClick(DialogInterface dialog, int id) {
                 dialog.cancel();
            }

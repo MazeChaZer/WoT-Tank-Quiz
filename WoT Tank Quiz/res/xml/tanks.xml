@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <tanks>
     <tank name="Leichttraktor" pic="germany_ltraktor" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw 35 (t)" pic="germany_pz35t" country="GERMANY" class="LIGHTTANK" />
@@ -227,9 +227,26 @@
     <tank name="Lorraine155 51" pic="france_lorraine155_51" country="FRANCE" class="SPG" />
     <tank name="Bat Chatillon 155" pic="france_bat_chatillon155" country="FRANCE" class="SPG" />
 
+    <tank name="Renault NC-31" pic="china_ch06_renault_nc31" country="CHINA" class="LIGHTTANK" />
+    <tank name="Vickers Mk. E Type B" pic="china_ch07_vickers_mke_type_bt26" country="CHINA" class="LIGHTTANK" />
+    <tank name="Type 2597 Chi-Ha" pic="china_ch08_type97_chi_ha" country="CHINA" class="LIGHTTANK" />
+    <tank name="M5A1 Stuart" pic="china_ch09_m5" country="CHINA" class="LIGHTTANK" />
+    <tank name="59-16" pic="china_ch15_59_16" country="CHINA" class="LIGHTTANK" />
     <tank name="Type 62" pic="china_ch02_type62" country="CHINA" class="LIGHTTANK" />
+    <tank name="WZ-131" pic="china_ch16_wz_131" country="CHINA" class="LIGHTTANK" />
+    <tank name="WZ-132" pic="china_ch17_wz131_1_wz132" country="CHINA" class="LIGHTTANK" />
+    <tank name="Type T-34" pic="china_ch21_t34" country="CHINA" class="MEDIUMTANK" />
+    <tank name="Type 58" pic="china_ch20_type58" country="CHINA" class="MEDIUMTANK" />
+    <tank name="T-34-1" pic="china_ch04_t34_1" country="CHINA" class="MEDIUMTANK" />
     <tank name="Typ 59" pic="china_ch01_type59" country="CHINA" class="MEDIUMTANK" />
+    <tank name="T-34-2" pic="china_ch05_t34_2" country="CHINA" class="MEDIUMTANK" />
+    <tank name="WZ-120" pic="china_ch18_wz_120" country="CHINA" class="MEDIUMTANK" />
+    <tank name="121" pic="china_ch19_121" country="CHINA" class="MEDIUMTANK" />
+    <tank name="IS-2" pic="china_ch10_is2" country="CHINA" class="HEAVYTANK" />
+    <tank name="110" pic="china_ch11_110" country="CHINA" class="HEAVYTANK" />
     <tank name="WZ-111" pic="china_ch03_wz_111" country="CHINA" class="HEAVYTANK" />
+    <tank name="WZ-111 model 1-4" pic="china_ch12_111_1_2_3" country="CHINA" class="HEAVYTANK" />
+    <tank name="113" pic="china_ch22_113" country="CHINA" class="HEAVYTANK" />
 
     <tank name="Cruiser MK. I" pic="uk_gb03_cruiser_mk_i" country="UK" class="LIGHTTANK" />
     <tank name="A13 Mk. I Cr. Tank Mk. III" pic="uk_gb58_cruiser_mk_iii" country="UK" class="LIGHTTANK" />

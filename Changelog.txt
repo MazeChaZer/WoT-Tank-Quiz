@@ -1,3 +1,6 @@
+Version 1.8
+•Added new tanks of the WoT 8.3 update: Renault NC-31, Vickers Mk. E Type B, Type 2597 Chi-Ha, M5A1 Stuart, 59-16, WZ131, WZ-132, Type T-34, Type 58, T-34-1, T-34-2, WZ-120, 121, IS-2, 110, WZ-111 model 1-4, 113
+
 Version 1.7
 •Added new tanks of the WoT 8.2 update: T21, T71, Т69, Т54E1, T57, TOG-2, АТ-15А, FCM 50t
 •Fixed rare bug that the text on the answer buttons wasn't readable on some devices
