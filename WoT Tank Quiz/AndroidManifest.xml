@@ -20,8 +20,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mazechazer.android.wottankquiz"
-    android:versionCode="10"
-    android:versionName="1.8"
+    android:versionCode="11"
+    android:versionName="1.9"
     android:installLocation="auto">
 
     <uses-sdk

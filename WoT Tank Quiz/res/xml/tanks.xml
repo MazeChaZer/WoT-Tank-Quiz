@@ -3,9 +3,12 @@
     <tank name="Leichttraktor" pic="germany_ltraktor" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw 35 (t)" pic="germany_pz35t" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw II" pic="germany_pzii" country="GERMANY" class="LIGHTTANK" />
+    <tank name="Pz.Kpfw. I" pic="germany_pzi" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw 38H735 (f)" pic="germany_h39_captured" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw 38 (t)" pic="germany_pz38t" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw III Ausf. A" pic="germany_pziii_a" country="GERMANY" class="LIGHTTANK" />
+    <tank name="Pz.Kpfw. I Ausf. C" pic="germany_pzi_ausf_c" country="GERMANY" class="LIGHTTANK" />
+    <tank name="Pz.Kpfw. II Ausf. G" pic="germany_pz_ii_ausfg" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw II Luchs" pic="germany_pzii_luchs" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw II Ausf. J" pic="germany_pzii_j" country="GERMANY" class="LIGHTTANK" />
     <tank name="T-15" pic="germany_t_15" country="GERMANY" class="LIGHTTANK" />
@@ -27,7 +30,6 @@
     <tank name="PzKpfw V Panther" pic="germany_pzv" country="GERMANY" class="MEDIUMTANK" />
     <tank name="VK 3002 (DB)" pic="germany_vk3002db" country="GERMANY" class="MEDIUMTANK" />
     <tank name="Panther-M10" pic="germany_panther_m10" country="GERMANY" class="MEDIUMTANK" />
-
     <tank name="Panther II" pic="germany_panther_ii" country="GERMANY" class="MEDIUMTANK" />
     <tank name="E-50" pic="germany_e_50" country="GERMANY" class="MEDIUMTANK" />
     <tank name="E-50 Ausf.M" pic="germany_e50_ausf_m" country="GERMANY" class="MEDIUMTANK" />
@@ -109,6 +111,7 @@
     <tank name="SU-85" pic="ussr_su_85" country="USSR" class="TANKDESTROYER" />
     <tank name="SU-85I" pic="ussr_su_85i" country="USSR" class="TANKDESTROYER" />
     <tank name="SU-100" pic="ussr_su_100" country="USSR" class="TANKDESTROYER" />
+    <tank name="SU-100Y" pic="ussr_su100y" country="USSR" class="TANKDESTROYER" />
     <tank name="SU-152" pic="ussr_su_152" country="USSR" class="TANKDESTROYER" />
     <tank name="SU-100M1" pic="ussr_su100m1" country="USSR" class="TANKDESTROYER" />
     <tank name="SU-122-44" pic="ussr_su122_44" country="USSR" class="TANKDESTROYER" />
@@ -272,5 +275,16 @@
     <tank name="Caernarvon" pic="uk_gb11_caernarvon" country="UK" class="HEAVYTANK" />
     <tank name="Conqueror" pic="uk_gb12_conqueror" country="UK" class="HEAVYTANK" />
     <tank name="FV215b" pic="uk_gb13_fv215b" country="UK" class="HEAVYTANK" />
+    <tank name="Universal Carrier 2-pdr" pic="uk_gb39_universal_carrierqf2" country="UK" class="TANKDESTROYER" />
+    <tank name="Valentine AT" pic="uk_gb42_valentine_at" country="UK" class="TANKDESTROYER" />
+    <tank name="Alecto" pic="uk_gb57_alecto" country="UK" class="TANKDESTROYER" />
+    <tank name="AT 2" pic="uk_gb73_at2" country="UK" class="TANKDESTROYER" />
+    <tank name="AT 8" pic="uk_gb74_at8" country="UK" class="TANKDESTROYER" />
+    <tank name="Churchill Gun Carrier" pic="uk_gb40_gun_carrier_churchill" country="UK" class="TANKDESTROYER" />
+    <tank name="AT 7" pic="uk_gb75_at7" country="UK" class="TANKDESTROYER" />
     <tank name="AT-15A" pic="uk_gb71_at_15a" country="UK" class="TANKDESTROYER" />
+    <tank name="AT 15" pic="uk_gb72_at15" country="UK" class="TANKDESTROYER" />
+    <tank name="Tortoise" pic="uk_gb32_tortoise" country="UK" class="TANKDESTROYER" />
+    <tank name="FV215b (183)" pic="uk_gb48_fv215b_183" country="UK" class="TANKDESTROYER" />
+    
 </tanks>

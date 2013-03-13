@@ -1,3 +1,6 @@
+Version 1.9
+•Added new tanks of the WoT 8.4 update: Universal Carrier 2-pdr, Valentine AT, Alecto, AT 2, AT 8, Churchill Gun Carrier, AT 7, AT 15, Tortoise, FV215b (183), Pz.Kpfw. I, Pz.Kpfw. I Ausf. C, Pz.Kpfw. II Ausf. G, SU-100Y
+
 Version 1.8
 •Added new tanks of the WoT 8.3 update: Renault NC-31, Vickers Mk. E Type B, Type 2597 Chi-Ha, M5A1 Stuart, 59-16, WZ131, WZ-132, Type T-34, Type 58, T-34-1, T-34-2, WZ-120, 121, IS-2, 110, WZ-111 model 1-4, 113
 
