@@ -1,3 +1,6 @@
+Version 1.10
+•Added new tanks of the WoT 8.5 update: VK 20.01 (D), VK 30.01 (D), Aufklärungspanzer Panther, Indien-Panzer, Leopard prototyp A, Leopard 1, Т-60, T-70, T-80
+
 Version 1.9
 •Added new tanks of the WoT 8.4 update: Universal Carrier 2-pdr, Valentine AT, Alecto, AT 2, AT 8, Churchill Gun Carrier, AT 7, AT 15, Tortoise, FV215b (183), Pz.Kpfw. I, Pz.Kpfw. I Ausf. C, Pz.Kpfw. II Ausf. G, SU-100Y
 

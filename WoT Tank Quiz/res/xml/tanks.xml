@@ -12,34 +12,40 @@
     <tank name="PzKpfw II Luchs" pic="germany_pzii_luchs" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw II Ausf. J" pic="germany_pzii_j" country="GERMANY" class="LIGHTTANK" />
     <tank name="T-15" pic="germany_t_15" country="GERMANY" class="LIGHTTANK" />
-    <tank name="VK 1602 Leopard" pic="germany_vk1602" country="GERMANY" class="LIGHTTANK" />
+    <tank name="VK 16.02 Leopard" pic="germany_vk1602" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw 38 nA" pic="germany_pz38_na" country="GERMANY" class="LIGHTTANK" />
-    <tank name="VK 2801" pic="germany_vk2801" country="GERMANY" class="LIGHTTANK" />
+    <tank name="VK 28.01" pic="germany_vk2801" country="GERMANY" class="LIGHTTANK" />
+    <tank name="Aufklärungspanzer Panther" pic="germany_auf_panther" country="GERMANY" class="LIGHTTANK" />
     <tank name="PzKpfw S35 739 (f)" pic="germany_s35_captured" country="GERMANY" class="MEDIUMTANK" />
     <tank name="PzKpfw III" pic="germany_pziii" country="GERMANY" class="MEDIUMTANK" />
     <tank name="PzKpfw IV" pic="germany_pziv" country="GERMANY" class="MEDIUMTANK" />
     <tank name="PzKpfw III/IV" pic="germany_pziii_iv" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="VK 20.01 (D)" pic="germany_vk2001db" country="GERMANY" class="MEDIUMTANK" />
     <tank name="T-25" pic="germany_t_25" country="GERMANY" class="MEDIUMTANK" />
     <tank name="PzKpfw IV hydrostat." pic="germany_pziv_hydro" country="GERMANY" class="MEDIUMTANK" />
-    <tank name="VK 3601 (H)" pic="germany_vk3601h" country="GERMANY" class="MEDIUMTANK" />
-    <tank name="VK 3001 (H)" pic="germany_vk3001h" country="GERMANY" class="MEDIUMTANK" />
-    <tank name="VK 3001 (P)" pic="germany_vk3001p" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="VK 36.01 (H)" pic="germany_vk3601h" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="VK 30.01 (H)" pic="germany_vk3001h" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="VK 30.01 (P)" pic="germany_vk3001p" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="VK 30.01 (D)" pic="germany_vk3002db_v1" country="GERMANY" class="MEDIUMTANK" />
     <tank name="PzKpfw V-IV" pic="germany_pzv_pziv" country="GERMANY" class="MEDIUMTANK" />
     <tank name="PzKpfw V-IV Alpha" pic="germany_pzv_pziv_ausf_alfa" country="GERMANY" class="MEDIUMTANK" />
     <tank name="PzKpfw IV Schmalturm" pic="germany_pziv_schmalturm" country="GERMANY" class="MEDIUMTANK" />
     <tank name="PzKpfw V Panther" pic="germany_pzv" country="GERMANY" class="MEDIUMTANK" />
-    <tank name="VK 3002 (DB)" pic="germany_vk3002db" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="VK 30.02 (DB)" pic="germany_vk3002db" country="GERMANY" class="MEDIUMTANK" />
     <tank name="Panther-M10" pic="germany_panther_m10" country="GERMANY" class="MEDIUMTANK" />
     <tank name="Panther II" pic="germany_panther_ii" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="Indien-Panzer" pic="germany_indien_panzer" country="GERMANY" class="MEDIUMTANK" />
     <tank name="E-50" pic="germany_e_50" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="Leopard prototyp A" pic="germany_pro_ag_a" country="GERMANY" class="MEDIUMTANK" />
     <tank name="E-50 Ausf.M" pic="germany_e50_ausf_m" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="Leopard 1" pic="germany_leopard1" country="GERMANY" class="MEDIUMTANK" />
     <tank name="PzKpfw B2 740 (f)" pic="germany_b_1bis_captured" country="GERMANY" class="HEAVYTANK" />
     <tank name="PzKpfw VI Tiger" pic="germany_pzvi" country="GERMANY" class="HEAVYTANK" />
     <tank name="PzKpfw VI Tiger (P)" pic="germany_pzvi_tiger_p" country="GERMANY" class="HEAVYTANK" />
     <tank name="PzKpfw VIB Tiger II" pic="germany_pzvib_tiger_ii" country="GERMANY" class="HEAVYTANK" />
-    <tank name="VK 4502 (P) Ausf. A" pic="germany_vk4502a" country="GERMANY" class="HEAVYTANK" />
+    <tank name="VK 45.02 (P) Ausf. A" pic="germany_vk4502a" country="GERMANY" class="HEAVYTANK" />
     <tank name="Löwe" pic="germany_lowe" country="GERMANY" class="HEAVYTANK" />
-    <tank name="VK 4502 (P) Ausf. B" pic="germany_vk4502p" country="GERMANY" class="HEAVYTANK" />
+    <tank name="VK 45.02 (P) Ausf. B" pic="germany_vk4502p" country="GERMANY" class="HEAVYTANK" />
     <tank name="E-75" pic="germany_e_75" country="GERMANY" class="HEAVYTANK" />
     <tank name="Maus" pic="germany_maus" country="GERMANY" class="HEAVYTANK" />
     <tank name="E-100" pic="germany_e_100" country="GERMANY" class="HEAVYTANK" />
@@ -67,14 +73,17 @@
     <tank name="MS-1" pic="ussr_ms_1" country="USSR" class="LIGHTTANK" />
     <tank name="BT-2" pic="ussr_bt_2" country="USSR" class="LIGHTTANK" />
     <tank name="T-26" pic="ussr_t_26" country="USSR" class="LIGHTTANK" />
+    <tank name="T-60" pic="ussr_t_60" country="USSR" class="LIGHTTANK" />
     <tank name="MkVII Tetrach" pic="ussr_tetrarch_ll" country="USSR" class="LIGHTTANK" />
     <tank name="BT-7" pic="ussr_bt_7" country="USSR" class="LIGHTTANK" />
     <tank name="T-46" pic="ussr_t_46" country="USSR" class="LIGHTTANK" />
+    <tank name="T-70" pic="ussr_t_70" country="USSR" class="LIGHTTANK" />
     <tank name="BT-SV" pic="ussr_bt_sv" country="USSR" class="LIGHTTANK" />
     <tank name="M3 Stuart" pic="ussr_m3_stuart_ll" country="USSR" class="LIGHTTANK" />
     <tank name="T-127" pic="ussr_t_127" country="USSR" class="LIGHTTANK" />
     <tank name="A-20" pic="ussr_a_20" country="USSR" class="LIGHTTANK" />
     <tank name="T-50" pic="ussr_t_50" country="USSR" class="LIGHTTANK" />
+    <tank name="T-80" pic="ussr_t80" country="USSR" class="LIGHTTANK" />
     <tank name="Valentine" pic="ussr_valentine_ll" country="USSR" class="LIGHTTANK" />
     <tank name="T-50-2" pic="ussr_t_50_2" country="USSR" class="LIGHTTANK" />
     <tank name="T-28" pic="ussr_t_28" country="USSR" class="MEDIUMTANK" />
