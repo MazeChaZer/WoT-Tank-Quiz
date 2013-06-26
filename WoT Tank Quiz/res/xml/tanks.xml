@@ -61,12 +61,15 @@
     <tank name="Jagdtiger 8,8 cm PaK 43" pic="germany_jagdtiger_sdkfz_185" country="GERMANY" class="TANKDESTROYER" />
     <tank name="Jagdtiger" pic="germany_jagdtiger" country="GERMANY" class="TANKDESTROYER" />
     <tank name="JagdPz E-100" pic="germany_jagdpz_e100" country="GERMANY" class="TANKDESTROYER" />
+    <tank name="G.Pz. Mk. VI (e)" pic="germany_gw_mk_vie" country="GERMANY" class="SPG" />
     <tank name="Sturmpanzer I Bison" pic="germany_bison_i" country="GERMANY" class="SPG" />
     <tank name="Sturmpanzer II" pic="germany_sturmpanzer_ii" country="GERMANY" class="SPG" />
+    <tank name="Pz.Sfl. IVb" pic="germany_pz_sfl_ivb" country="GERMANY" class="SPG" />
     <tank name="Wespe" pic="germany_wespe" country="GERMANY" class="SPG" />
     <tank name="Grille" pic="germany_grille" country="GERMANY" class="SPG" />
     <tank name="Hummel" pic="germany_hummel" country="GERMANY" class="SPG" />
     <tank name="GW Panther" pic="germany_g_panther" country="GERMANY" class="SPG" />
+    <tank name="G.W. Tiger (P)" pic="germany_gw_tiger_p" country="GERMANY" class="SPG" />
     <tank name="GW Tiger" pic="germany_g_tiger" country="GERMANY" class="SPG" />
     <tank name="GW Typ E" pic="germany_g_e" country="GERMANY" class="SPG" />
 
@@ -133,8 +136,10 @@
     <tank name="SU-18" pic="ussr_su_18" country="USSR" class="SPG" />
     <tank name="SU-26" pic="ussr_su_26" country="USSR" class="SPG" />
     <tank name="SU-5" pic="ussr_su_5" country="USSR" class="SPG" />
+    <tank name="SU-122A" pic="ussr_su122a" country="USSR" class="SPG" />
     <tank name="SU-8" pic="ussr_su_8" country="USSR" class="SPG" />
     <tank name="S-51" pic="ussr_s_51" country="USSR" class="SPG" />
+    <tank name="SU-14-1" pic="ussr_su14_1" country="USSR" class="SPG" />
     <tank name="SU-14" pic="ussr_su_14" country="USSR" class="SPG" />
     <tank name="Objekt 212" pic="ussr_object_212" country="USSR" class="SPG" />
     <tank name="Objekt 261" pic="ussr_object_261" country="USSR" class="SPG" />
@@ -196,8 +201,10 @@
     <tank name="M37" pic="usa_m37" country="USA" class="SPG" />
     <tank name="M7 Priest" pic="usa_m7_priest" country="USA" class="SPG" />
     <tank name="M41" pic="usa_m41" country="USA" class="SPG" />
+    <tank name="M44" pic="usa_m44" country="USA" class="SPG" />
     <tank name="M12" pic="usa_m12" country="USA" class="SPG" />
     <tank name="M40/M43" pic="usa_m40m43" country="USA" class="SPG" />
+    <tank name="M53/M55" pic="usa_m53_55" country="USA" class="SPG" />
     <tank name="T92" pic="usa_t92" country="USA" class="SPG" />
             
     <tank name="RenaultFT" pic="france_renaultft" country="FRANCE" class="LIGHTTANK" />
@@ -211,7 +218,7 @@
     <tank name="AMX 13 90" pic="france_amx_13_90" country="FRANCE" class="LIGHTTANK" />
     <tank name="D2" pic="france_d2" country="FRANCE" class="MEDIUMTANK" />
     <tank name="Lorraine 40 t" pic="france_lorraine40t" country="FRANCE" class="MEDIUMTANK" />
-    <tank name="Bat Chatillon 25 t" pic="france_bat_chatillon25t" country="FRANCE" class="MEDIUMTANK" />
+    <tank name="Bat.-Châtillon 25 t" pic="france_bat_chatillon25t" country="FRANCE" class="MEDIUMTANK" />
     <tank name="B1" pic="france_b1" country="FRANCE" class="HEAVYTANK" />
     <tank name="BDR G1B" pic="france_bdr_g1b" country="FRANCE" class="HEAVYTANK" />
     <tank name="ARL 44" pic="france_arl_44" country="FRANCE" class="HEAVYTANK" />
@@ -232,12 +239,14 @@
     <tank name="AMX-50 Foch (155)" pic="france_amx_50fosh_155" country="FRANCE" class="TANKDESTROYER" />
     <tank name="RenaultBS" pic="france_renaultbs" country="FRANCE" class="SPG" />
     <tank name="Lorraine39 L AM" pic="france_lorraine39_l_am" country="FRANCE" class="SPG" />
+    <tank name="AMX 105 AM mle. 47" pic="france_amx_ob_am105" country="FRANCE" class="SPG" />
     <tank name="105 leFH18B2" pic="france__105_lefh18b2" country="FRANCE" class="SPG" />
     <tank name="AMX 105AM" pic="france_amx_105am" country="FRANCE" class="SPG" />
     <tank name="AMX-13 F3 AM" pic="france_amx_13f3am" country="FRANCE" class="SPG" />
     <tank name="Lorraine155 50" pic="france_lorraine155_50" country="FRANCE" class="SPG" />
     <tank name="Lorraine155 51" pic="france_lorraine155_51" country="FRANCE" class="SPG" />
-    <tank name="Bat Chatillon 155" pic="france_bat_chatillon155" country="FRANCE" class="SPG" />
+    <tank name="Bat.-Châtillon 155 55" pic="france_bat_chatillon155_55" country="FRANCE" class="SPG" />
+    <tank name="Bat.-Châtillon 155 58" pic="france_bat_chatillon155" country="FRANCE" class="SPG" />
 
     <tank name="Renault NC-31" pic="china_ch06_renault_nc31" country="CHINA" class="LIGHTTANK" />
     <tank name="Vickers Mk. E Type B" pic="china_ch07_vickers_mke_type_bt26" country="CHINA" class="LIGHTTANK" />
@@ -278,6 +287,7 @@
     <tank name="Centurion Mk. 7/1" pic="uk_gb24_centurion_mk3" country="UK" class="MEDIUMTANK" />
     <tank name="FV4202(105)" pic="uk_gb70_fv4202_105" country="UK" class="MEDIUMTANK" />
     <tank name="Churchill I" pic="uk_gb08_churchill_i" country="UK" class="HEAVYTANK" />
+    <tank name="Excelsior" pic="uk_gb51_excelsior" country="UK" class="HEAVYTANK" />
     <tank name="Churchill VII" pic="uk_gb09_churchill_vii" country="UK" class="HEAVYTANK" />
     <tank name="TOG II*" pic="uk_gb63_tog_ii" country="UK" class="HEAVYTANK" />
     <tank name="Black Prince" pic="uk_gb10_black_prince" country="UK" class="HEAVYTANK" />

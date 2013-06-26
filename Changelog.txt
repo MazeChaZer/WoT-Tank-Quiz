@@ -1,3 +1,6 @@
+Version 1.11
+•Added new tanks of the WoT 8.6 update: SU-122A, SU-14-1, G.Pz. Mk. VI (e), Pz.Sfl. IVb, G.W. Tiger (P), M44, M53/M55, AMX 105 AM mle. 47, Bat.-Châtillon 155 55, Excelsior
+
 Version 1.10
 •Added new tanks of the WoT 8.5 update: VK 20.01 (D), VK 30.01 (D), Aufklärungspanzer Panther, Indien-Panzer, Leopard prototyp A, Leopard 1, Т-60, T-70, T-80
 
