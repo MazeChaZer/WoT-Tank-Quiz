@@ -20,13 +20,13 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mazechazer.android.wottankquiz"
-    android:versionCode="13"
-    android:versionName="1.11"
+    android:versionCode="14"
+    android:versionName="1.12"
     android:installLocation="auto">
 
     <uses-sdk
         android:minSdkVersion="5"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="19" />
 
     <application
         android:icon="@drawable/wottq_logo_new_sd"
