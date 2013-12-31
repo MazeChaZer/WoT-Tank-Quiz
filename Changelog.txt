@@ -1,6 +1,7 @@
 Version 1.12
 •Added new tanks of the WoT 8.7, 8.8, 8.9 and 8.10 update
 •Fixed mismatched images
+•Fixed background color of start screen
 
 Version 1.11
 •Added new tanks of the WoT 8.6 update: SU-122A, SU-14-1, G.Pz. Mk. VI (e), Pz.Sfl. IVb, G.W. Tiger (P), M44, M53/M55, AMX 105 AM mle. 47, Bat.-Châtillon 155 55, Excelsior
