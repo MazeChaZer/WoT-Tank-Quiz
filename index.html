@@ -9,6 +9,31 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>WoT Tank Quiz</title>
+    
+    <script type="text/javascript" src="javascripts/highslide/highslide-with-gallery.js"></script>
+    <link rel="stylesheet" type="text/css" href="javascripts/highslide/highslide.mod.css">
+    <script type="text/javascript">
+      hs.graphicsDir = 'javascripts/highslide/graphics/';
+      hs.align = 'center';
+      hs.transitions = ['expand', 'crossfade'];
+      hs.outlineType = 'rounded-white';
+      hs.fadeInOut = true;
+      //hs.dimmingOpacity = 0.75;
+
+      // Add the controlbar
+      hs.addSlideshow({
+              //slideshowGroup: 'group1',
+              interval: 5000,
+              repeat: false,
+              useControls: true,
+              fixedControls: 'fit',
+              overlayOptions: {
+                      opacity: 0.75,
+                      position: 'bottom center',
+                      hideOnMouseOut: true
+              }
+      });
+    </script>
   </head>
 
   <body>
@@ -35,36 +60,33 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="identify-all-the-tanks" class="anchor" href="#identify-all-the-tanks"><span class="octicon octicon-link"></span></a>Identify ALL the tanks!</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>In this little quiz app you have 1 minute to guess the names of as much tanks as possible.<br />
+You will see an image of a tank from World of Tanks and 4 different options to choose from. Depeding on the level of difficulty, these options will be rather different or very similar to each other.</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<a href="images/screen1.png" onclick="return hs.expand(this)" title="The home screen of the app"><img src="images/screen1.png" alt="The home screen of the app" width="120px" /></a>
+<a href="images/screen2.png" onclick="return hs.expand(this)" title="Playing the quiz"><img src="images/screen2.png" alt="Playing the quiz" width="120px" /></a>
+<a href="images/screen3.png" onclick="return hs.expand(this)" title="The minute is over"><img src="images/screen3.png" alt="The minute is over" width="120px" /></a>
+<a href="images/screen4.png" onclick="return hs.expand(this)" title="The highscores"><img src="images/screen4.png" alt="The highscores" width="120px" /></a>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="is-this-app-free" class="anchor" href="#is-this-app-free"><span class="octicon octicon-link"></span></a>Is this app free?</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>Yep, this app is completely free and also free of ads. Furthermore, this app is free software, licensed under the GPL. On the top of this page there are several download links included, so you can choose the one that suits your needs. You can either download it from the Google Play Store, as an APK file or, if you are a developer, you can get the sources either in the zip or tar.gz format.</p>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="who-developed-this-app" class="anchor" href="#who-developed-this-app"><span class="octicon octicon-link"></span></a>Who developed this app?</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>This app has been developed by Jonas Schürmann, I am an informatics student from Germany. If you are further interested in this app, you can check out the <a href="https://github.com/MazeChaZer/WoT-Tank-Quiz">GitHub page</a> and the <a href="https://github.com/MazeChaZer/WoT-Tank-Quiz/wiki">GitHub wiki</a>.
+<br />In case you want to report a bug or suggest an enhancment, you can do this in the <a href="https://github.com/MazeChaZer/WoT-Tank-Quiz/issues">issues section</a> on GitHub. Alternatively you can also drop me an email: 
+
+<a href="http://www.google.com/recaptcha/mailhide/d?k=01Nkwexvj6skSXbBgydQvXlg==&amp;c=HfnHF43DKYLTo44J4ZHhxJeme3fFsv83ovUhK_sfEU0=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501Nkwexvj6skSXbBgydQvXlg\75\75\46c\75HfnHF43DKYLTo44J4ZHhxJeme3fFsv83ovUhK_sfEU0\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">Reveal email address</a>
+
+</p>
       </section>
     </div>
 
