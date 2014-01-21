@@ -133,7 +133,7 @@ strong {
   font-weight: bold;
 }
 
-img {
+img.default {
   position: relative;
   margin: 0 auto;
   max-width: 739px;
@@ -332,15 +332,46 @@ Full-Width Styles
   margin-right: 12px;
   width: 40px;
   height: 40px;
+  padding: 0px;
 }
 
-.zip_download_link, .tar_download_link, .apk_download_link, .playstore_download_link, .fdroid_download_link {
+.download_link {
   display: block;
-  float: right;
   width: 90px;
   height:70px;
   text-indent: -5000px;
   overflow: hidden;
+}
+
+.download_link_box {
+  display: block;
+  float: right;
+  width: 90px;
+  height:70px;
+  position: relative;
+}
+
+.qr_code {
+  width: 110px;
+  height: 110px;
+  background: white;
+  position: absolute;
+  margin-left: -10px;
+  display: none;
+  box-shadow: 0 0 5px #000000;
+  -webkit-box-shadow: 0 0 5px #000000;
+  -moz-box-shadow: 0 0 5px #000000;
+  -o-box-shadow: 0 0 5px #000000;
+  -ms-box-shadow: 0 0 5px #000000;
+}
+
+.qr_code img {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.download_link:hover ~ .qr_code{
+  display: block;
 }
 
 .zip_download_link {
@@ -349,7 +380,6 @@ Full-Width Styles
 
 .tar_download_link {
   background: url(../images/sprite_download.png) no-repeat -90px -70px;
-  margin-left: 10px;
 }
 
 .apk_download_link {
