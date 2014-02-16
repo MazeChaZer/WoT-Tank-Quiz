@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 #This script needs BeautifulSoup 4 and curl
 import urllib.request
 from bs4 import BeautifulSoup
@@ -6,11 +8,11 @@ from subprocess import call
 
 soup = BeautifulSoup(urllib.request.urlopen("http://worldoftanks.eu/encyclopedia/vehicles/"))
 
-countryconstants = {'Soviet Vehicles' : 'USSR',
+countryconstants = {'U.S.S.R. Vehicles' : 'USSR',
                     'German Vehicles' : 'GERMANY',
-                    'USA Vehicles' : 'USA',
+                    'U.S.A. Vehicles' : 'USA',
                     'French Vehicles' : 'FRANCE',
-                    'UK Vehicles' : 'UK',
+                    'U.K. Vehicles' : 'UK',
                     'Chinese Vehicles' :'CHINA',
                     'Japanese Vehicles' : 'JAPAN'}
 

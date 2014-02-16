@@ -1,8 +1,7 @@
 The WoT Tank Quiz is a Quiz about the PC game "World of Tanks". Here are some further information:
-  - The WoT Tank Quiz web site: http://mazechazer.jimdo.com/english/wot-tank-quiz/
+  - The WoT Tank Quiz web site: https://mazechazer.github.io/WoT-Tank-Quiz/
   - My development email address: mazechazer@aol.de
-  - The WoT Tank Quiz Facebook page: http://www.facebook.com/WotTankQuiz
-  - The WoT Tank Quiz Sourceforge page: https://sourceforge.net/projects/wottankquiz
+  - The WoT Tank Quiz GitHub page: https://github.com/MazeChaZer/WoT-Tank-Quiz
   - The WoT Tank Quiz Google Play Store site: https://play.google.com/store/apps/details?id=mazechazer.android.wottankquiz
   - The package name of the app: mazechazer.android.wottankquiz
   - To see the license for this project, read "LICENSE.txt"

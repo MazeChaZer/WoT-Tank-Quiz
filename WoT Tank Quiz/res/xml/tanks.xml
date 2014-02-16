@@ -8,6 +8,7 @@
     <tank name="BT-7" pic="ussr_bt_7" country="USSR" class="LIGHTTANK" />
     <tank name="T-46" pic="ussr_t_46" country="USSR" class="LIGHTTANK" />
     <tank name="T-70" pic="ussr_t_70" country="USSR" class="LIGHTTANK" />
+    <tank name="BT-SV" pic="ussr_bt_sv" country="USSR" class="LIGHTTANK" />
     <tank name="M3 Light" pic="ussr_m3_stuart_ll" country="USSR" class="LIGHTTANK" />
     <tank name="T-127" pic="ussr_t_127" country="USSR" class="LIGHTTANK" />
     <tank name="LTP" pic="ussr_ltp" country="USSR" class="LIGHTTANK" />
@@ -15,9 +16,9 @@
     <tank name="T-50" pic="ussr_t_50" country="USSR" class="LIGHTTANK" />
     <tank name="T-80" pic="ussr_t80" country="USSR" class="LIGHTTANK" />
     <tank name="Valentine II" pic="ussr_valentine_ll" country="USSR" class="LIGHTTANK" />
-    <tank name="T-50-2" pic="ussr_t_50_2" country="USSR" class="LIGHTTANK" />
     <tank name="MT-25" pic="ussr_mt25" country="USSR" class="LIGHTTANK" />
     <tank name="T-28" pic="ussr_t_28" country="USSR" class="MEDIUMTANK" />
+    <tank name="A-32" pic="ussr_a_32" country="USSR" class="MEDIUMTANK" />
     <tank name="T-34" pic="ussr_t_34" country="USSR" class="MEDIUMTANK" />
     <tank name="Matilda IV" pic="ussr_matilda_ii_ll" country="USSR" class="MEDIUMTANK" />
     <tank name="T-34-85" pic="ussr_t_34_85" country="USSR" class="MEDIUMTANK" />
@@ -31,8 +32,11 @@
     <tank name="Object 430 Version II" pic="ussr_r104_object_430_ii" country="USSR" class="MEDIUMTANK" />
     <tank name="T-62A" pic="ussr_t62a" country="USSR" class="MEDIUMTANK" />
     <tank name="Object 140" pic="ussr_object_140" country="USSR" class="MEDIUMTANK" />
+    <tank name="Object 430" pic="ussr_object_430" country="USSR" class="MEDIUMTANK" />
     <tank name="KV-1" pic="ussr_kv1" country="USSR" class="HEAVYTANK" />
+    <tank name="KV-220 Beta-Test" pic="ussr_kv_220" country="USSR" class="HEAVYTANK" />
     <tank name="Churchill III" pic="ussr_churchill_ll" country="USSR" class="HEAVYTANK" />
+    <tank name="KV-220" pic="ussr_kv_220_action" country="USSR" class="HEAVYTANK" />
     <tank name="KV-1S" pic="ussr_kv_1s" country="USSR" class="HEAVYTANK" />
     <tank name="KV-2" pic="ussr_kv2" country="USSR" class="HEAVYTANK" />
     <tank name="T-150" pic="ussr_t150" country="USSR" class="HEAVYTANK" />
@@ -88,6 +92,7 @@
     <tank name="VK 28.01" pic="germany_vk2801" country="GERMANY" class="LIGHTTANK" />
     <tank name="Aufklärungspanzer Panther" pic="germany_auf_panther" country="GERMANY" class="LIGHTTANK" />
     <tank name="Pz.Kpfw. S35 739 (f)" pic="germany_s35_captured" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="Großtraktor - Krupp" pic="germany_g100_gtraktor_krupp" country="GERMANY" class="MEDIUMTANK" />
     <tank name="Pz.Kpfw. III" pic="germany_pziii" country="GERMANY" class="MEDIUMTANK" />
     <tank name="VK 20.01 (D)" pic="germany_vk2001db" country="GERMANY" class="MEDIUMTANK" />
     <tank name="Pz.Kpfw. IV" pic="germany_pziv" country="GERMANY" class="MEDIUMTANK" />
@@ -97,6 +102,7 @@
     <tank name="VK 30.01 (D)" pic="germany_vk3002db_v1" country="GERMANY" class="MEDIUMTANK" />
     <tank name="VK 30.02 (M)" pic="germany_vk3002m" country="GERMANY" class="MEDIUMTANK" />
     <tank name="Pz.Kpfw. V/IV" pic="germany_pzv_pziv" country="GERMANY" class="MEDIUMTANK" />
+    <tank name="Pz.Kpfw. V/IV Alpha" pic="germany_pzv_pziv_ausf_alfa" country="GERMANY" class="MEDIUMTANK" />
     <tank name="Pz.Kpfw. IV Schmalturm" pic="germany_pziv_schmalturm" country="GERMANY" class="MEDIUMTANK" />
     <tank name="Panther" pic="germany_pzv" country="GERMANY" class="MEDIUMTANK" />
     <tank name="VK 30.02 (D)" pic="germany_vk3002db" country="GERMANY" class="MEDIUMTANK" />
@@ -120,6 +126,7 @@
     <tank name="E 75" pic="germany_e_75" country="GERMANY" class="HEAVYTANK" />
     <tank name="Maus" pic="germany_maus" country="GERMANY" class="HEAVYTANK" />
     <tank name="E 100" pic="germany_e_100" country="GERMANY" class="HEAVYTANK" />
+    <tank name="VK 72.01 (K)" pic="germany_vk7201" country="GERMANY" class="HEAVYTANK" />
     <tank name="Panzerjäger I" pic="germany_panzerjager_i" country="GERMANY" class="TANKDESTROYER" />
     <tank name="Marder II" pic="germany_g20_marder_ii" country="GERMANY" class="TANKDESTROYER" />
     <tank name="Hetzer" pic="germany_hetzer" country="GERMANY" class="TANKDESTROYER" />
@@ -179,12 +186,14 @@
     <tank name="T54E1" pic="usa_t54e1" country="USA" class="MEDIUMTANK" />
     <tank name="M48A1 Patton" pic="usa_m48a1" country="USA" class="MEDIUMTANK" />
     <tank name="M60" pic="usa_m60" country="USA" class="MEDIUMTANK" />
+    <tank name="T95E6" pic="usa_t95_e6" country="USA" class="MEDIUMTANK" />
     <tank name="T14" pic="usa_t14" country="USA" class="HEAVYTANK" />
     <tank name="T1 Heavy Tank" pic="usa_t1_hvy" country="USA" class="HEAVYTANK" />
     <tank name="M6" pic="usa_m6" country="USA" class="HEAVYTANK" />
     <tank name="T29" pic="usa_t29" country="USA" class="HEAVYTANK" />
     <tank name="T34" pic="usa_t34_hvy" country="USA" class="HEAVYTANK" />
     <tank name="T32" pic="usa_t32" country="USA" class="HEAVYTANK" />
+    <tank name="M6A2E1" pic="usa_m6a2e1" country="USA" class="HEAVYTANK" />
     <tank name="M103" pic="usa_m103" country="USA" class="HEAVYTANK" />
     <tank name="T110E5" pic="usa_t110" country="USA" class="HEAVYTANK" />
     <tank name="T57 Heavy Tank" pic="usa_t57_58" country="USA" class="HEAVYTANK" />
@@ -255,6 +264,7 @@
     <tank name="Bat.-Châtillon 155 58" pic="france_bat_chatillon155_58" country="FRANCE" class="SPG" />
     <tank name="Cruiser Mk. I" pic="uk_gb03_cruiser_mk_i" country="UK" class="LIGHTTANK" />
     <tank name="Cruiser Mk. III" pic="uk_gb58_cruiser_mk_iii" country="UK" class="LIGHTTANK" />
+    <tank name="Light Mk. VIC" pic="uk_gb76_mk_vic" country="UK" class="LIGHTTANK" />
     <tank name="Cruiser Mk. II" pic="uk_gb69_cruiser_mk_ii" country="UK" class="LIGHTTANK" />
     <tank name="Cruiser Mk. IV" pic="uk_gb59_cruiser_mk_iv" country="UK" class="LIGHTTANK" />
     <tank name="Valentine" pic="uk_gb04_valentine" country="UK" class="LIGHTTANK" />
@@ -324,7 +334,6 @@
     <tank name="Renault Otsu" pic="japan_nc27" country="JAPAN" class="LIGHTTANK" />
     <tank name="Type 95 Ha-Go" pic="japan_ha_go" country="JAPAN" class="LIGHTTANK" />
     <tank name="Type 98 Ke-Ni" pic="japan_ke_ni" country="JAPAN" class="LIGHTTANK" />
-    <tank name="Type 98 Ke-Ni Otsu" pic="japan_ke_ni_b" country="JAPAN" class="LIGHTTANK" />
     <tank name="Type 5 Ke-Ho" pic="japan_ke_ho" country="JAPAN" class="LIGHTTANK" />
     <tank name="Chi-Ni" pic="japan_chi_ni" country="JAPAN" class="MEDIUMTANK" />
     <tank name="Type 97 Chi-Ha" pic="japan_chi_ha" country="JAPAN" class="MEDIUMTANK" />
