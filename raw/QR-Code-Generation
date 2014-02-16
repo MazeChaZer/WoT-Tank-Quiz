@@ -1,0 +1,2 @@
+qrencode -o qr-code.png -l L -m 0 -s 5 example.org
+Afterwards scaling to 100px width with Gimp, no interpolation.
