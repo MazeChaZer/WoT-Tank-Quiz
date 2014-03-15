@@ -28,8 +28,8 @@ There is already a German and a Spanish translation. A Russian or polish transla
 ...the unknown creator of the "Destroy"-Font. I extended this font with all the Spanish and some French characters by combining the original characters/punctuation marks. The only thing that was created new is the tilde, designed by my little sister, also thanks for that :)
 ...the Open Clip Art Library, where i got the image of the little tank in the app icon from (http://openclipart.org/detail/97843/cartoon-tank-by-rg1024).
 
-I used the glorious GIMP to edit the images.
-For font editing I used Fontforge and Inkscape (and also GIMP), both very cool programs.
+I used GIMP to edit images.
+For font editing I used Fontforge and Inkscape.
 
  . 
   .
