@@ -5,7 +5,7 @@ This little quiz app is about guessing as much tanks from WoT as possible within
 
 You will see an image of a tank from World of Tanks and 4 different options to choose from. Depeding on the level of difficulty, these options will be rather different or very similar to each other.
 
-This app is free software, licensed under the GPL (for details see [Licensing](https://github.com/MazeChaZer/WoT-Tank-Quiz/wiki/Licensing)).
+This app is free software, licensed under the GPLv3+ (for details see [Licensing](https://github.com/MazeChaZer/WoT-Tank-Quiz/wiki/Licensing)).
 
 The official website is hosted at [mazechazer.github.io/WoT-Tank-Quiz](https://mazechazer.github.io/WoT-Tank-Quiz).
 
