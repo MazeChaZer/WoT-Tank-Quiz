@@ -317,7 +317,7 @@ Full-Width Styles
 
 #downloads {
   position: absolute;
-  width: 390px;
+  width: 480px;
 /*   width: 480px; */
   z-index: 10;
   bottom: -40px;
@@ -411,6 +411,10 @@ Full-Width Styles
 
 #main_content {
   padding-top: 40px;
+}
+
+#main_content > h3:first-child {
+  margin-top: 20px;
 }
 
 #footer_wrap {
