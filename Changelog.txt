@@ -1,3 +1,6 @@
+Version 1.14
+•Added new tanks up to the WoT 9.3 update
+
 Version 1.13
 •Added new tanks of the WoT 8.11 update
 
