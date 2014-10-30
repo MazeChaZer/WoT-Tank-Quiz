@@ -22,7 +22,40 @@
     <string name="Level">Nivel</string>
     <string name="Highscore">Récords</string>
     <string name="About">Acerca de</string>
-    <string name="AboutText">Esta aplicación es de código abierto y ha sido programada por Jonas Schürmann, también conocido como MazeChaZer.\n\nEs software libre (código abierto).\nPara obtener más información visita mi sitio web:\n\nmazechazer.jimdo.com\n\nAllí también tienes la posibilidad de contactar conmigo o enviar un informe de bugs.\nEspero que te diviertas con esta aplicación :)\nEstaría guay que me dieses tu opinión en la Play Store de Google o en mi web.\n\nLicencia:\nCopyright 2012 Jonas Schürmann ©\n\nEl WoT Tank Quiz es un producto de software libre: puedes redistribuirlo y/o modificarlo bajo los términos de la Licencia Pública General de GNU publicada por la Fundación de Software Libre, ya sea la versión 3 de la Licencia o cualquier versión posterior que tú elijas. Con la distribución de WoT Tank Quiz se pretende hacer pública una aplicación que pueda resultar de utilidad, pero SIN NINGUNA GARANTÍA; tampoco la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO DETERMINADO. Para más información, consulta la Licencia Pública General de GNU.\n\nDeberías haber recibido una copia de la Licencia Pública General de GNU junto con el WoT Tank Quiz. Si no es así, puedes entrar en:\n\n&lt;http://www.gnu.org/licenses/&gt;\n\nLa licencia no incluye las imágenes de los tanques, wargaming.net es el propietario de sus derechos de copia.\n\nImágenes utilizadas con permiso.\n\n\&quot;World of Tanks\&quot; es una marca registrada por wargaming.net.\n\nVisita mi web para obtener más información sobre la licencia.\n\nTraducción de Cristina Vidal</string>
+    <string name="AboutText">Esta aplicación es de código abierto y ha sido programada por Jonas Schürmann, también
+        conocido como MazeChaZer.
+        \n
+        \nEs software libre (código abierto).
+        \nPara obtener más información visita mi sitio web:
+        \n
+        \nmazechazer.jimdo.com
+        \n
+        \nAllí también tienes la posibilidad de contactar conmigo o enviar un informe de bugs.
+        \nEspero que te diviertas con esta aplicación :)
+        \nEstaría guay que me dieses tu opinión en la Play Store de Google o en mi web.
+        \n
+        \nLicencia:
+        \nCopyright 2012 Jonas Schürmann ©
+        \n
+        \nEl WoT Tank Quiz es un producto de software libre: puedes redistribuirlo y/o modificarlo bajo los términos de
+        la Licencia Pública General de GNU publicada por la Fundación de Software Libre, ya sea la versión 3 de la
+        Licencia o cualquier versión posterior que tú elijas. Con la distribución de WoT Tank Quiz se pretende hacer
+        pública una aplicación que pueda resultar de utilidad, pero SIN NINGUNA GARANTÍA; tampoco la garantía implícita
+        de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO DETERMINADO. Para más información, consulta la Licencia Pública
+        General de GNU.
+        \n
+        \nDeberías haber recibido una copia de la Licencia Pública General de GNU junto con el WoT Tank Quiz. Si no es
+        así, puedes entrar en:
+        \n
+        \n&lt;http://www.gnu.org/licenses/&gt;
+        \n
+        \nLa licencia no incluye las imágenes de los tanques, wargaming.net es el propietario de sus derechos de copia.
+        \n
+        \nImágenes utilizadas con permiso.
+        \n
+        \n\&quot;World of Tanks\&quot; es una marca registrada por wargaming.net.
+        \n
+        \nTraducción de Cristina Vidal</string>
     <string name="Easy">Fácil</string>
     <string name="Medium">Medio</string>
     <string name="Hard">Difícil</string>
@@ -39,5 +72,80 @@
     <string name="StatementThirtyoneAndMore">¿Quéeeeee? Menudo friki estás hecho :)</string>
     <string name="PleaseEnterYourName">Introduce tu nombre</string>
     <string name="Changelog">Historial de cambios</string>
-    <string name="ChangelogText">Versión 1.13\nAñadidos nuevos tanques de la actualización del WoT 8.11\n\nVersión 1.12\n•Añadidos nuevos tanques de las actualizaciones del WoT 8.7, 8.8, 8.9 y 8.10\n•Fixed mismatched images\n•Fixed background color of start screen\n\nVersión 1.11\n•Añadidos nuevos tanques de la actualización del WoT 8.6: SU–122A, SU–14–1, G.Pz. Mk. VI (e), Pz.Sfl. IVb, G.W. Tiger (P), M44, M53/M55, AMX 105 AM mle. 47, Bat.–Châtillon 155 55, Excelsior\n\nVersión 1.10\n•Añadidos nuevos tanques de la actualización del WoT 8.5: VK 20.01 (D), VK 30.01 (D), Aufklärungspanzer Panther, Indien-Panzer, Leopard prototyp A, Leopard 1, Т–60, T–70, T–80\n\nVersión 1.9\n•Añadidos nuevos tanques de la actualización del WoT 8.4: Universal Carrier 2–pdr, Valentine AT, Alecto, AT 2, AT 8, Churchill Gun Carrier, AT 7, AT 15, Tortoise, FV215b (183), Pz.Kpfw. I, Pz.Kpfw. I Ausf. C, Pz.Kpfw. II Ausf. G, SU–100Y\n\nVersión 1.8\n•Añadidos nuevos tanques de la actualización del WoT 8.3: Renault NC–31, Vickers Mk. E Type B, Type 2597 Chi–Ha, M5A1 Stuart, 59–16, WZ131, WZ–132, Type T–34, Type 58, T–34–1, T–34–2, WZ–120, 121, IS–2, 110, WZ–111 model 1–4, 113\n\nVersión 1.7\n•Añadidos nuevos tanques de la actualización del WoT 8.2: T21, T71, Т69, Т54E1, T57, TOG–2, АТ–15А, FCM 50t\n•Arreglado el bug poco común que hacía que el texto de los botones de respuesta no pudiese leerse en ciertos dispositivos\n\nVersión 1.6\n•Añadidos nuevos tanques de la actualización del WoT 8.1: SU–122–44, Panther M–10, PzKpfw IV Schmalturm, Cruiser MK. I, A13 Mk. I Cr. Tank Mk. III, A10 Cruiser Mk. II, A13 Mk. II Cr. Tank Mk. IV, Valentine Mk.III, A13 Covenanter, Crusader, Medium Mark I, Vickers Medium Mk. II, Vickers Medium Mk. III, Matilda, Cromwell, Comet, Centurion Mk. I, Centurion Mk. 7/1, FV4202(105), Churchill I, Churchill VII, Black Prince, Caernarvon, Conqueror y FV215b\n\nVersión 1.5\n•Añadidas las versiones en alemán y español de la aplicación\n•Añadidos nuevos tanques de las actualizaciones del WoT:\n7.4: RenaultFT AC, Renault UE 57, Somua SAu–40, S–35 CA, ARL V39, AMX AC Mle.1946, AMX AC Mle.1948, AMX 50 Foch, RenaultBS, Lorraine39 L AM, AMX 105AM, AMX 13 F3 AM, Lorraine 155 50, Lorraine 155 51, Bat Chatillon 155, IS–6, Jagdtiger 8,8 cm PaK 43\n7.5: JagdPz E–100, Object 268, AMX–50 Foch (155), T110E3, T110E4, E–50 Ausf. M, T–62A, M48A1, ELC AMX, Dicker Max, Super Pershing\n8.0: SU–100М1, SU–101, SU–122–54, Object 263, Matilda Black Prince\n•Mejorada la elección de los tanques(ya no aparece el mismo tanque dos veces en la misma partida)\n•Mejoradas las respuestas alternativas (ya no aparecen campos en blanco)\n•Nueva cabecera en la página de inicio; nueva fuente para los botones\n•Añadido botón para mostrar el historial de cambios en el diálogo \&quot;Acerca de…\&quot;\n\nVersión 1.4\n•Arreglado el bug que ocultaba el diálogo del \&quot;Historial de cambios\&quot;\n\nVersión 1.3\n•Añadidos nuevos tanques de la actualización del WoT 7.3: KV–1, KV–2, T–150, ST–I, IS–4, IS–8, Type 62 y WZ–111\n•Corregida la errata del S–51(\&quot;SU–51\&quot;)\n•Arreglado el bug en Hummel/Grille\n\nVersión 1.2\n•Eliminado el bug de la cuenta atrás que aparecía cuando el diálogo de pausa se cancelaba con el botón de retroceder\n• Eliminado el bug por el que el diálogo de pausa aparecía encima del diálogo de récords cuando se pausaba la actividad\n•Añadida la notificación del \&quot;Historial de cambios\&quot;\n•Arreglado el bug que mostraba una puntuación incorrecta en el diálogo de récords\n\nVersión 1.1\n•Mejoras en el icono de la aplicación\n•Arreglado el bug que mostraba la puntuación incorrecta en el diálogo de récords</string>
+    <string name="ChangelogText">Versión 1.14
+        \nAñadidos nuevos tanques hasta de la actualización WoT 9.3
+        \n
+        \nVersión 1.13
+        \nAñadidos nuevos tanques de la actualización del WoT 8.11
+        \n
+        \nVersión 1.12
+        \n•Añadidos nuevos tanques de las actualizaciones del WoT 8.7, 8.8, 8.9 y 8.10
+        \n•Fixed mismatched images
+        \n•Fixed background color of start screen
+        \n
+        \nVersión 1.11
+        \n•Añadidos nuevos tanques de la actualización del WoT 8.6: SU–122A, SU–14–1, G.Pz. Mk. VI (e), Pz.Sfl. IVb, G.W.
+        Tiger (P), M44, M53/M55, AMX 105 AM mle. 47, Bat.–Châtillon 155 55, Excelsior
+        \n
+        \nVersión 1.10
+        \n•Añadidos nuevos tanques de la actualización del WoT 8.5: VK 20.01 (D), VK 30.01 (D), Aufklärungspanzer
+        Panther, Indien-Panzer, Leopard prototyp A, Leopard 1, Т–60, T–70, T–80
+        \n
+        \nVersión 1.9
+        \n•Añadidos nuevos tanques de la actualización del WoT 8.4: Universal Carrier 2–pdr, Valentine AT, Alecto, AT 2,
+        AT 8, Churchill Gun Carrier, AT 7, AT 15, Tortoise, FV215b (183), Pz.Kpfw. I, Pz.Kpfw. I Ausf. C, Pz.Kpfw. II
+        Ausf. G, SU–100Y
+        \n
+        \nVersión 1.8
+        \n•Añadidos nuevos tanques de la actualización del WoT 8.3: Renault NC–31, Vickers Mk. E Type B, Type 2597
+        Chi–Ha, M5A1 Stuart, 59–16, WZ131, WZ–132, Type T–34, Type 58, T–34–1, T–34–2, WZ–120, 121, IS–2, 110, WZ–111
+        model 1–4,
+        113
+        \n
+        \nVersión 1.7
+        \n•Añadidos nuevos tanques de la actualización del WoT 8.2: T21, T71, Т69, Т54E1, T57, TOG–2, АТ–15А, FCM 50t
+        \n•Arreglado el bug poco común que hacía que el texto de los botones de respuesta no pudiese leerse en ciertos
+        dispositivos
+        \n
+        \nVersión 1.6
+        \n•Añadidos nuevos tanques de la actualización del WoT 8.1: SU–122–44, Panther M–10, PzKpfw IV Schmalturm,
+        Cruiser MK. I, A13 Mk. I Cr. Tank Mk. III, A10 Cruiser Mk. II, A13 Mk. II Cr. Tank Mk. IV, Valentine Mk.III, A13
+        Covenanter, Crusader, Medium Mark I, Vickers Medium Mk. II, Vickers Medium Mk. III, Matilda, Cromwell, Comet,
+        Centurion Mk. I, Centurion Mk. 7/1, FV4202(105), Churchill I, Churchill VII, Black Prince, Caernarvon, Conqueror
+        y FV215b
+        \n
+        \nVersión 1.5
+        \n•Añadidas las versiones en alemán y español de la aplicación
+        \n•Añadidos nuevos tanques de las actualizaciones del WoT:
+        \n7.4: RenaultFT AC, Renault UE 57, Somua SAu–40, S–35 CA, ARL V39, AMX AC Mle.1946, AMX AC Mle.1948, AMX 50
+        Foch, RenaultBS, Lorraine39 L AM, AMX 105AM, AMX 13 F3 AM, Lorraine 155 50, Lorraine 155 51, Bat Chatillon 155,
+        IS–6, Jagdtiger 8,8 cm PaK 43
+        \n7.5: JagdPz E–100, Object 268, AMX–50 Foch (155), T110E3, T110E4, E–50 Ausf. M, T–62A, M48A1, ELC AMX, Dicker
+        Max, Super Pershing
+        \n8.0: SU–100М1, SU–101, SU–122–54, Object 263, Matilda Black Prince
+        \n•Mejorada la elección de los tanques(ya no aparece el mismo tanque dos veces en la misma partida)
+        \n•Mejoradas las respuestas alternativas (ya no aparecen campos en blanco)
+        \n•Nueva cabecera en la página de inicio; nueva fuente para los botones
+        \n•Añadido botón para mostrar el historial de cambios en el diálogo \&quot;Acerca de…\&quot;
+        \n
+        \nVersión 1.4
+        \n•Arreglado el bug que ocultaba el diálogo del \&quot;Historial de cambios\&quot;
+        \n
+        \nVersión 1.3
+        \n•Añadidos nuevos tanques de la actualización del WoT 7.3: KV–1, KV–2, T–150, ST–I, IS–4, IS–8, Type 62 y
+        WZ–111
+        \n•Corregida la errata del S–51(\&quot;SU–51\&quot;)
+        \n•Arreglado el bug en Hummel/Grille
+        \n
+        \nVersión 1.2
+        \n•Eliminado el bug de la cuenta atrás que aparecía cuando el diálogo de pausa se cancelaba con el botón de
+        retroceder
+        \n• Eliminado el bug por el que el diálogo de pausa aparecía encima del diálogo de récords cuando se pausaba la
+        actividad
+        \n•Añadida la notificación del \&quot;Historial de cambios\&quot;
+        \n•Arreglado el bug que mostraba una puntuación incorrecta en el diálogo de récords
+        \n
+        \nVersión 1.1
+        \n•Mejoras en el icono de la aplicación
+        \n•Arreglado el bug que mostraba la puntuación incorrecta en el diálogo de récords</string>
 </resources>
