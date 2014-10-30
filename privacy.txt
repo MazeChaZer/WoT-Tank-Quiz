@@ -1,0 +1,20 @@
+Privacy Policy
+
+The WoT Tank Quiz doesn't collect any kind of data about the user. It isn't
+even able to do so because it doesn't have any permissions like internet access
+:)
+
+If you use the Google Play Store, I get some informaions about the
+installations of the app, like every Developer on the Google Play Store. E.g. I
+can see how many user come from which country or which devices or Android
+System Versions are used. But this data is anonymous, I can't identify the user
+from the data.
+
+Since this project is free software (open source) you can grap the source code
+and check if I'm telling you the truth ;)
+
+If you enter personal Information like your email address on this website, I
+will not give away this data to anyone and I will only use it for the inteded
+purpose (I won't send you ads or spam).
+
+If you want me to delete this data, just write me a short message.
