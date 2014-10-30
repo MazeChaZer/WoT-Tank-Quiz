@@ -9,7 +9,7 @@ This app is free software, licensed under the GPLv3+ (for details see [Licensing
 
 The official website is hosted at [mazechazer.github.io/WoT-Tank-Quiz](https://mazechazer.github.io/WoT-Tank-Quiz).
 
-This app has been published on the [Google Play Store](https://play.google.com/store/apps/details?id=mazechazer.android.wottankquiz).
+This app has been published on [F-Droid](https://f-droid.org/repository/browse/?fdid=mazechazer.android.wottankquiz) the [Google Play Store](https://play.google.com/store/apps/details?id=mazechazer.android.wottankquiz).
 
 You can also download this app as an APK file from the [releases section](https://github.com/MazeChaZer/WoT-Tank-Quiz/releases) of this GitHub repository.
 
