@@ -10,7 +10,7 @@ can see how many user come from which country or which devices or Android
 System Versions are used. But this data is anonymous, I can't identify the user
 from the data.
 
-Since this project is free software (open source) you can grap the source code
+Since this project is free software (open source) you can grab the source code
 and check if I'm telling you the truth ;)
 
 If you enter personal Information like your email address on this website, I
